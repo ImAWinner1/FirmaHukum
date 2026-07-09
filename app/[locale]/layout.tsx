@@ -62,12 +62,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: {
-    icon: [
-      { url: '/icon.svg', type: 'image/svg+xml' }
-    ],
-    shortcut: '/icon.svg',
-  },
 };
 
 export default async function RootLayout({
