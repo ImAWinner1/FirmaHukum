@@ -47,9 +47,9 @@ export const metadata: Metadata = {
       "Firma hukum profesional yang menyediakan layanan konsultasi dan pendampingan hukum terpercaya untuk individu dan korporasi di Indonesia.",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1200&h=630&fit=crop",
+        url: "/images/hero-statue.png",
         width: 1200,
-        height: 630,
+        height: 800,
         alt: "Firma Hukum - Solusi Hukum Terpercaya",
       },
     ],
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: "Firma Hukum | Solusi Hukum Terpercaya",
     description:
       "Firma hukum profesional yang menyediakan layanan konsultasi dan pendampingan hukum terpercaya untuk individu dan korporasi di Indonesia.",
-    images: ["https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1200&h=630&fit=crop"],
+    images: ["/images/hero-statue.png"],
   },
   robots: {
     index: true,
