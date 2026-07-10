@@ -4,6 +4,10 @@ import nodemailer from "nodemailer";
 import { z } from "zod";
 import dns from "dns";
 
+/**
+ * Skema validasi Zod untuk data formulir kontak.
+ * Memastikan setiap field memenuhi aturan minimum sebelum diproses ke server.
+ */
 const contactFormSchema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
@@ -12,6 +16,14 @@ const contactFormSchema = z.object({
   message: z.string().min(10),
 });
 
+/**
+ * Memverifikasi keberadaan domain email melalui pencarian DNS MX Record.
+ * Digunakan sebagai lapisan validasi tambahan untuk memastikan domain email
+ * benar-benar memiliki server penerima email yang terdaftar.
+ *
+ * @param email - Alamat email yang akan diverifikasi domainnya.
+ * @returns `true` jika domain memiliki MX Record, `false` jika tidak.
+ */
 async function verifyEmailDomain(email: string): Promise<boolean> {
   const domain = email.split("@")[1];
   if (!domain) return false;
@@ -24,12 +36,24 @@ async function verifyEmailDomain(email: string): Promise<boolean> {
   }
 }
 
+/**
+ * Memverifikasi validitas alamat email menggunakan Abstract Email Validation API.
+ * Memeriksa deliverability (kemampuan pengiriman) dan mendeteksi email disposable (sekali pakai).
+ *
+ * Strategi fallback berlapis:
+ * 1. Jika API Key tidak tersedia: validasi melalui regex + DNS MX Record.
+ * 2. Jika API mengembalikan error: kembali ke validasi regex + DNS MX Record.
+ * 3. Jika API merespons normal: gunakan hasil deliverability dan deteksi disposable.
+ *
+ * @param email - Alamat email yang akan diverifikasi.
+ * @returns Objek `{ valid, reason? }` yang menunjukkan status validitas beserta alasan penolakan.
+ */
 async function verifyEmailAbstract(
   email: string
 ): Promise<{ valid: boolean; reason?: string }> {
   const apiKey = process.env.ABSTRACT_EMAIL_API_KEY;
 
-  // Stronger Fallback: DNS MX Record check
+  /** Fallback: validasi regex dasar diikuti pemeriksaan DNS MX Record */
   const fallbackRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   let isRegexValid = fallbackRegex.test(email);
   if (isRegexValid) {
@@ -53,7 +77,7 @@ async function verifyEmailAbstract(
 
     if (data.error) {
       console.error("Abstract Email API Error:", data.error.message);
-      // Smart Fallback if API Key is invalid or rate limited
+      /** Fallback otomatis jika API Key tidak valid atau rate limit tercapai */
       return isRegexValid
         ? { valid: true }
         : {
@@ -62,7 +86,7 @@ async function verifyEmailAbstract(
           };
     }
 
-    // Deliverability can be DELIVERABLE, UNDELIVERABLE, RISKY, UNKNOWN
+    /** Evaluasi deliverability: DELIVERABLE, UNDELIVERABLE, RISKY, atau UNKNOWN */
     if (data.deliverability === "UNDELIVERABLE") {
       return {
         valid: false,
@@ -88,12 +112,23 @@ async function verifyEmailAbstract(
   }
 }
 
+/**
+ * Memverifikasi validitas nomor telepon menggunakan Abstract Phone Validation API.
+ * Memeriksa apakah nomor telepon terdaftar dan memiliki format yang benar.
+ *
+ * Strategi fallback:
+ * 1. Jika API Key tidak tersedia: validasi melalui pola regex (minimal 8 digit, mendukung format internasional).
+ * 2. Jika API mengembalikan error: kembali ke validasi regex.
+ *
+ * @param phone - Nomor telepon yang akan diverifikasi.
+ * @returns Objek `{ valid, reason? }` yang menunjukkan status validitas beserta alasan penolakan.
+ */
 async function verifyPhoneAbstract(
   phone: string
 ): Promise<{ valid: boolean; reason?: string }> {
   const apiKey = process.env.ABSTRACT_PHONE_API_KEY;
 
-  // Regex Fallback for Phone (at least 8 digits, optional +, spaces, dashes)
+  /** Fallback: pola regex untuk nomor telepon (minimal 8 digit, opsional +, spasi, tanda hubung) */
   const fallbackRegex = /^\+?[0-9\s\-\(\)]{8,20}$/;
   const isRegexValid = fallbackRegex.test(phone);
 
@@ -111,7 +146,7 @@ async function verifyPhoneAbstract(
 
     if (data.error) {
       console.error("Abstract Phone API Error:", data.error.message);
-      // Smart Fallback if API Key is invalid
+      /** Fallback otomatis jika API Key tidak valid */
       return isRegexValid
         ? { valid: true }
         : { valid: false, reason: "Format nomor telepon tidak valid." };
@@ -134,14 +169,29 @@ async function verifyPhoneAbstract(
   }
 }
 
+/**
+ * Server Action utama untuk memproses pengiriman formulir kontak.
+ *
+ * Alur pemrosesan:
+ * 1. Validasi data masuk menggunakan skema Zod.
+ * 2. Verifikasi alamat email melalui Abstract API (dengan fallback DNS MX Record).
+ * 3. Verifikasi nomor telepon melalui Abstract API (dengan fallback regex).
+ * 4. Ambil kredensial SMTP dari environment variables.
+ * 5. Buat transporter Nodemailer dengan konfigurasi Gmail SMTP.
+ * 6. Susun konten email dalam format teks dan HTML.
+ * 7. Kirim email ke alamat penerima yang ditentukan di environment variable `EMAIL_RECEIVER`.
+ *
+ * @param formData - Data formulir yang telah divalidasi sesuai skema `contactFormSchema`.
+ * @returns Objek `{ success, message? }` yang menunjukkan hasil pengiriman.
+ */
 export async function sendContactEmail(
   formData: z.infer<typeof contactFormSchema>
 ) {
   try {
-    // 1. Validate the incoming data
+    /** Langkah 1: Validasi data masuk menggunakan skema Zod */
     const validatedData = contactFormSchema.parse(formData);
 
-    // 1.5 Verify email via Abstract API
+    /** Langkah 2: Verifikasi alamat email melalui Abstract API */
     const emailCheck = await verifyEmailAbstract(validatedData.email);
     if (!emailCheck.valid) {
       return {
@@ -150,7 +200,7 @@ export async function sendContactEmail(
       };
     }
 
-    // 1.6 Verify phone via Abstract API
+    /** Langkah 3: Verifikasi nomor telepon melalui Abstract API */
     const phoneCheck = await verifyPhoneAbstract(validatedData.phone);
     if (!phoneCheck.valid) {
       return {
@@ -159,7 +209,7 @@ export async function sendContactEmail(
       };
     }
 
-    // 2. Extract credentials from environment variables
+    /** Langkah 4: Ambil kredensial SMTP dari environment variables */
     const emailUser = process.env.EMAIL_USER;
     const emailPass = process.env.EMAIL_PASS;
 
@@ -172,7 +222,7 @@ export async function sendContactEmail(
       };
     }
 
-    // 3. Create the Nodemailer transporter
+    /** Langkah 5: Buat transporter Nodemailer dengan konfigurasi Gmail SMTP */
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -181,7 +231,7 @@ export async function sendContactEmail(
       },
     });
 
-    // 4. Construct the email content
+    /** Langkah 6: Susun konten email dalam format teks biasa dan HTML */
     const mailOptions = {
       from: `"${validatedData.name}" <${emailUser}>`,
       to: process.env.EMAIL_RECEIVER || "thelawticsa@gmail.com",
@@ -214,7 +264,7 @@ ${validatedData.message}
       `,
     };
 
-    // 5. Send the email
+    /** Langkah 7: Kirim email melalui transporter */
     await transporter.sendMail(mailOptions);
 
     return { success: true };

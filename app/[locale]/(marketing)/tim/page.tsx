@@ -40,7 +40,7 @@ export default async function TeamPage({ params }: Props) {
                 delay={0.1 * index}
               >
                 <div className="group relative overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-sm transition-all duration-300 hover:border-gold-300 hover:shadow-xl hover:shadow-gold-900/5 h-full flex flex-col">
-                  {/* Image Container */}
+                  {/* Kontainer gambar */}
                   <div className="aspect-[4/5] w-full overflow-hidden bg-navy-900 relative">
                     <Image
                       src={member.imagePlaceholder}
@@ -69,7 +69,7 @@ export default async function TeamPage({ params }: Props) {
                     </div>
                   </div>
 
-                  {/* Content */}
+                  {/* Konten */}
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="mb-4 pb-4 border-b border-gray-100 flex-grow">
                       <p className="text-sm font-semibold text-navy-900 uppercase tracking-wider mb-2">

@@ -32,7 +32,7 @@ export function PageHero({
         className
       )}
     >
-      {/* Background Image / Gradient */}
+      {/* Gambar latar belakang atau gradien */}
       <div className="absolute inset-0 z-0">
         {backgroundImage ? (
           <>
@@ -68,7 +68,7 @@ export function PageHero({
         </AnimatedElement>
       </Container>
 
-      {/* Bottom gradient fade */}
+      {/* Gradien pudar di bagian bawah */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-600/30 to-transparent" />
     </section>
   );

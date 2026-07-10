@@ -63,7 +63,7 @@ export default async function PracticeAreaPage({
     notFound();
   }
 
-  // @ts-ignore - dynamic icon lookup
+  /** @ts-ignore - pencarian ikon secara dinamis berdasarkan nama string */
   const Icon = LucideIcons[area.icon];
 
   return (
@@ -84,7 +84,7 @@ export default async function PracticeAreaPage({
       <SectionWrapper background="white">
         <Container>
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-            {/* Main Content */}
+            {/* Konten utama */}
             <div className="lg:col-span-8">
               <Link
                 href={`/${locale}/layanan`}

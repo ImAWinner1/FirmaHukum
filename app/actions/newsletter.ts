@@ -4,10 +4,22 @@ import nodemailer from "nodemailer";
 import { z } from "zod";
 import dns from "dns";
 
+/**
+ * Skema validasi Zod untuk data langganan newsletter.
+ * Hanya memerlukan satu field `email` yang memenuhi format alamat email standar.
+ */
 const newsletterSchema = z.object({
   email: z.string().email(),
 });
 
+/**
+ * Memverifikasi keberadaan domain email melalui pencarian DNS MX Record.
+ * Digunakan sebagai lapisan validasi untuk memastikan domain email
+ * benar-benar memiliki server penerima email yang terdaftar.
+ *
+ * @param email - Alamat email yang akan diverifikasi domainnya.
+ * @returns `true` jika domain memiliki MX Record, `false` jika tidak.
+ */
 async function verifyEmailDomain(email: string): Promise<boolean> {
   const domain = email.split("@")[1];
   if (!domain) return false;
@@ -20,6 +32,23 @@ async function verifyEmailDomain(email: string): Promise<boolean> {
   }
 }
 
+/**
+ * Server Action utama untuk memproses langganan newsletter.
+ *
+ * Alur pemrosesan:
+ * 1. Validasi data masuk menggunakan skema Zod.
+ * 2. Verifikasi domain email melalui DNS MX Record.
+ * 3. Ambil kredensial SMTP dari environment variables.
+ * 4. Buat transporter Nodemailer dengan konfigurasi Gmail SMTP.
+ * 5. Kirim email notifikasi ke admin tentang pelanggan baru.
+ * 6. Kirim email selamat datang ke pelanggan yang baru berlangganan.
+ *
+ * Kedua email (notifikasi admin dan sambutan pelanggan) dikirim secara paralel
+ * menggunakan `Promise.all` untuk efisiensi waktu respons.
+ *
+ * @param formData - Data formulir dalam bentuk `FormData` (dari elemen form HTML) atau objek `{ email }`.
+ * @returns Objek `{ success, message? }` yang menunjukkan hasil proses langganan.
+ */
 export async function subscribeNewsletter(
   formData: FormData | { email: string }
 ) {
@@ -27,10 +56,10 @@ export async function subscribeNewsletter(
     const rawEmail =
       formData instanceof FormData ? formData.get("email") : formData.email;
 
-    // 1. Validate the incoming data
+    /** Langkah 1: Validasi data masuk menggunakan skema Zod */
     const validatedData = newsletterSchema.parse({ email: rawEmail });
 
-    // 2. Verify email domain (MX Record Check)
+    /** Langkah 2: Verifikasi domain email melalui DNS MX Record */
     const isDomainValid = await verifyEmailDomain(validatedData.email);
     if (!isDomainValid) {
       return {
@@ -39,7 +68,7 @@ export async function subscribeNewsletter(
       };
     }
 
-    // 3. Extract credentials from environment variables
+    /** Langkah 3: Ambil kredensial SMTP dari environment variables */
     const emailUser = process.env.EMAIL_USER;
     const emailPass = process.env.EMAIL_PASS;
 
@@ -52,7 +81,7 @@ export async function subscribeNewsletter(
       };
     }
 
-    // 4. Create the Nodemailer transporter
+    /** Langkah 4: Buat transporter Nodemailer dengan konfigurasi Gmail SMTP */
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -61,7 +90,7 @@ export async function subscribeNewsletter(
       },
     });
 
-    // 5. Send notification to admin
+    /** Langkah 5: Susun dan kirim email notifikasi ke admin */
     const mailOptionsAdmin = {
       from: `"Newsletter Subscriber" <${emailUser}>`,
       to: process.env.EMAIL_RECEIVER || "thelawticsa@gmail.com",
@@ -80,7 +109,7 @@ export async function subscribeNewsletter(
       `,
     };
 
-    // 6. Send welcome email to subscriber
+    /** Langkah 6: Susun dan kirim email sambutan ke pelanggan baru */
     const mailOptionsSubscriber = {
       from: `"Firma Hukum" <${emailUser}>`,
       to: validatedData.email,
@@ -100,6 +129,7 @@ export async function subscribeNewsletter(
       `,
     };
 
+    /** Kirim kedua email secara paralel untuk efisiensi */
     await Promise.all([
       transporter.sendMail(mailOptionsAdmin),
       transporter.sendMail(mailOptionsSubscriber),

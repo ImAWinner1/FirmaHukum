@@ -32,7 +32,7 @@ export default async function ContactPage({ params }: Props) {
       <SectionWrapper background="cream">
         <Container>
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-            {/* Form Section */}
+            {/* Bagian formulir kontak */}
             <div className="lg:col-span-7">
               <AnimatedElement variant="fadeRight">
                 <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm md:p-10">
@@ -48,7 +48,7 @@ export default async function ContactPage({ params }: Props) {
               </AnimatedElement>
             </div>
 
-            {/* Contact Info Section */}
+            {/* Bagian informasi kontak */}
             <div className="lg:col-span-5 space-y-8">
               <AnimatedElement variant="fadeLeft">
                 <h2 className="font-heading text-2xl font-bold text-navy-950 mb-6">
@@ -137,7 +137,7 @@ export default async function ContactPage({ params }: Props) {
                 delay={0.2}
                 className="h-64 w-full overflow-hidden rounded-2xl bg-gray-200 border border-gray-200"
               >
-                {/* Embedded Map Placeholder */}
+                {/* Peta lokasi kantor */}
                 <iframe
                   src="https://maps.google.com/maps?q=Jl.+AH.+Nasution+No.105,+Cipadung+Wetan,+Kec.+Cibiru,+Kota+Bandung,+Jawa+Barat+40614&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"

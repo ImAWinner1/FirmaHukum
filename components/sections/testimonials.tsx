@@ -27,7 +27,7 @@ export function Testimonials({
         </AnimatedElement>
 
         <div className="group relative flex w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 gap-6">
-          {/* First Marquee Set */}
+          {/* Set marquee pertama */}
           <div className="flex shrink-0 animate-marquee gap-6 group-hover:[animation-play-state:paused]">
             {[...dict.testimonials.items, ...dict.testimonials.items].map(
               (item, index) => (
@@ -77,7 +77,7 @@ export function Testimonials({
             )}
           </div>
 
-          {/* Second Marquee Set (for seamless looping) */}
+          {/* Set marquee kedua (untuk efek looping tanpa jeda) */}
           <div
             className="flex shrink-0 animate-marquee gap-6 group-hover:[animation-play-state:paused]"
             aria-hidden="true"

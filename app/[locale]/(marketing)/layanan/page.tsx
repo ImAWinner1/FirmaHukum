@@ -41,7 +41,7 @@ export default async function ServicesPage({ params }: Props) {
         <Container>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {practiceAreas.map((area) => {
-              // @ts-ignore - dynamic icon lookup
+              /** @ts-ignore - pencarian ikon secara dinamis berdasarkan nama string */
               const Icon = LucideIcons[area.icon];
 
               return (

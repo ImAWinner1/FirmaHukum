@@ -19,11 +19,11 @@ export function Statistics({
   dict: Dictionary;
   locale: string;
 }) {
-  // Memoize icon mapping to avoid repeated lookups
+  /** Memoize pemetaan ikon agar tidak melakukan pencarian ulang (lookup) pada setiap render */
   const iconMap = useMemo(() => {
     const map: Record<string, React.ElementType> = {};
     statistics.forEach((stat) => {
-      // @ts-ignore - dynamic icon lookup
+      /** @ts-ignore - pencarian ikon secara dinamis berdasarkan nama string */
       const Icon = LucideIcons[stat.icon];
       if (Icon) map[stat.icon] = Icon;
     });

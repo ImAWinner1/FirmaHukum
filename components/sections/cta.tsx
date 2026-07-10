@@ -12,7 +12,7 @@ import type { Dictionary } from "@/dictionaries/id";
 export function CTA({ dict, locale }: { dict: Dictionary; locale: string }) {
   return (
     <SectionWrapper background="navy" className="relative overflow-hidden">
-      {/* Decorative background elements */}
+      {/* Elemen dekoratif latar belakang */}
       <div
         className="absolute inset-0 opacity-[0.07]"
         style={{

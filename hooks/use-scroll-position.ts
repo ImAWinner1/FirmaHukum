@@ -14,7 +14,7 @@ export function useScrollPosition(threshold: number = 50): boolean {
       setIsScrolled(window.scrollY > threshold);
     }
 
-    // Check initial position
+    /** Periksa posisi scroll awal saat komponen pertama kali di-mount */
     handleScroll();
 
     window.addEventListener("scroll", handleScroll, { passive: true });

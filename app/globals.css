@@ -10,13 +10,13 @@
    ========================================================================== */
 
 @theme inline {
-  /* — Font families — */
+  /* Font families - Keluarga font */
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-playfair);
 
-  /* — shadcn semantic color mappings — */
+  /* shadcn semantic color mappings - Pemetaan warna semantik shadcn/ui */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -36,7 +36,7 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  /* — Custom project colors — */
+  /* Custom project colors - Warna kustom proyek */
   --color-navy-950: #0a0f1c;
   --color-navy-900: #0e1629;
   --color-navy-800: #141d33;
@@ -53,7 +53,7 @@
   --color-cream-100: #f5f1e8;
   --color-cream-200: #ede7d9;
 
-  /* — Radius scale — */
+  /* Radius scale - Skala radius sudut */
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
@@ -61,7 +61,7 @@
   --radius-2xl: 24px;
   --radius-full: 9999px;
 
-  /* — Sidebar (required by shadcn) — */
+  /* Sidebar - Dibutuhkan oleh komponen shadcn/ui */
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -71,14 +71,14 @@
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
 
-  /* — Chart colors (required by shadcn) — */
+  /* Chart colors - Warna grafik (dibutuhkan oleh komponen shadcn/ui) */
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
 
-  /* — Custom Animations — */
+  /* Custom Animations - Animasi kustom */
   --animate-marquee: marquee 40s linear infinite;
 
   @keyframes marquee {
@@ -92,15 +92,16 @@
 }
 
 /* ==========================================================================
-   ROOT VARIABLES — Light mode (default)
-   Used for cream/white sections. shadcn semantic tokens mapped to our palette.
+   ROOT VARIABLES - Light mode (default)
+   Digunakan untuk section dengan latar krem/putih.
+   Token semantik shadcn dipetakan ke palet warna proyek.
    ========================================================================== */
 :root {
-  /* Core */
+  /* Core - Inti */
   --background: #ffffff;
   --foreground: #111319;
 
-  /* Cards */
+  /* Cards - Kartu */
   --card: #ffffff;
   --card-foreground: #111319;
 
@@ -108,23 +109,23 @@
   --popover: #ffffff;
   --popover-foreground: #111319;
 
-  /* Primary = Gold accent */
+  /* Primary - Aksen emas */
   --primary: #c9a24a;
   --primary-foreground: #0a0f1c;
 
-  /* Secondary = Navy */
+  /* Secondary - Warna Navy */
   --secondary: #0e1629;
   --secondary-foreground: #f9fafb;
 
-  /* Muted */
+  /* Muted - Warna redup */
   --muted: #f3f4f6;
   --muted-foreground: #6b7280;
 
-  /* Accent */
+  /* Accent - Warna aksen */
   --accent: #f5f1e8;
   --accent-foreground: #111319;
 
-  /* Destructive */
+  /* Destructive - Warna peringatan/error */
   --destructive: #dc2626;
 
   /* Borders / Input / Ring */
@@ -132,7 +133,7 @@
   --input: #e5e7eb;
   --ring: #c9a24a;
 
-  /* Charts */
+  /* Charts - Warna grafik */
   --chart-1: #c9a24a;
   --chart-2: #0e1629;
   --chart-3: #6b7280;
@@ -151,7 +152,8 @@
 }
 
 /* ==========================================================================
-   DARK MODE — Used for navy sections (hero, footer, team, navbar)
+   DARK MODE
+   Digunakan untuk section berwarna navy (hero, footer, tim, navbar)
    ========================================================================== */
 .dark {
   --background: #0a0f1c;
@@ -199,6 +201,7 @@
 
 /* ==========================================================================
    BASE LAYER
+   Lapisan dasar untuk elemen HTML
    ========================================================================== */
 @layer base {
   * {
@@ -214,7 +217,7 @@
     scroll-behavior: smooth;
   }
 
-  /* Respect reduced motion preference */
+  /* Respect reduced motion preference - Hormati preferensi reduced-motion dari pengguna */
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -226,13 +229,13 @@
     }
   }
 
-  /* Focus ring — accessible gold ring */
+  /* Focus ring - Cincin fokus aksesibel berwarna emas */
   :focus-visible {
     outline: 2px solid var(--ring);
     outline-offset: 2px;
   }
 
-  /* Selection */
+  /* Selection - Warna seleksi teks */
   ::selection {
     background-color: #c9a24a;
     color: #0a0f1c;
@@ -241,9 +244,10 @@
 
 /* ==========================================================================
    UTILITY CLASSES
+   Kelas utilitas kustom
    ========================================================================== */
 @layer utilities {
-  /* Container utility */
+  /* Container utility - Utilitas kontainer */
   .container-custom {
     width: 100%;
     max-width: 1280px;
@@ -263,7 +267,7 @@
     }
   }
 
-  /* Section padding utility */
+  /* Section padding utility - Utilitas padding section */
   .section-padding {
     padding-block: 3rem;
   }
@@ -286,12 +290,12 @@
     }
   }
 
-  /* Heading font utility */
+  /* Heading font utility - Utilitas font heading */
   .font-heading {
     font-family: var(--font-playfair), Georgia, "Times New Roman", serif;
   }
 
-  /* Gold text gradient */
+  /* Gold text gradient - Gradien teks emas */
   .text-gradient-gold {
     background: linear-gradient(135deg, #d4af6a 0%, #c9a24a 50%, #e0c083 100%);
     -webkit-background-clip: text;
@@ -299,7 +303,7 @@
     background-clip: text;
   }
 
-  /* Subtle gold border glow */
+  /* Subtle gold border glow - Cahaya border emas halus */
   .border-glow-gold {
     box-shadow: 0 0 0 1px rgba(201, 162, 74, 0.2);
   }

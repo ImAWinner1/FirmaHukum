@@ -2,12 +2,16 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
+/**
+ * Konfigurasi ESLint untuk proyek Next.js.
+ * Menggunakan preset `core-web-vitals` dan `typescript` dari eslint-config-next.
+ */
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
-  // Override default ignores of eslint-config-next.
+  /** Override pola ignore bawaan dari eslint-config-next */
   globalIgnores([
-    // Default ignores of eslint-config-next:
+    /** Direktori dan file yang dikecualikan dari proses linting */
     ".next/**",
     "out/**",
     "build/**",

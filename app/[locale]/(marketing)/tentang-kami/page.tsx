@@ -94,7 +94,7 @@ export default async function AboutPage({ params }: Props) {
         description={dict.aboutPage.heroDesc}
       />
 
-      {/* Story & Philosophy */}
+      {/* Cerita dan Filosofi */}
       <SectionWrapper background="white">
         <Container>
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
@@ -122,7 +122,7 @@ export default async function AboutPage({ params }: Props) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent" />
 
-                {/* Decorative Elements */}
+                {/* Elemen dekoratif */}
                 <div className="absolute bottom-8 left-8 right-8 border-l-2 border-gold-500 pl-6 py-2">
                   <p className="font-heading text-2xl font-bold text-white mb-2">
                     "{dict.aboutPage.quote}"
@@ -137,9 +137,9 @@ export default async function AboutPage({ params }: Props) {
         </Container>
       </SectionWrapper>
 
-      {/* Vision & Mission */}
+      {/* Visi dan Misi */}
       <SectionWrapper background="navy" className="relative overflow-hidden">
-        {/* Subtle background element */}
+        {/* Elemen latar belakang halus */}
         <div className="absolute right-0 top-0 h-full w-1/3 bg-gold-600/5 blur-[120px]" />
 
         <Container className="relative z-10">
@@ -179,7 +179,7 @@ export default async function AboutPage({ params }: Props) {
         </Container>
       </SectionWrapper>
 
-      {/* Core Values */}
+      {/* Nilai Inti */}
       <SectionWrapper background="cream">
         <Container>
           <AnimatedElement variant="fadeUp">
@@ -216,7 +216,7 @@ export default async function AboutPage({ params }: Props) {
         </Container>
       </SectionWrapper>
 
-      {/* Timeline */}
+      {/* Lini Masa */}
       <SectionWrapper background="white">
         <Container className="max-w-4xl">
           <AnimatedElement variant="fadeUp">
@@ -234,19 +234,19 @@ export default async function AboutPage({ params }: Props) {
                 delay={index * 0.1}
                 className="relative pl-8 md:pl-0"
               >
-                {/* Desktop timeline line */}
+                {/* Garis lini masa desktop */}
                 <div className="hidden md:block absolute left-[50%] top-0 bottom-[-3rem] w-px bg-gray-200 -translate-x-1/2 last:bottom-0" />
 
-                {/* Mobile timeline line */}
+                {/* Garis lini masa mobile */}
                 <div className="block md:hidden absolute left-0 top-2 bottom-[-3rem] w-px bg-gray-200 last:bottom-0" />
 
                 <div
                   className={`md:flex items-center justify-between ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
                 >
-                  {/* Timeline dot */}
+                  {/* Titik lini masa */}
                   <div className="absolute left-[-5px] md:left-[50%] top-1.5 md:top-1/2 h-3 w-3 rounded-full bg-gold-500 md:-translate-x-1/2 md:-translate-y-1/2 ring-4 ring-white" />
 
-                  {/* Content Box */}
+                  {/* Kotak konten */}
                   <div className="md:w-[45%]">
                     <div className="rounded-xl border border-gray-100 bg-cream-50/50 p-6 shadow-sm">
                       <span className="text-sm font-bold text-gold-600 mb-2 block">
@@ -259,7 +259,7 @@ export default async function AboutPage({ params }: Props) {
                     </div>
                   </div>
 
-                  {/* Empty space for alternating layout on desktop */}
+                  {/* Ruang kosong untuk tata letak bergantian di desktop */}
                   <div className="hidden md:block md:w-[45%]" />
                 </div>
               </AnimatedElement>
@@ -268,7 +268,7 @@ export default async function AboutPage({ params }: Props) {
         </Container>
       </SectionWrapper>
 
-      {/* Office & Global Reach */}
+      {/* Kantor dan Jangkauan */}
       <SectionWrapper background="navy" className="border-t border-navy-800">
         <Container>
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">

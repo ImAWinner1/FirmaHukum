@@ -19,11 +19,11 @@ export function TeamPreview({
   dict: Dictionary;
   locale: string;
 }) {
-  // Use all teamMembers for the marquee slider
+  /** Menggunakan seluruh data anggota tim untuk slider marquee horizontal */
 
   return (
     <SectionWrapper background="navy" className="relative overflow-hidden">
-      {/* Decorative background grid */}
+      {/* Grid dekoratif latar belakang */}
       <div
         className="absolute inset-0 opacity-[0.02]"
         style={{
@@ -44,7 +44,7 @@ export function TeamPreview({
         </AnimatedElement>
 
         <div className="group relative flex w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 gap-6">
-          {/* First Marquee Set */}
+          {/* Set marquee pertama */}
           <div className="flex shrink-0 animate-marquee gap-6 group-hover:[animation-play-state:paused]">
             {teamMembers.map((member) => (
               <div
@@ -52,7 +52,7 @@ export function TeamPreview({
                 className="w-[280px] md:w-[300px] shrink-0 h-full"
               >
                 <div className="group/card relative overflow-hidden rounded-xl bg-navy-900 border border-navy-700/50 transition-all duration-300 hover:border-gold-600/50 hover:shadow-2xl hover:shadow-gold-600/10">
-                  {/* Image Container */}
+                  {/* Kontainer gambar */}
                   <div className="aspect-[3/4] w-full overflow-hidden bg-navy-950 relative">
                     <Image
                       src={member.imagePlaceholder}
@@ -63,7 +63,7 @@ export function TeamPreview({
                     />
                   </div>
 
-                  {/* Content */}
+                  {/* Konten */}
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950 via-navy-950/90 to-transparent p-6 pt-12">
                     <div className="h-[3.5rem] mb-1 flex items-center">
                       <h3 className="font-heading text-lg font-bold text-white transition-colors group-hover/card:text-gold-500 line-clamp-2">
@@ -109,7 +109,7 @@ export function TeamPreview({
             ))}
           </div>
 
-          {/* Second Marquee Set */}
+          {/* Set marquee kedua */}
           <div
             className="flex shrink-0 animate-marquee gap-6 group-hover:[animation-play-state:paused]"
             aria-hidden="true"
@@ -120,7 +120,7 @@ export function TeamPreview({
                 className="w-[280px] md:w-[300px] shrink-0 h-full"
               >
                 <div className="group/card relative overflow-hidden rounded-xl bg-navy-900 border border-navy-700/50 transition-all duration-300 hover:border-gold-600/50 hover:shadow-2xl hover:shadow-gold-600/10">
-                  {/* Image Container */}
+                  {/* Kontainer gambar */}
                   <div className="aspect-[3/4] w-full overflow-hidden bg-navy-950 relative">
                     <Image
                       src={member.imagePlaceholder}
@@ -131,7 +131,7 @@ export function TeamPreview({
                     />
                   </div>
 
-                  {/* Content */}
+                  {/* Konten */}
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950 via-navy-950/90 to-transparent p-6 pt-12">
                     <div className="h-[3.5rem] mb-1 flex items-center">
                       <h3 className="font-heading text-lg font-bold text-white transition-colors group-hover/card:text-gold-500 line-clamp-2">

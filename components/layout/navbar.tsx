@@ -70,7 +70,7 @@ export function Navbar({ dict, locale }: { dict: Dictionary; locale: string }) {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Navigasi desktop */}
           <ul className="hidden items-center gap-1 lg:flex">
             {navItems.map((item) => {
               const fullHref = `/${locale}${item.href === "/" ? "" : item.href}`;
@@ -97,7 +97,7 @@ export function Navbar({ dict, locale }: { dict: Dictionary; locale: string }) {
                       )}
                     </Link>
 
-                    {/* Dropdown */}
+                    {/* Menu dropdown */}
                     <div className="absolute left-0 top-full invisible w-64 pt-2 opacity-0 translate-y-2 transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">
                       <div className="rounded-lg border border-navy-700 bg-navy-900 p-2 shadow-xl shadow-black/20">
                         {practiceAreas.map((area) => (
@@ -138,9 +138,9 @@ export function Navbar({ dict, locale }: { dict: Dictionary; locale: string }) {
             })}
           </ul>
 
-          {/* Desktop CTA + Language Switcher */}
+          {/* CTA dan pengalih bahasa desktop */}
           <div className="hidden items-center gap-4 lg:flex">
-            {/* Language switcher */}
+            {/* Pengalih bahasa */}
             <div
               className="flex items-center gap-2 text-xs font-medium"
               aria-label="Pemilih bahasa"
@@ -177,7 +177,7 @@ export function Navbar({ dict, locale }: { dict: Dictionary; locale: string }) {
               </Button>
             </Link>
           </div>
-          {/* Mobile Menu Toggle */}
+          {/* Tombol toggle menu mobile */}
           <label
             htmlFor="mobile-menu-toggle"
             className="lg:hidden relative z-50 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-navy-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gold-500 cursor-pointer"
@@ -195,7 +195,7 @@ export function Navbar({ dict, locale }: { dict: Dictionary; locale: string }) {
         </nav>
       </header>
 
-      {/* Mobile Menu Overlay and Content */}
+      {/* Overlay dan konten menu mobile */}
       <label
         htmlFor="mobile-menu-toggle"
         className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm lg:hidden opacity-0 pointer-events-none peer-checked:opacity-100 peer-checked:pointer-events-auto transition-opacity"
@@ -312,7 +312,7 @@ export function Navbar({ dict, locale }: { dict: Dictionary; locale: string }) {
             })}
           </ul>
 
-          {/* Mobile Language Switcher */}
+          {/* Pengalih bahasa mobile */}
           <div className="mt-4 flex items-center gap-4 px-3 py-2">
             <span className="text-sm font-medium text-gray-400">Bahasa:</span>
             <div className="flex items-center gap-3 text-sm font-medium">
@@ -346,7 +346,7 @@ export function Navbar({ dict, locale }: { dict: Dictionary; locale: string }) {
             </div>
           </div>
 
-          {/* Mobile CTA */}
+          {/* CTA mobile */}
           <div className="mt-6 border-t border-navy-700 pt-6">
             <Link
               href={`/${locale}/kontak`}

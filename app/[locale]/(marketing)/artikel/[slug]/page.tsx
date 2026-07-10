@@ -52,7 +52,7 @@ export default async function ArticleDetailPage({ params }: Props) {
   }
 
   const localizedArticles = getArticles(locale);
-  // Get some related articles (just excluding the current one)
+  /** Ambil artikel terkait (mengecualikan artikel yang sedang ditampilkan, maksimal 3 item) */
   const relatedArticles = localizedArticles
     .filter((a) => a.id !== article.id)
     .slice(0, 3);

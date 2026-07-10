@@ -21,12 +21,12 @@ export function WhyChooseUs({
     <SectionWrapper background="white">
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-24 items-center">
-          {/* Left Column - Image */}
+          {/* Kolom kiri - Gambar */}
           <AnimatedElement
             variant="fadeRight"
             className="relative w-full aspect-[3/4] md:aspect-[4/5] lg:aspect-auto lg:h-full lg:min-h-[600px] overflow-hidden rounded-2xl bg-navy-900"
           >
-            {/* Portrait of Rizky Maulana Malik Ibrahim */}
+            {/* Potret Rizky Maulana Malik Ibrahim */}
             <Image
               src="/images/team/Rizky Maulana Malik Ibrahim-v4.png"
               alt="Rizky Maulana Malik Ibrahim"
@@ -62,7 +62,7 @@ export function WhyChooseUs({
             </div>
           </AnimatedElement>
 
-          {/* Right Column - Content */}
+          {/* Kolom kanan - Konten */}
           <div>
             <AnimatedElement variant="fadeLeft">
               <SectionHeading

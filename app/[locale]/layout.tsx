@@ -50,7 +50,7 @@ export const metadata: Metadata = {
       "Firma hukum profesional yang menyediakan layanan konsultasi dan pendampingan hukum terpercaya untuk individu dan korporasi di Indonesia.",
     images: [
       {
-        url: "/opengraph-image.jpg",
+        url: "/preview-image.jpg",
         width: 1200,
         height: 630,
         alt: "Firma Hukum",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Firma Hukum | Solusi Hukum Terpercaya",
     description:
       "Firma hukum profesional yang menyediakan layanan konsultasi dan pendampingan hukum terpercaya untuk individu dan korporasi di Indonesia.",
-    images: ["/opengraph-image.jpg"],
+    images: ["/preview-image.jpg"],
   },
   robots: {
     index: true,
@@ -86,7 +86,7 @@ export default async function RootLayout({
 }>) {
   const { locale } = await params;
 
-  // JSON-LD Structured Data
+  /** Structured Data (JSON-LD) untuk SEO: mendefinisikan entitas Organization dan LegalService */
   const structuredData = {
     "@context": "https://schema.org",
     "@type": ["Organization", "LegalService"],

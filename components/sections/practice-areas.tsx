@@ -28,7 +28,7 @@ export function PracticeAreas({
   const iconMap = useMemo(() => {
     const map: Record<string, React.ElementType> = {};
     practiceAreas.forEach((area) => {
-      // @ts-ignore - dynamic icon lookup
+      /** @ts-ignore - pencarian ikon secara dinamis berdasarkan nama string */
       const Icon = LucideIcons[area.icon];
       if (Icon) map[area.icon] = Icon;
     });
