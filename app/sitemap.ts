@@ -8,7 +8,7 @@ import { getAllPracticeAreaSlugs } from "@/lib/data/practice-areas";
  * dan route dinamis (halaman detail setiap area praktik hukum).
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://firmahukum.id";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://thelawticsa-firmahukum.vercel.app";
 
   /** Route statis utama situs */
   const routes = ["", "/tentang-kami", "/layanan", "/tim", "/kontak"].map(
