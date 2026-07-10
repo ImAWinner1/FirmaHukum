@@ -293,9 +293,7 @@ firma-hukum/
 ├── next.config.ts
 ├── tailwind.config.ts
 ├── tsconfig.json
-├── package.json
-├── AGENTS.md
-└── DESIGN.md
+└── package.json
 ```
 
 ### Penjelasan Pola Desain Direktori
@@ -405,7 +403,7 @@ Pastikan langkah berikut telah dilakukan sebelum mengajukan Pull Request:
 
 Proyek ini bersifat **proprietary** dan tidak dilisensikan untuk penggunaan publik.
 
-Hak Cipta &copy; 2025 Firma Hukum. Seluruh hak dilindungi undang-undang.
+Hak Cipta &copy; 2026 Firma Hukum. Seluruh hak dilindungi undang-undang.
 
 ---
 
