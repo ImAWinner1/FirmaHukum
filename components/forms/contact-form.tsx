@@ -4,7 +4,8 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Loader2, CheckCircle2 } from "lucide-react";
+import { Loader2, ChevronDown } from "lucide-react";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,16 +17,10 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { practiceAreas } from "@/lib/data/practice-areas";
+import { sendContactEmail } from "@/app/actions/contact";
 
-
+import { useEffect } from "react";
 
 export function ContactForm({ dict }: { dict: any }) {
   const contactFormSchema = z.object({
@@ -36,8 +31,8 @@ export function ContactForm({ dict }: { dict: any }) {
     message: z.string().min(10, { message: dict.contactForm.errors.message })
   });
   type ContactFormValues = z.infer<typeof contactFormSchema>;
+  
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -53,45 +48,48 @@ export function ContactForm({ dict }: { dict: any }) {
   async function onSubmit(data: ContactFormValues) {
     setIsSubmitting(true);
     
-    // Simulate API call for form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    
-    console.log("Form submitted:", data);
-    
-    setIsSubmitting(false);
-    setIsSuccess(true);
-    form.reset();
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => {
-      setIsSuccess(false);
-    }, 5000);
-  }
+    try {
+      const response = await sendContactEmail(data);
+      if (response.success) {
+        toast.success(dict.contactForm.successTitle, {
+          description: dict.contactForm.successDesc
+        });
+        form.reset();
+      } else {
+        toast.error("Gagal Mengirim Pesan", {
+          description: response.message || "Gagal mengirim pesan."
+        });
+      }
+    } catch (error) {
+      toast.error("Kesalahan Sistem", {
+        description: "Terjadi kesalahan sistem. Silakan coba lagi nanti."
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
-  if (isSuccess) {
-    return (
-      <div className="flex flex-col items-center justify-center space-y-4 rounded-xl border border-green-100 bg-green-50 p-8 text-center shadow-sm">
-        <CheckCircle2 className="h-16 w-16 text-green-500" />
-        <h3 className="font-heading text-2xl font-bold text-navy-950">
-          {dict.contactForm.successTitle}
-        </h3>
-        <p className="text-gray-600">
-          {dict.contactForm.successDesc}
-        </p>
-        <Button 
-          variant="outline" 
-          onClick={() => setIsSuccess(false)}
-          className="mt-4 border-gold-600 text-gold-600 hover:bg-gold-50"
-        >
-          {dict.contactForm.sendAnother}
-        </Button>
-      </div>
-    );
+  function onError(errors: any) {
+    console.log("Validation errors:", errors);
+    toast.error("Formulir Tidak Lengkap", {
+      description: "Mohon periksa kembali isian formulir Anda. Ada kolom yang masih kosong atau salah format."
+    });
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form 
+        onSubmit={async (e) => {
+          e.preventDefault();
+          try {
+            await form.handleSubmit(onSubmit, onError)(e);
+          } catch (err) {
+            console.error("Form submit error:", err);
+          }
+        }} 
+        className="space-y-6"
+      >
+
         <div className="grid gap-6 md:grid-cols-2">
           <FormField
             control={form.control}
@@ -141,21 +139,23 @@ export function ContactForm({ dict }: { dict: any }) {
             render={({ field }) => (
               <FormItem>
                 <FormLabel className="text-navy-900 font-semibold">{dict.contactForm.labels.service}</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <FormControl>
-                    <SelectTrigger className="bg-white border-gray-200 focus-visible:ring-gold-500">
-                      <SelectValue placeholder={dict.contactForm.placeholders.service} />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
+                <div className="relative">
+                  <select
+                    className="flex h-10 w-full appearance-none items-center justify-between rounded-md border border-gray-200 bg-white px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 text-navy-950"
+                    {...field}
+                  >
+                    <option value="" disabled hidden>
+                      {dict.contactForm.placeholders.service}
+                    </option>
                     {practiceAreas.map((area) => (
-                      <SelectItem key={area.id} value={area.id}>
+                      <option key={area.id} value={area.id}>
                         {dict.servicesPage?.areas?.[area.id as keyof typeof dict.servicesPage.areas]?.title || area.title}
-                      </SelectItem>
+                      </option>
                     ))}
-                    <SelectItem value="other">{dict.contactForm.otherService}</SelectItem>
-                  </SelectContent>
-                </Select>
+                    <option value="other">{dict.contactForm.otherService}</option>
+                  </select>
+                  <ChevronDown className="absolute right-3 top-3 h-4 w-4 opacity-50 pointer-events-none text-gray-500" />
+                </div>
                 <FormMessage />
               </FormItem>
             )}

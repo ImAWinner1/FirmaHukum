@@ -9,6 +9,7 @@ import {
   Mail,
   Clock,
   ArrowRight,
+  Loader2,
 } from "lucide-react";
 import { Linkedin, Instagram, Facebook, Twitter } from "@/components/shared/social-icons";
 import { cn } from "@/lib/utils";
@@ -17,6 +18,7 @@ import { Container } from "@/components/shared/container";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import type { Dictionary } from "@/dictionaries/id";
+import { subscribeNewsletter } from "@/app/actions/newsletter";
 
 const socialIconMap: Record<string, React.ElementType> = {
   Linkedin,
@@ -28,6 +30,8 @@ const socialIconMap: Record<string, React.ElementType> = {
 export function Footer({ dict, locale }: { dict: Dictionary; locale: string }) {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const [isSubscribing, setIsSubscribing] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const currentYear = new Date().getFullYear();
 
   const navItems = [
@@ -47,11 +51,26 @@ export function Footer({ dict, locale }: { dict: Dictionary; locale: string }) {
     { label: dict.practiceAreas.property.title, href: "/layanan/hukum-properti" },
   ];
 
-  function handleNewsletterSubmit(e: React.FormEvent) {
+  async function handleNewsletterSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (email && email.includes("@")) {
+    if (!email || !email.includes("@")) return;
+
+    setIsSubscribing(true);
+    setError(null);
+
+    const result = await subscribeNewsletter({ email });
+
+    setIsSubscribing(false);
+
+    if (result.success) {
       setSubscribed(true);
       setEmail("");
+      
+      setTimeout(() => {
+        setSubscribed(false);
+      }, 3000);
+    } else {
+      setError(result.message || (locale === "en" ? "Failed to subscribe" : "Gagal berlangganan"));
     }
   }
 
@@ -178,25 +197,36 @@ export function Footer({ dict, locale }: { dict: Dictionary; locale: string }) {
                 {locale === "en" ? "Thank you for subscribing!" : "Terima kasih telah berlangganan!"}
               </p>
             ) : (
-              <form
-                onSubmit={handleNewsletterSubmit}
-                className="flex gap-2"
-              >
-                <Input
-                  type="email"
-                  placeholder={locale === "en" ? "Your email address" : "Alamat email Anda"}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="border-navy-700 bg-navy-900 text-sm text-white placeholder:text-gray-500 focus:border-gold-600"
-                />
-                <Button
-                  type="submit"
-                  className="shrink-0 bg-gold-600 text-navy-950 hover:bg-gold-500"
+              <div className="flex flex-col gap-2">
+                <form
+                  onSubmit={handleNewsletterSubmit}
+                  className="flex gap-2"
                 >
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </form>
+                  <Input
+                    type="email"
+                    placeholder={locale === "en" ? "Your email address" : "Alamat email Anda"}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    disabled={isSubscribing}
+                    className="border-navy-700 bg-navy-900 text-sm text-white placeholder:text-gray-500 focus:border-gold-600"
+                  />
+                  <Button
+                    type="submit"
+                    disabled={isSubscribing}
+                    className="shrink-0 bg-gold-600 text-navy-950 hover:bg-gold-500"
+                  >
+                    {isSubscribing ? (
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : (
+                      <ArrowRight className="h-4 w-4" />
+                    )}
+                  </Button>
+                </form>
+                {error && (
+                  <p className="text-xs text-red-400">{error}</p>
+                )}
+              </div>
             )}
           </div>
         </div>

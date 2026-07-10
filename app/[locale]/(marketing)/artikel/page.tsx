@@ -38,7 +38,10 @@ export default async function ArtikelPage({ params }: Props) {
                     
                     {/* Image Area */}
                     <div className="relative aspect-[16/9] w-full overflow-hidden bg-navy-900">
-                      <div className="absolute inset-0 bg-[url('/images/placeholder/portrait.jpg')] bg-cover bg-center opacity-60 mix-blend-luminosity transition-transform duration-500 group-hover:scale-105 group-hover:opacity-80" />
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center opacity-60 mix-blend-luminosity transition-transform duration-500 group-hover:scale-105 group-hover:opacity-80" 
+                        style={{ backgroundImage: `url('${article.imageUrl}')` }}
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent" />
                       
                       {/* Category Badge */}
@@ -66,7 +69,10 @@ export default async function ArtikelPage({ params }: Props) {
                       <div className="mt-auto border-t border-gray-100 pt-4 flex items-center gap-3">
                         <div className="h-8 w-8 overflow-hidden rounded-full bg-gray-200 flex-shrink-0">
                           {/* We use a simple div as avatar placeholder */}
-                          <div className="h-full w-full bg-[url('/images/placeholder/portrait.jpg')] bg-cover bg-center" />
+                          <div 
+                            className="h-full w-full bg-cover bg-center" 
+                            style={{ backgroundImage: `url('${article.authorImage}')` }}
+                          />
                         </div>
                         <div>
                           <p className="text-xs font-bold text-navy-950">{article.author}</p>

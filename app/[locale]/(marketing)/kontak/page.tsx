@@ -117,7 +117,7 @@ export default async function ContactPage({ params }: Props) {
               <AnimatedElement variant="fadeLeft" delay={0.2} className="h-64 w-full overflow-hidden rounded-2xl bg-gray-200 border border-gray-200">
                 {/* Embedded Map Placeholder */}
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.24032338245!2d106.76615560505166!3d-6.229740112833132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x100c5e82dd4b820!2sJakarta!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" 
+                  src="https://maps.google.com/maps?q=Jl.+AH.+Nasution+No.105,+Cipadung+Wetan,+Kec.+Cibiru,+Kota+Bandung,+Jawa+Barat+40614&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 

@@ -1,26 +1,20 @@
 import type { PracticeArea } from "@/types";
 
-/**
- * Practice area data — all descriptions are PLACEHOLDER content.
- * Replace with actual firm practice area details before production.
- */
 export const practiceAreas: PracticeArea[] = [
   {
     id: "hukum-korporasi",
     title: "Hukum Korporasi",
     slug: "hukum-korporasi",
     icon: "Building2",
-    shortDescription:
-      "Pendampingan hukum menyeluruh untuk kebutuhan bisnis dan korporasi, mulai dari pendirian hingga restrukturisasi perusahaan.",
-    fullDescription:
-      "Tim kami menyediakan layanan hukum korporasi yang komprehensif, mencakup pendirian perusahaan, penyusunan anggaran dasar, merger dan akuisisi, due diligence, serta kepatuhan regulasi. Kami membantu klien korporasi menavigasi kompleksitas hukum bisnis dengan solusi yang strategis dan terukur.",
+    shortDescription: "Layanan advokasi strategis dan komprehensif untuk entitas korporasi, meliputi pendirian perusahaan, aksi korporasi, hingga kepatuhan regulasi.",
+    fullDescription: "Firma kami menghadirkan layanan Hukum Korporasi dan Komersial berkaliber tinggi yang dirancang khusus untuk memenuhi dinamika bisnis modern. Kami memahami bahwa setiap entitas bisnis memerlukan fondasi hukum yang tangguh untuk memitigasi risiko dan memaksimalkan potensi pertumbuhan. Tim spesialis korporasi kami memiliki pengalaman mendalam dalam mendampingi perusahaan berskala nasional maupun multinasional melalui seluruh siklus hidup bisnis—mulai dari pendirian entitas, penyusunan tata kelola perusahaan yang ketat, hingga transaksi kompleks seperti merger, akuisisi, dan restrukturisasi finansial. Dengan pendekatan presisi, pragmatis, dan berorientasi pada hasil, kami memastikan bahwa setiap manuver bisnis strategis Anda terlindungi secara hukum dan mematuhi regulasi terkini.",
     keyServices: [
-      "Pendirian dan restrukturisasi perusahaan",
-      "Merger, akuisisi, dan joint venture",
-      "Due diligence hukum",
-      "Penyusunan kontrak bisnis",
-      "Kepatuhan regulasi dan perizinan",
-      "Corporate governance",
+      "Pendirian Entitas Bisnis & Restrukturisasi Korporasi",
+      "Merger, Akuisisi (M&A), dan Joint Venture",
+      "Uji Tuntas Hukum (Legal Due Diligence) Komprehensif",
+      "Penyusunan & Negosiasi Kontrak Komersial Kompleks",
+      "Kepatuhan Regulasi (Regulatory Compliance) & Perizinan",
+      "Tata Kelola Perusahaan (Corporate Governance) & Audit Hukum"
     ],
   },
   {
@@ -28,17 +22,15 @@ export const practiceAreas: PracticeArea[] = [
     title: "Hukum Perdata",
     slug: "hukum-perdata",
     icon: "Scale",
-    shortDescription:
-      "Penanganan sengketa perdata secara profesional melalui litigasi maupun alternatif penyelesaian sengketa.",
-    fullDescription:
-      "Kami memiliki pengalaman luas dalam menangani berbagai jenis sengketa perdata, termasuk sengketa kontrak, wanprestasi, perbuatan melawan hukum, dan sengketa properti. Pendekatan kami mengutamakan penyelesaian yang efisien namun tetap melindungi kepentingan klien secara maksimal.",
+    shortDescription: "Representasi hukum tingkat tinggi dalam penanganan sengketa perdata melalui litigasi agresif maupun alternatif penyelesaian sengketa.",
+    fullDescription: "Mengelola sengketa perdata membutuhkan kombinasi antara ketajaman analisis hukum dan strategi litigasi yang terkalibrasi. Kami menawarkan representasi hukum tingkat tinggi dalam menangani spektrum penuh sengketa perdata, mulai dari pelanggaran kontrak (wanprestasi), perbuatan melawan hukum (tort), hingga sengketa kepemilikan aset bernilai tinggi. Pendekatan kami tidak selalu berpusat pada peradilan; kami sangat piawai dalam merancang taktik negosiasi, mediasi, dan arbitrase (ADR) untuk mencapai resolusi yang efisien dan meminimalkan eksposur risiko klien. Jika proses pengadilan menjadi jalan yang tak terhindarkan, tim litigator kami siap bertarung untuk merebut kembali hak serta kepentingan komersial klien di setiap tingkatan peradilan.",
     keyServices: [
-      "Litigasi perdata di pengadilan",
-      "Mediasi dan arbitrase",
-      "Sengketa kontrak dan wanprestasi",
-      "Perbuatan melawan hukum",
-      "Eksekusi putusan pengadilan",
-      "Gugatan ganti rugi",
+      "Representasi Litigasi Perdata Komersial",
+      "Mediasi, Negosiasi, dan Arbitrase (ADR)",
+      "Sengketa Kontrak & Wanprestasi Bisnis",
+      "Gugatan Perbuatan Melawan Hukum (Tort Litigation)",
+      "Sengketa Pemegang Saham & Kemitraan",
+      "Eksekusi Putusan Pengadilan & Pemulihan Aset"
     ],
   },
   {
@@ -46,17 +38,15 @@ export const practiceAreas: PracticeArea[] = [
     title: "Hukum Pidana",
     slug: "hukum-pidana",
     icon: "Shield",
-    shortDescription:
-      "Pembelaan dan pendampingan hukum pidana dengan integritas tinggi untuk melindungi hak-hak klien.",
-    fullDescription:
-      "Tim litigasi pidana kami memberikan pendampingan hukum dari tahap penyelidikan hingga persidangan. Kami berkomitmen untuk memastikan hak-hak klien terlindungi sepenuhnya dalam setiap tahapan proses hukum pidana, dengan pendekatan yang strategis dan berintegritas.",
+    shortDescription: "Advokasi dan pembelaan hukum pidana premium, berfokus pada tindak pidana korporasi, kejahatan kerah putih, dan perlindungan hak asasi klien.",
+    fullDescription: "Menghadapi tuduhan pidana, terutama di ranah bisnis dan pemerintahan, adalah situasi dengan pertaruhan tertinggi yang dapat menghancurkan reputasi serta masa depan entitas. Kami menyediakan layanan pembelaan pidana premium yang dirancang khusus untuk menangani kejahatan kerah putih (white-collar crimes), tindak pidana korupsi, pencucian uang, dan pelanggaran pidana korporasi lainnya. Tim kami bertindak dengan tingkat diskresi dan kerahasiaan absolut, memberikan perlindungan presisi sejak tahap investigasi awal oleh pihak berwenang hingga pembelaan agresif di ruang sidang. Fokus utama kami adalah mendekonstruksi dakwaan, menyusun narasi pembelaan yang solid secara pembuktian, dan memitigasi eksposur pidana untuk melindungi klien kami.",
     keyServices: [
-      "Pendampingan hukum di kepolisian dan kejaksaan",
-      "Pembelaan di persidangan",
-      "Peninjauan kembali dan banding",
-      "Perlindungan hak tersangka dan terdakwa",
-      "Tindak pidana ekonomi dan korupsi",
-      "Tindak pidana khusus",
+      "Pembelaan Kejahatan Kerah Putih (White-Collar Crimes)",
+      "Pendampingan Investigasi Kepolisian, Kejaksaan, & KPK",
+      "Tindak Pidana Korupsi & Pencucian Uang (TPPU)",
+      "Tindak Pidana Perbankan & Penipuan Komersial",
+      "Audit Investigatif & Praperadilan",
+      "Strategi Mitigasi Risiko Pidana Korporasi"
     ],
   },
   {
@@ -64,35 +54,31 @@ export const practiceAreas: PracticeArea[] = [
     title: "Hukum Ketenagakerjaan",
     slug: "hukum-ketenagakerjaan",
     icon: "Users",
-    shortDescription:
-      "Konsultasi dan pendampingan hukum ketenagakerjaan untuk perusahaan maupun pekerja.",
-    fullDescription:
-      "Kami menyediakan layanan hukum ketenagakerjaan yang mencakup penyusunan peraturan perusahaan, penyelesaian perselisihan hubungan industrial, dan konsultasi kepatuhan terhadap undang-undang ketenagakerjaan. Layanan kami membantu menciptakan hubungan kerja yang sehat dan sesuai regulasi.",
+    shortDescription: "Arsitektur kepatuhan ketenagakerjaan dan manajemen risiko hubungan industrial untuk menciptakan ekosistem kerja yang produktif.",
+    fullDescription: "Dinamika hubungan antara manajemen dan tenaga kerja sering kali menjadi titik kerentanan hukum terbesar bagi sebuah perusahaan. Layanan Hukum Ketenagakerjaan kami dirancang untuk membentengi korporasi melalui arsitektur kepatuhan ketenagakerjaan yang mutakhir dan manajemen risiko hubungan industrial yang proaktif. Kami mendampingi perusahaan dalam merancang struktur kontrak kerja tingkat eksekutif, menyusun peraturan perusahaan dan perjanjian kerja bersama (PKB), serta menavigasi kompleksitas hukum dalam proses pemutusan hubungan kerja massal maupun individu. Saat sengketa industrial tidak terelakkan, kami hadir sebagai negosiator tangguh dan litigator andal di Pengadilan Hubungan Industrial (PHI) untuk melindungi stabilitas operasional klien.",
     keyServices: [
-      "Penyusunan perjanjian kerja dan peraturan perusahaan",
-      "Penyelesaian perselisihan hubungan industrial",
-      "Pemutusan hubungan kerja (PHK)",
-      "Kepatuhan undang-undang ketenagakerjaan",
-      "Audit ketenagakerjaan",
-      "Program jaminan sosial tenaga kerja",
+      "Penyusunan Kontrak Kerja & Eksekutif (PKWT/PKWTT)",
+      "Perancangan Peraturan Perusahaan & Perjanjian Kerja Bersama",
+      "Manajemen Risiko Pemutusan Hubungan Kerja (PHK)",
+      "Representasi di Pengadilan Hubungan Industrial (PHI)",
+      "Negosiasi Bipartit, Tripartit, & Sengketa Serikat Pekerja",
+      "Audit Kepatuhan Hukum Ketenagakerjaan Terkini"
     ],
   },
   {
     id: "hukum-properti",
-    title: "Hukum Properti & Pertanahan",
+    title: "Hukum Properti",
     slug: "hukum-properti",
     icon: "Home",
-    shortDescription:
-      "Layanan hukum properti dan pertanahan untuk transaksi, sertifikasi, dan penyelesaian sengketa tanah.",
-    fullDescription:
-      "Tim properti dan pertanahan kami membantu klien dalam berbagai aspek hukum terkait properti, termasuk transaksi jual beli, sertifikasi tanah, penyelesaian sengketa, dan perizinan pembangunan. Kami memastikan setiap transaksi properti berjalan aman dan sesuai hukum.",
+    shortDescription: "Pengamanan legalitas aset dan orkestrasi transaksi real estat berskala besar untuk meminimalkan risiko sengketa pertanahan.",
+    fullDescription: "Sektor properti dan real estat diwarnai oleh regulasi agraria yang kompleks dan risiko tumpang tindih kepemilikan yang tinggi. Praktik Hukum Properti kami mendedikasikan keahliannya untuk mengamankan legalitas aset dan mengorkestrasi transaksi real estat berskala besar, baik untuk kawasan komersial, industri, maupun residensial premium. Kami mengeksekusi uji tuntas pertanahan (land due diligence) yang sangat teliti untuk mendeteksi potensi sengketa tersembunyi sebelum transaksi terjadi. Selain itu, tim kami menangani akuisisi lahan yang rumit, penyusunan perjanjian sewa komersial tingkat tinggi, serta merepresentasikan klien dalam litigasi sengketa batas wilayah maupun hak kepemilikan dengan tingkat keberhasilan yang meyakinkan.",
     keyServices: [
-      "Transaksi jual beli properti",
-      "Sertifikasi dan pendaftaran tanah",
-      "Sengketa pertanahan",
-      "Perizinan pembangunan",
-      "Due diligence properti",
-      "Hukum agraria",
+      "Uji Tuntas Pertanahan (Land Due Diligence) Ekstensif",
+      "Strukturisasi Transaksi & Akuisisi Real Estat",
+      "Penyusunan Perjanjian Sewa Komersial & Retail",
+      "Penyelesaian Sengketa Hak Milik & Tumpang Tindih Lahan",
+      "Kepatuhan Perizinan Pembangunan & Zonasi Wilayah",
+      "Hukum Agraria & Pembebasan Lahan Proyek Strategis"
     ],
   },
   {
@@ -100,17 +86,15 @@ export const practiceAreas: PracticeArea[] = [
     title: "Hukum Perbankan & Keuangan",
     slug: "hukum-perbankan",
     icon: "Landmark",
-    shortDescription:
-      "Pendampingan hukum di sektor perbankan, keuangan, dan pasar modal sesuai regulasi terkini.",
-    fullDescription:
-      "Kami memberikan layanan hukum khusus untuk sektor perbankan dan keuangan, termasuk kepatuhan regulasi OJK dan Bank Indonesia, penyusunan produk keuangan, serta litigasi perbankan. Pengalaman kami di sektor ini memastikan solusi yang tepat dan sesuai dengan dinamika regulasi keuangan.",
+    shortDescription: "Arsitektur transaksi finansial kompleks dan navigasi kepatuhan ketat di bawah yurisdiksi otoritas keuangan.",
+    fullDescription: "Menavigasi sektor finansial membutuhkan pemahaman taktis terhadap arsitektur keuangan dan kepatuhan regulasi yang tanpa celah. Layanan Hukum Perbankan dan Keuangan kami dipercaya oleh institusi keuangan terkemuka, perusahaan fintech, serta investor institusional untuk menstrukturisasi transaksi pembiayaan berskala masif. Kami memberikan asistensi legal mendalam terkait fasilitas kredit sindikasi, pembiayaan proyek (project finance), penerbitan obligasi, serta kepatuhan mutlak terhadap regulasi OJK dan Bank Indonesia. Di saat krisis likuiditas melanda, kepakaran kami dalam restrukturisasi utang korporasi dan penundaan kewajiban pembayaran utang (PKPU) menjadi garda terdepan dalam menyelamatkan aset krusial klien dari ancaman kepailitan.",
     keyServices: [
-      "Kepatuhan regulasi perbankan",
-      "Penyusunan perjanjian kredit dan pembiayaan",
-      "Restrukturisasi utang",
-      "Litigasi perbankan",
-      "Regulasi fintech dan teknologi keuangan",
-      "Pasar modal dan investasi",
+      "Strukturisasi Fasilitas Kredit & Pembiayaan Sindikasi",
+      "Kepatuhan Regulasi OJK & Bank Indonesia",
+      "Restrukturisasi Utang, PKPU, & Kepailitan Korporasi",
+      "Asistensi Hukum Teknologi Keuangan (Fintech) & Kripto",
+      "Pembiayaan Proyek (Project Finance) Infrastruktur",
+      "Litigasi Perbankan & Eksekusi Hak Tanggungan"
     ],
   },
   {
@@ -118,17 +102,15 @@ export const practiceAreas: PracticeArea[] = [
     title: "Kekayaan Intelektual",
     slug: "hukum-kekayaan-intelektual",
     icon: "Lightbulb",
-    shortDescription:
-      "Perlindungan dan penegakan hak kekayaan intelektual secara menyeluruh dan strategis.",
-    fullDescription:
-      "Tim kekayaan intelektual kami menyediakan layanan pendaftaran, perlindungan, dan penegakan hak atas merek, paten, hak cipta, dan desain industri. Kami membantu klien menjaga dan memaksimalkan nilai aset intelektual mereka dalam lingkungan bisnis yang kompetitif.",
+    shortDescription: "Komersialisasi dan benteng pertahanan absolut bagi inovasi, merek dagang, dan aset tak berwujud milik perusahaan Anda.",
+    fullDescription: "Dalam era ekonomi berbasis pengetahuan, aset tak berwujud sering kali merupakan valuasi terbesar dari sebuah perusahaan. Praktik Hak Kekayaan Intelektual (HAKI) kami berfokus pada pembangunan benteng pertahanan absolut bagi inovasi dan identitas merek klien. Kami tidak hanya mengurus pendaftaran administratif paten, merek dagang, hak cipta, dan desain industri secara presisi di lingkup nasional maupun internasional, tetapi juga merancang strategi komersialisasi melalui perjanjian lisensi dan waralaba. Ketika terjadi pelanggaran atau pembajakan oleh pihak ketiga, unit litigasi IP kami siap melancarkan tindakan hukum yang tegas—mulai dari somasi agresif hingga gugatan pengadilan niaga—untuk menghentikan eksploitasi ilegal.",
     keyServices: [
-      "Pendaftaran merek dan paten",
-      "Perlindungan hak cipta",
-      "Desain industri dan rahasia dagang",
-      "Litigasi kekayaan intelektual",
-      "Lisensi dan perjanjian IP",
-      "Audit portofolio kekayaan intelektual",
+      "Pendaftaran Merek, Paten, Hak Cipta, & Desain Industri",
+      "Litigasi Pelanggaran HAKI di Pengadilan Niaga",
+      "Penyusunan Perjanjian Lisensi & Waralaba (Franchise)",
+      "Audit Portofolio Kekayaan Intelektual Korporasi",
+      "Perlindungan Rahasia Dagang & Non-Disclosure Agreement",
+      "Penindakan Hukum Anti-Pemalsuan (Anti-Counterfeiting)"
     ],
   },
   {
@@ -136,19 +118,17 @@ export const practiceAreas: PracticeArea[] = [
     title: "Hukum Keluarga",
     slug: "hukum-keluarga",
     icon: "Heart",
-    shortDescription:
-      "Pendampingan hukum keluarga dengan pendekatan yang profesional, empatik, dan berorientasi pada solusi.",
-    fullDescription:
-      "Kami memahami bahwa masalah hukum keluarga bersifat sensitif dan memerlukan penanganan yang bijaksana. Tim kami menyediakan layanan hukum keluarga yang profesional namun tetap mengedepankan empati, termasuk perceraian, hak asuh anak, waris, dan adopsi.",
+    shortDescription: "Penanganan elegan dan rahasia untuk sengketa keluarga kompleks, mitigasi risiko aset perkawinan, dan perencanaan suksesi waris.",
+    fullDescription: "Sengketa dalam ranah keluarga membutuhkan kalibrasi sempurna antara ketegasan hukum dan kepekaan emosional yang tinggi. Kami menyediakan layanan hukum keluarga eksklusif bagi individu dengan jaminan privasi dan kerahasiaan tanpa kompromi. Kepakaran kami mencakup penyusunan perjanjian pranikah dan pascanikah untuk memitigasi risiko percampuran aset bisnis, penanganan proses perceraian yang rumit, hingga sengketa hak asuh anak lintas yurisdiksi. Lebih jauh, kami merancang strategi perencanaan suksesi dan hukum waris yang komprehensif, memastikan transisi kekayaan antargenerasi berjalan mulus tanpa celah hukum yang berpotensi memicu konflik internal keluarga di masa depan.",
     keyServices: [
-      "Perceraian dan pembagian harta bersama",
-      "Hak asuh anak",
-      "Hukum waris dan pembagian warisan",
-      "Adopsi anak",
-      "Perjanjian pranikah",
-      "Mediasi keluarga",
+      "Perjanjian Pranikah & Pascanikah (Prenup/Postnup)",
+      "Litigasi Perceraian Kompleks & Pembagian Harta Gono-Gini",
+      "Sengketa Hak Asuh Anak & Hak Alimentasi",
+      "Perencanaan Suksesi & Pembuatan Wasiat (Estate Planning)",
+      "Sengketa Kewarisan & Eksekusi Pembagian Harta",
+      "Adopsi Anak & Status Hukum Perdata Khusus"
     ],
-  },
+  }
 ];
 
 /**

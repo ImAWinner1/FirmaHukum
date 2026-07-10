@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import { Toaster } from "sonner";
 import "../globals.css";
 
 const inter = Inter({
@@ -83,15 +84,15 @@ export default async function RootLayout({
     description: "Firma hukum profesional yang menyediakan layanan konsultasi dan pendampingan hukum terpercaya untuk individu dan korporasi di Indonesia.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Jl. Jenderal Sudirman No. 123, Lantai 15",
-      addressLocality: "Jakarta Selatan",
-      addressRegion: "DKI Jakarta",
-      postalCode: "12190",
+      streetAddress: "Jl. AH. Nasution No.105, Cipadung Wetan, Kec. Cibiru",
+      addressLocality: "Kota Bandung",
+      addressRegion: "Jawa Barat",
+      postalCode: "40614",
       addressCountry: "ID",
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+62-21-5555-1234",
+      telephone: "+62 89644191553",
       contactType: "customer service",
       areaServed: "ID",
       availableLanguage: ["Indonesian", "English"],
@@ -114,6 +115,7 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         {children}
+        <Toaster richColors position="top-right" />
       </body>
     </html>
   );

@@ -13,10 +13,10 @@ export const siteConfig: SiteConfig = {
     "Firma hukum profesional yang menyediakan layanan konsultasi dan pendampingan hukum terpercaya untuk individu dan korporasi di Indonesia.",
   contact: {
     address:
-      "Gedung Hukum Nusantara, Jl. Jenderal Sudirman No. 123, Lantai 15, Jakarta Selatan 12190",
-    phone: "+62 21 5555 1234",
-    email: "info@firmahukum.id",
-    whatsapp: "+6281234567890",
+      "Jl. AH. Nasution No.105, Cipadung Wetan, Kec. Cibiru, Kota Bandung, Jawa Barat 40614",
+    phone: "+62 896 4419 1553",
+    email: "thelawticsa@gmail.com",
+    whatsapp: "+6289644191553",
     businessHours: "Senin – Jumat: 08.00 – 17.00 WIB",
   },
   socialLinks: [

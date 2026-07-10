@@ -27,14 +27,14 @@ export function Hero({ dict, locale }: { dict: Dictionary; locale: string }) {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-navy-950 pt-20 md:pt-24 lg:min-h-[90vh] flex items-center">
+    <section className="relative overflow-hidden bg-navy-950 pt-20 md:pt-24 lg:min-h-screen">
       {/* Background Image (Desktop only) */}
-      <div className="absolute inset-y-0 right-0 hidden w-full lg:block lg:w-[60%]">
+      <div className="absolute top-8 bottom-0 right-0 hidden w-full lg:block lg:w-[65%]">
         <Image
           src="/images/hero-statue.png"
           alt="Simbol Keadilan"
           fill
-          className="object-cover object-center"
+          className="object-contain object-right-bottom"
           priority
         />
         {/* Gradients to blend image into the navy background */}

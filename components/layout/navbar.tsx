@@ -3,16 +3,18 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Scale, X } from "lucide-react";
+import { Menu, Scale, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useScrollPosition } from "@/hooks/use-scroll-position";
 import { siteConfig } from "@/lib/data/site-config";
 import { Button } from "@/components/ui/button";
+import { practiceAreas } from "@/lib/data/practice-areas";
 import type { Dictionary } from "@/dictionaries/id";
 
 export function Navbar({ dict, locale }: { dict: Dictionary; locale: string }) {
   const isScrolled = useScrollPosition(20);
   const pathname = usePathname();
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
   const closeMenu = () => {
     const checkbox = document.getElementById("mobile-menu-toggle") as HTMLInputElement;
@@ -75,6 +77,44 @@ export function Navbar({ dict, locale }: { dict: Dictionary; locale: string }) {
             const isActive =
               pathname === fullHref ||
               (item.href !== "/" && pathname.startsWith(fullHref));
+            
+            if (item.href === "/layanan") {
+              return (
+                <li key={item.href} className="relative group">
+                  <Link
+                    href={fullHref}
+                    className={cn(
+                      "flex items-center gap-1 relative px-3 py-2 text-sm font-medium transition-colors",
+                      isActive
+                        ? "text-gold-500"
+                        : "text-gray-300 hover:text-white"
+                    )}
+                  >
+                    {item.label}
+                    <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
+                    {isActive && (
+                      <span className="absolute bottom-0.5 left-3 right-3 h-0.5 rounded-full bg-gold-500" />
+                    )}
+                  </Link>
+                  
+                  {/* Dropdown */}
+                  <div className="absolute left-0 top-full invisible w-64 pt-2 opacity-0 translate-y-2 transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">
+                    <div className="rounded-lg border border-navy-700 bg-navy-900 p-2 shadow-xl shadow-black/20">
+                      {practiceAreas.map((area) => (
+                        <Link
+                          key={area.id}
+                          href={`/${locale}/layanan/${area.slug}`}
+                          className="block rounded-md px-4 py-2 text-sm text-gray-300 transition-colors hover:bg-navy-800 hover:text-gold-500"
+                        >
+                          {dict.servicesPage.areas[area.id as keyof typeof dict.servicesPage.areas]?.title || area.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </li>
+              );
+            }
+
             return (
               <li key={item.href}>
                 <Link
@@ -180,6 +220,53 @@ export function Navbar({ dict, locale }: { dict: Dictionary; locale: string }) {
                 const isActive =
                   (item.href === "/" && pathname === `/${locale}`) ||
                   (item.href !== "/" && pathname.startsWith(fullHref));
+                
+                if (item.href === "/layanan") {
+                  return (
+                    <li key={item.href} className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <Link
+                          href={fullHref}
+                          onClick={closeMenu}
+                          className={cn(
+                            "block rounded-md px-3 py-2 text-base font-medium transition-colors flex-grow",
+                            isActive
+                              ? "bg-navy-900 text-gold-500"
+                              : "text-gray-300 hover:bg-navy-800 hover:text-white"
+                          )}
+                        >
+                          {item.label}
+                        </Link>
+                        <button 
+                          onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                          className="p-2 text-gray-300 hover:text-gold-500 hover:bg-navy-800 rounded-md transition-colors"
+                          aria-label="Toggle menu layanan"
+                        >
+                          <ChevronDown className={cn("h-5 w-5 transition-transform duration-300", isMobileServicesOpen && "rotate-180")} />
+                        </button>
+                      </div>
+                      <div className={cn("overflow-hidden transition-all duration-300 ease-in-out", isMobileServicesOpen ? "max-h-[500px] opacity-100 mt-1" : "max-h-0 opacity-0")}>
+                        <ul className="pl-4 space-y-1 border-l border-navy-700 ml-3 py-1">
+                          {practiceAreas.map((area) => (
+                            <li key={area.id}>
+                              <Link
+                                href={`/${locale}/layanan/${area.slug}`}
+                                onClick={closeMenu}
+                                className={cn(
+                                  "block rounded-md px-3 py-2 text-sm font-medium transition-colors text-gray-400 hover:bg-navy-800 hover:text-white",
+                                  pathname === `/${locale}/layanan/${area.slug}` && "text-gold-400"
+                                )}
+                              >
+                                {dict.servicesPage.areas[area.id as keyof typeof dict.servicesPage.areas]?.title || area.title}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </li>
+                  );
+                }
+
                 return (
                   <li key={item.href}>
                     <Link

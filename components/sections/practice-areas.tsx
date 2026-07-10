@@ -71,12 +71,12 @@ export function PracticeAreas({ dict, locale }: { dict: Dictionary; locale: stri
                       <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-50 text-navy-700 transition-colors group-hover:bg-gold-50 group-hover:text-gold-600">
                         {Icon && <Icon className="h-6 w-6" />}
                       </div>
-                      <CardTitle className="font-heading text-xl leading-tight text-navy-950 transition-colors group-hover:text-gold-600">
+                      <CardTitle className="font-heading text-xl leading-tight text-navy-950 transition-colors group-hover:text-gold-600 min-h-[50px] flex items-start">
                         {areaDict.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="flex flex-col flex-1">
-                      <CardDescription className="line-clamp-3 text-sm leading-relaxed text-gray-500">
+                      <CardDescription className="line-clamp-3 text-sm leading-relaxed text-gray-500 text-justify min-h-[70px]">
                         {areaDict.desc}
                       </CardDescription>
                       <div className="mt-auto pt-6 flex items-center text-sm font-semibold text-gold-600 transition-all duration-300">

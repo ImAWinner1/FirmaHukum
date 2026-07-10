@@ -77,7 +77,10 @@ export default async function ArticleDetailPage({ params }: Props) {
                 {/* Author Info */}
                 <div className="mb-10 flex items-center gap-4 rounded-2xl bg-cream-50 p-6 border border-gray-100">
                   <div className="h-14 w-14 overflow-hidden rounded-full bg-gray-200 shrink-0">
-                    <div className="h-full w-full bg-[url('/images/placeholder/portrait.jpg')] bg-cover bg-center" />
+                    <div 
+                      className="h-full w-full bg-cover bg-center" 
+                      style={{ backgroundImage: `url('${article.authorImage}')` }}
+                    />
                   </div>
                   <div>
                     <p className="font-heading text-lg font-bold text-navy-950">{article.author}</p>
@@ -113,7 +116,10 @@ export default async function ArticleDetailPage({ params }: Props) {
                   <Link href={`/${locale}/artikel/${relatedArticle.slug}`} className="group block h-full">
                     <div className="flex h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:border-gold-300 hover:shadow-xl hover:shadow-gold-900/5">
                       <div className="relative aspect-[16/9] w-full overflow-hidden bg-navy-900">
-                        <div className="absolute inset-0 bg-[url('/images/placeholder/portrait.jpg')] bg-cover bg-center opacity-60 mix-blend-luminosity transition-transform duration-500 group-hover:scale-105 group-hover:opacity-80" />
+                        <div 
+                          className="absolute inset-0 bg-cover bg-center opacity-60 mix-blend-luminosity transition-transform duration-500 group-hover:scale-105 group-hover:opacity-80" 
+                          style={{ backgroundImage: `url('${relatedArticle.imageUrl}')` }}
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent" />
                         <div className="absolute bottom-4 left-4 rounded-full bg-gold-500 px-3 py-1 text-xs font-bold text-navy-950">
                           {relatedArticle.category}

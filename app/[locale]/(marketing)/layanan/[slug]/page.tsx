@@ -84,14 +84,16 @@ export default async function PracticeAreaPage({ params }: PracticeAreaPageProps
                   {Icon && <Icon className="h-8 w-8" />}
                 </div>
                 <h2 className="font-heading text-3xl font-bold text-navy-950 md:text-4xl">
-                  {locale === 'en' ? 'Service Overview' : 'Ikhtisar Layanan'}
+                  {dict.servicesPage.areas[area.id as keyof typeof dict.servicesPage.areas]?.title || area.title}
                 </h2>
               </div>
 
-              <div className="prose prose-lg prose-gray max-w-none">
-                <p className="text-gray-600 leading-relaxed">
-                  {dict.servicesPage.areas[area.id as keyof typeof dict.servicesPage.areas]?.fullDesc}
-                </p>
+              <div className="prose prose-lg prose-gray max-w-none text-justify">
+                {String(dict.servicesPage.areas[area.id as keyof typeof dict.servicesPage.areas]?.fullDesc || "").split('\n\n').map((paragraph, index) => (
+                  <p key={index} className="text-gray-600 leading-relaxed mb-4 indent-8">
+                    {paragraph}
+                  </p>
+                ))}
               </div>
 
               <div className="mt-12">

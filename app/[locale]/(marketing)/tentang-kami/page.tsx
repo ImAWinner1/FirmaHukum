@@ -1,5 +1,6 @@
 import { getDictionary } from '@/lib/dictionary';
 import { Metadata } from "next";
+import Image from "next/image";
 import { Container } from "@/components/shared/container";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -98,8 +99,13 @@ export default async function AboutPage({ params }: Props) {
 
             <AnimatedElement variant="fadeLeft" className="relative">
               <div className="aspect-square overflow-hidden rounded-2xl bg-navy-900 relative">
-                <div className="absolute inset-0 bg-[url('/images/placeholder/office-interior.jpg')] bg-cover bg-center opacity-60 mix-blend-luminosity" />
-                <div className="absolute inset-0 bg-gradient-to-tr from-navy-950/80 to-transparent" />
+                <Image 
+                  src="/images/tentang-kami.png" 
+                  alt="Sejarah WebWeavers" 
+                  fill 
+                  className="object-cover object-right opacity-80"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent" />
                 
                 {/* Decorative Elements */}
                 <div className="absolute bottom-8 left-8 right-8 border-l-2 border-gold-500 pl-6 py-2">
