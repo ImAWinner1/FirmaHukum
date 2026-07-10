@@ -426,9 +426,7 @@ Untuk pertanyaan teknis atau kolaborasi terkait proyek ini:
 ---
 
 <p align="center">
-  <img src="app/icon.svg" height="35" alt="Logo Firma Hukum" style="vertical-align: middle;" />
-  &nbsp;&nbsp;
-  <img src="public/images/readme-title.svg" height="45" alt="Firma Hukum" style="vertical-align: middle;" />
+  <img src="app/icon.svg" height="35" alt="Logo Firma Hukum" style="vertical-align: middle;" />&nbsp;&nbsp;<img src="public/images/readme-title.svg" height="45" alt="Firma Hukum" style="vertical-align: middle;" />
 </p>
 
 <p align="center">
