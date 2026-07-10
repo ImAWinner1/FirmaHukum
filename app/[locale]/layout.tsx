@@ -36,7 +36,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Firma Hukum" }],
   creator: "Firma Hukum",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://firmahukum.id"
+    process.env.NEXT_PUBLIC_SITE_URL
+      ? process.env.NEXT_PUBLIC_SITE_URL
+      : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3000"
   ),
   openGraph: {
     type: "website",
