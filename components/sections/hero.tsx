@@ -28,22 +28,21 @@ export function Hero({ dict, locale }: { dict: Dictionary; locale: string }) {
 
   return (
     <section className="relative overflow-hidden bg-navy-950 pt-20 md:pt-24 lg:min-h-screen">
-      {/* Background Image (Desktop only) */}
-      <div className="absolute top-8 bottom-0 right-0 hidden w-full lg:block lg:w-[65%]">
+      {/* Background Image (Responsive) */}
+      <div className="absolute inset-0 lg:top-8 lg:left-auto lg:w-[65%] opacity-60 lg:opacity-100">
         <Image
           src="/images/hero-statue.png"
           alt="Simbol Keadilan"
           fill
-          className="object-contain object-right-bottom"
+          className="object-cover object-bottom sm:object-contain sm:object-right-bottom"
           priority
         />
+        {/* Mobile specific dark overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-navy-950/50 lg:hidden" />
         {/* Gradients to blend image into the navy background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/60 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/70 to-transparent lg:via-navy-950/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/30 to-transparent lg:via-transparent" />
       </div>
-
-      {/* Subtle background gradient for mobile (when image is hidden) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950 lg:hidden" />
 
       <Container className="relative z-10 w-full">
         <div className="py-16 md:py-20 lg:w-[55%] lg:py-28 lg:pr-8">
