@@ -2,7 +2,9 @@
   <img src="app/icon.svg" width="80" alt="Logo Firma Hukum" />
 </p>
 
-<h1 align="center">Firma Hukum</h1>
+<h1 align="center">
+  <img src="public/images/readme-title.svg" width="380" alt="Firma Hukum" />
+</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Solusi_Hukum-Terpercaya-D4AF6A?style=for-the-badge" alt="Tagline" />
@@ -425,5 +427,5 @@ Untuk pertanyaan teknis atau kolaborasi terkait proyek ini:
 </p>
 
 <p align="center">
-  <sub>Hak Cipta &copy; 2025 Firma Hukum. Seluruh hak dilindungi undang-undang.</sub>
+  <sub>Hak Cipta &copy; 2026 Firma Hukum. Seluruh hak dilindungi undang-undang.</sub>
 </p>
