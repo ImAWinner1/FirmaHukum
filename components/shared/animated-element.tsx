@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-type AnimationVariant = "fadeIn" | "fadeUp" | "fadeLeft" | "fadeRight" | "scale";
+type AnimationVariant =
+  "fadeIn" | "fadeUp" | "fadeLeft" | "fadeRight" | "scale";
 
 interface AnimatedElementProps {
   children: React.ReactNode;
@@ -11,9 +12,9 @@ interface AnimatedElementProps {
   variant?: AnimationVariant;
   delay?: number;
   duration?: number;
-  /** Trigger animation only once */
+  /** Memicu render animasi hanya satu kali saja (animasi tidak diulang ketika pengguna menggulir layar ke atas). */
   once?: boolean;
-  /** How much of the element must be visible (0-1) */
+  /** Rasio ambang batas visibilitas (rentang 0-1) suatu elemen dalam Viewport sebelum memicu animasi. */
   threshold?: number;
 }
 
@@ -44,10 +45,10 @@ const variants: Record<
 };
 
 /**
- * Framer Motion wrapper for scroll-triggered entrance animations.
- * Respects prefers-reduced-motion via CSS (see globals.css).
+ * Komponen pembungkus berbasis Framer Motion untuk memicu efek animasi saat elemen masuk ke dalam layar (scroll-triggered).
+ * Mendukung aksesibilitas dengan menghormati pengaturan `prefers-reduced-motion` (lihat globals.css).
  *
- * Uses Intersection Observer via Framer's useInView for performance.
+ * Menggunakan Intersection Observer API melalui hooks `useInView` dari Framer untuk menjaga kinerja (performance).
  */
 export function AnimatedElement({
   children,
@@ -58,9 +59,5 @@ export function AnimatedElement({
   once = true,
   threshold = 0.15,
 }: AnimatedElementProps) {
-  return (
-    <div className={cn(className)}>
-      {children}
-    </div>
-  );
+  return <div className={cn(className)}>{children}</div>;
 }

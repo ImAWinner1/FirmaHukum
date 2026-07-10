@@ -1,14 +1,14 @@
 /* ==========================================================================
-   Shared Type Definitions — Firma Hukum
+   Shared Type Definitions - Firma Hukum
    ========================================================================== */
 
-/** Navigation link item */
+/** Struktur data yang merepresentasikan setiap item tautan pada menu navigasi. */
 export interface NavItem {
   label: string;
   href: string;
 }
 
-/** Practice area / legal service */
+/** Struktur data untuk mendefinisikan area praktik atau layanan hukum yang ditawarkan firma. */
 export interface PracticeArea {
   id: string;
   title: string;
@@ -19,7 +19,7 @@ export interface PracticeArea {
   keyServices: string[];
 }
 
-/** Team member / lawyer */
+/** Representasi data profil anggota tim, pengacara, atau advokat. */
 export interface TeamMember {
   id: string;
   name: string;
@@ -30,7 +30,7 @@ export interface TeamMember {
   linkedIn: string;
 }
 
-/** Statistic item */
+/** Data metrik atau statistik untuk ditampilkan pada bagian pencapaian. */
 export interface StatItem {
   label: string;
   value: number;
@@ -38,7 +38,7 @@ export interface StatItem {
   icon: string;
 }
 
-/** Contact information */
+/** Struktur informasi kontak utama firma hukum. */
 export interface ContactInfo {
   address: string;
   phone: string;
@@ -47,14 +47,14 @@ export interface ContactInfo {
   businessHours: string;
 }
 
-/** Social media link */
+/** Definisi tipe untuk tautan media sosial yang digunakan pada header/footer. */
 export interface SocialLink {
   platform: string;
   href: string;
   icon: string;
 }
 
-/** Site configuration */
+/** Skema konfigurasi global situs. */
 export interface SiteConfig {
   name: string;
   tagline: string;
@@ -63,14 +63,14 @@ export interface SiteConfig {
   socialLinks: SocialLink[];
 }
 
-/** Timeline event (for About page) */
+/** Struktur data riwayat atau lini masa (timeline) perusahaan untuk halaman 'Tentang Kami'. */
 export interface TimelineEvent {
   year: string;
   title: string;
   description: string;
 }
 
-/** Core value item */
+/** Struktur nilai-nilai inti (core values) yang dipegang oleh firma. */
 export interface CoreValue {
   title: string;
   description: string;

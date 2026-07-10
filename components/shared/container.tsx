@@ -7,8 +7,8 @@ interface ContainerProps {
 }
 
 /**
- * Constrained-width container with responsive horizontal padding.
- * Max width: 1280px. Used as the standard content wrapper across all sections.
+ * Komponen kontainer dengan batas lebar maksimal (maksimal 1280px) beserta padding horizontal yang responsif.
+ * Digunakan sebagai pembungkus standar konten (wrapper) agar tata letak tetap berada di tengah (centered) pada setiap bagian (section).
  */
 export function Container({
   children,

@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 
 /**
- * Tracks the window scroll position for scroll-aware UI elements.
- * Returns whether the page has been scrolled past a given threshold.
+ * Melacak posisi gulir (scroll) dari jendela (window) untuk komponen UI yang sensitif terhadap scroll.
+ * Mengembalikan nilai boolean apakah halaman telah digulir melewati batas (threshold) yang ditentukan.
  */
 export function useScrollPosition(threshold: number = 50): boolean {
   const [isScrolled, setIsScrolled] = useState(false);

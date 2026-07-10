@@ -37,7 +37,9 @@ export const metadata: Metadata = {
   creator: "Firma Hukum",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "https://firma-hukum-nine.vercel.app")
+      (process.env.VERCEL_PROJECT_PRODUCTION_URL
+        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+        : "https://firma-hukum-nine.vercel.app")
   ),
   openGraph: {
     type: "website",
@@ -83,7 +85,7 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
-  
+
   // JSON-LD Structured Data
   const structuredData = {
     "@context": "https://schema.org",
@@ -91,7 +93,8 @@ export default async function RootLayout({
     name: "Firma Hukum",
     url: "https://firmahukum.id",
     logo: "https://firmahukum.id/logo.png",
-    description: "Firma hukum profesional yang menyediakan layanan konsultasi dan pendampingan hukum terpercaya untuk individu dan korporasi di Indonesia.",
+    description:
+      "Firma hukum profesional yang menyediakan layanan konsultasi dan pendampingan hukum terpercaya untuk individu dan korporasi di Indonesia.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Jl. AH. Nasution No.105, Cipadung Wetan, Kec. Cibiru",

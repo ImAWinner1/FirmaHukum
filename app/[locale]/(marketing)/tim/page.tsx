@@ -1,17 +1,18 @@
-import { getDictionary } from '@/lib/dictionary';
+import { getDictionary } from "@/lib/dictionary";
 import { Metadata } from "next";
 import Image from "next/image";
-import { Linkedin } from "@/components/shared/social-icons";
-import { Container } from "@/components/shared/container";
-import { SectionWrapper } from "@/components/shared/section-wrapper";
-import { PageHero } from "@/components/shared/page-hero";
-import { CTA } from "@/components/sections/cta";
+import { Linkedin } from "@/components/shared";
+import { Container } from "@/components/shared";
+import { SectionWrapper } from "@/components/shared";
+import { PageHero } from "@/components/shared";
+import { CTA } from "@/components/sections";
 import { teamMembers } from "@/lib/data/team-members";
-import { AnimatedElement } from "@/components/shared/animated-element";
+import { AnimatedElement } from "@/components/shared";
 
 export const metadata: Metadata = {
   title: "Tim Kami",
-  description: "Kenali profil dan keahlian tim pengacara profesional kami yang siap memberikan pendampingan hukum terbaik untuk Anda.",
+  description:
+    "Kenali profil dan keahlian tim pengacara profesional kami yang siap memberikan pendampingan hukum terbaik untuk Anda.",
 };
 
 type Props = {
@@ -20,7 +21,7 @@ type Props = {
 
 export default async function TeamPage({ params }: Props) {
   const { locale } = await params;
-  const dict = await getDictionary(locale as 'id' | 'en');
+  const dict = await getDictionary(locale as "id" | "en");
 
   return (
     <>
@@ -49,7 +50,7 @@ export default async function TeamPage({ params }: Props) {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent" />
-                    
+
                     <div className="absolute bottom-6 left-6 right-6">
                       <div className="h-[3.5rem] md:h-[4rem] mb-1 flex items-center">
                         <h3 className="font-heading text-xl md:text-2xl font-bold text-white line-clamp-2">
@@ -58,7 +59,11 @@ export default async function TeamPage({ params }: Props) {
                       </div>
                       <div className="h-[1.5rem] flex items-center">
                         <p className="text-gold-500 font-medium line-clamp-1 text-sm md:text-base">
-                          {dict.teamPage.members[member.id as keyof typeof dict.teamPage.members]?.title}
+                          {
+                            dict.teamPage.members[
+                              member.id as keyof typeof dict.teamPage.members
+                            ]?.title
+                          }
                         </p>
                       </div>
                     </div>
@@ -83,10 +88,14 @@ export default async function TeamPage({ params }: Props) {
                         </p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-center justify-between mt-auto">
                       <p className="text-sm font-medium text-gray-500">
-                        {dict.teamPage.members[member.id as keyof typeof dict.teamPage.members]?.exp}
+                        {
+                          dict.teamPage.members[
+                            member.id as keyof typeof dict.teamPage.members
+                          ]?.exp
+                        }
                       </p>
                       <a
                         href={member.linkedIn}

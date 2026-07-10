@@ -1,8 +1,7 @@
 import type { TeamMember } from "@/types";
 
 /**
- * Team member data — all names, titles, and details are PLACEHOLDERS.
- * Replace with actual team data before production deployment.
+ * Data profil anggota tim utama firma hukum.
  */
 export const teamMembers: TeamMember[] = [
   {

@@ -5,9 +5,9 @@ import Image from "next/image";
 import { Shield, Award, Heart } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Container } from "@/components/shared/container";
+import { Container } from "@/components/shared";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/data/site-config";
+import { siteConfig } from "@/constants/site";
 import type { Dictionary } from "@/dictionaries/id";
 
 const fadeUp = {
@@ -16,14 +16,26 @@ const fadeUp = {
 };
 
 /**
- * Hero section — the primary visual impact area of the homepage.
- * Full-width dark navy background with headline, CTAs, and trust indicators.
+ * Komponen bagian Pahlawan (Hero), sebagai area penarik perhatian visual utama di beranda (homepage).
+ * Menampilkan latar belakang biru dongker (navy) penuh dengan judul utama, tombol aksi (CTA), dan indikator kepercayaan.
  */
 export function Hero({ dict, locale }: { dict: Dictionary; locale: string }) {
   const trustIndicators = [
-    { icon: Shield, label: dict.hero.trust.integrity.title, description: dict.hero.trust.integrity.desc },
-    { icon: Award, label: dict.hero.trust.professional.title, description: dict.hero.trust.professional.desc },
-    { icon: Heart, label: dict.hero.trust.dedication.title, description: dict.hero.trust.dedication.desc },
+    {
+      icon: Shield,
+      label: dict.hero.trust.integrity.title,
+      description: dict.hero.trust.integrity.desc,
+    },
+    {
+      icon: Award,
+      label: dict.hero.trust.professional.title,
+      description: dict.hero.trust.professional.desc,
+    },
+    {
+      icon: Heart,
+      label: dict.hero.trust.dedication.title,
+      description: dict.hero.trust.dedication.desc,
+    },
   ];
 
   return (
@@ -46,7 +58,7 @@ export function Hero({ dict, locale }: { dict: Dictionary; locale: string }) {
 
       <Container className="relative z-10 w-full">
         <div className="py-16 md:py-20 lg:w-[55%] lg:py-28 lg:pr-8">
-          {/* Left column — Content */}
+          {/* Left column - Content */}
           <div className="flex flex-col">
             {/* Eyebrow */}
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.2em] text-gold-500">
@@ -55,7 +67,11 @@ export function Hero({ dict, locale }: { dict: Dictionary; locale: string }) {
 
             {/* Headline */}
             <h1 className="font-heading text-4xl font-bold leading-[1.1] tracking-tight text-white md:text-5xl lg:text-[3.5rem]">
-              {dict.hero.headline} <span className="text-gold-500">{dict.hero.headlineHighlight}</span> {dict.hero.headlineEnd}
+              {dict.hero.headline}{" "}
+              <span className="text-gold-500">
+                {dict.hero.headlineHighlight}
+              </span>{" "}
+              {dict.hero.headlineEnd}
             </h1>
 
             {/* Supporting copy */}
@@ -95,9 +111,7 @@ export function Hero({ dict, locale }: { dict: Dictionary; locale: string }) {
                     <p className="text-sm font-semibold text-white">
                       {item.label}
                     </p>
-                    <p className="text-xs text-gray-400">
-                      {item.description}
-                    </p>
+                    <p className="text-xs text-gray-400">{item.description}</p>
                   </div>
                 </div>
               ))}

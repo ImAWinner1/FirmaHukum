@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, Scale, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useScrollPosition } from "@/hooks/use-scroll-position";
-import { siteConfig } from "@/lib/data/site-config";
+import { siteConfig } from "@/constants/site";
 import { Button } from "@/components/ui/button";
 import { practiceAreas } from "@/lib/data/practice-areas";
 import type { Dictionary } from "@/dictionaries/id";
@@ -17,7 +17,9 @@ export function Navbar({ dict, locale }: { dict: Dictionary; locale: string }) {
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
   const closeMenu = () => {
-    const checkbox = document.getElementById("mobile-menu-toggle") as HTMLInputElement;
+    const checkbox = document.getElementById(
+      "mobile-menu-toggle"
+    ) as HTMLInputElement;
     if (checkbox) checkbox.checked = false;
   };
 
@@ -47,145 +49,151 @@ export function Navbar({ dict, locale }: { dict: Dictionary; locale: string }) {
     <>
       <input type="checkbox" id="mobile-menu-toggle" className="peer hidden" />
       <header
-      className={cn(
-        "fixed top-0 right-0 left-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-navy-950 shadow-lg shadow-black/10"
-          : "bg-navy-950"
-      )}
-    >
-      <nav
-        className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-4 md:h-20 md:px-6 lg:px-8"
-        aria-label="Navigasi utama"
+        className={cn(
+          "fixed top-0 right-0 left-0 z-50 transition-all duration-300",
+          isScrolled ? "bg-navy-950 shadow-lg shadow-black/10" : "bg-navy-950"
+        )}
       >
-        {/* Logo */}
-        <Link
-          href={`/${locale}`}
-          className="flex items-center gap-2.5 transition-opacity hover:opacity-80"
-          aria-label={`${siteConfig.name} — Kembali ke beranda`}
+        <nav
+          className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-4 md:h-20 md:px-6 lg:px-8"
+          aria-label="Navigasi utama"
         >
-          <Scale className="h-6 w-6 text-gold-500 md:h-7 md:w-7" />
-          <span className="font-heading text-lg font-bold tracking-tight text-white md:text-xl">
-            {siteConfig.name}
-          </span>
-        </Link>
+          {/* Logo */}
+          <Link
+            href={`/${locale}`}
+            className="flex items-center gap-2.5 transition-opacity hover:opacity-80"
+            aria-label={`${siteConfig.name} - Kembali ke beranda`}
+          >
+            <Scale className="h-6 w-6 text-gold-500 md:h-7 md:w-7" />
+            <span className="font-heading text-lg font-bold tracking-tight text-white md:text-xl">
+              {siteConfig.name}
+            </span>
+          </Link>
 
-        {/* Desktop Navigation */}
-        <ul className="hidden items-center gap-1 lg:flex">
-          {navItems.map((item) => {
-            const fullHref = `/${locale}${item.href === "/" ? "" : item.href}`;
-            const isActive =
-              pathname === fullHref ||
-              (item.href !== "/" && pathname.startsWith(fullHref));
-            
-            if (item.href === "/layanan") {
+          {/* Desktop Navigation */}
+          <ul className="hidden items-center gap-1 lg:flex">
+            {navItems.map((item) => {
+              const fullHref = `/${locale}${item.href === "/" ? "" : item.href}`;
+              const isActive =
+                pathname === fullHref ||
+                (item.href !== "/" && pathname.startsWith(fullHref));
+
+              if (item.href === "/layanan") {
+                return (
+                  <li key={item.href} className="relative group">
+                    <Link
+                      href={fullHref}
+                      className={cn(
+                        "flex items-center gap-1 relative px-3 py-2 text-sm font-medium transition-colors",
+                        isActive
+                          ? "text-gold-500"
+                          : "text-gray-300 hover:text-white"
+                      )}
+                    >
+                      {item.label}
+                      <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
+                      {isActive && (
+                        <span className="absolute bottom-0.5 left-3 right-3 h-0.5 rounded-full bg-gold-500" />
+                      )}
+                    </Link>
+
+                    {/* Dropdown */}
+                    <div className="absolute left-0 top-full invisible w-64 pt-2 opacity-0 translate-y-2 transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">
+                      <div className="rounded-lg border border-navy-700 bg-navy-900 p-2 shadow-xl shadow-black/20">
+                        {practiceAreas.map((area) => (
+                          <Link
+                            key={area.id}
+                            href={`/${locale}/layanan/${area.slug}`}
+                            className="block rounded-md px-4 py-2 text-sm text-gray-300 transition-colors hover:bg-navy-800 hover:text-gold-500"
+                          >
+                            {dict.servicesPage.areas[
+                              area.id as keyof typeof dict.servicesPage.areas
+                            ]?.title || area.title}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </li>
+                );
+              }
+
               return (
-                <li key={item.href} className="relative group">
+                <li key={item.href}>
                   <Link
                     href={fullHref}
                     className={cn(
-                      "flex items-center gap-1 relative px-3 py-2 text-sm font-medium transition-colors",
+                      "relative px-3 py-2 text-sm font-medium transition-colors",
                       isActive
                         ? "text-gold-500"
                         : "text-gray-300 hover:text-white"
                     )}
                   >
                     {item.label}
-                    <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
                     {isActive && (
                       <span className="absolute bottom-0.5 left-3 right-3 h-0.5 rounded-full bg-gold-500" />
                     )}
                   </Link>
-                  
-                  {/* Dropdown */}
-                  <div className="absolute left-0 top-full invisible w-64 pt-2 opacity-0 translate-y-2 transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">
-                    <div className="rounded-lg border border-navy-700 bg-navy-900 p-2 shadow-xl shadow-black/20">
-                      {practiceAreas.map((area) => (
-                        <Link
-                          key={area.id}
-                          href={`/${locale}/layanan/${area.slug}`}
-                          className="block rounded-md px-4 py-2 text-sm text-gray-300 transition-colors hover:bg-navy-800 hover:text-gold-500"
-                        >
-                          {dict.servicesPage.areas[area.id as keyof typeof dict.servicesPage.areas]?.title || area.title}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
                 </li>
               );
-            }
+            })}
+          </ul>
 
-            return (
-              <li key={item.href}>
-                <Link
-                  href={fullHref}
-                  className={cn(
-                    "relative px-3 py-2 text-sm font-medium transition-colors",
-                    isActive
-                      ? "text-gold-500"
-                      : "text-gray-300 hover:text-white"
-                  )}
-                >
-                  {item.label}
-                  {isActive && (
-                    <span className="absolute bottom-0.5 left-3 right-3 h-0.5 rounded-full bg-gold-500" />
-                  )}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+          {/* Desktop CTA + Language Switcher */}
+          <div className="hidden items-center gap-4 lg:flex">
+            {/* Language switcher */}
+            <div
+              className="flex items-center gap-2 text-xs font-medium"
+              aria-label="Pemilih bahasa"
+            >
+              <Link
+                href={getLocalizedPath("id")}
+                onClick={() => setCookie("id")}
+                className={cn(
+                  "transition-colors hover:text-gold-400",
+                  locale === "id" ? "text-gold-500" : "text-gray-500"
+                )}
+              >
+                ID
+              </Link>
+              <span className="text-gray-600">|</span>
+              <Link
+                href={getLocalizedPath("en")}
+                onClick={() => setCookie("en")}
+                className={cn(
+                  "transition-colors hover:text-gold-400",
+                  locale === "en" ? "text-gold-500" : "text-gray-500"
+                )}
+              >
+                EN
+              </Link>
+            </div>
 
-        {/* Desktop CTA + Language Switcher */}
-        <div className="hidden items-center gap-4 lg:flex">
-          {/* Language switcher */}
-          <div
-            className="flex items-center gap-2 text-xs font-medium"
-            aria-label="Pemilih bahasa"
-          >
-            <Link
-              href={getLocalizedPath("id")}
-              onClick={() => setCookie("id")}
-              className={cn(
-                "transition-colors hover:text-gold-400",
-                locale === "id" ? "text-gold-500" : "text-gray-500"
-              )}
-            >
-              ID
-            </Link>
-            <span className="text-gray-600">|</span>
-            <Link
-              href={getLocalizedPath("en")}
-              onClick={() => setCookie("en")}
-              className={cn(
-                "transition-colors hover:text-gold-400",
-                locale === "en" ? "text-gold-500" : "text-gray-500"
-              )}
-            >
-              EN
+            <Link href={`/${locale}/kontak`}>
+              <Button
+                variant="outline"
+                className="border-gold-600/50 bg-transparent text-gold-500 hover:border-gold-500 hover:bg-gold-600/10 hover:text-gold-400"
+              >
+                {dict.hero.cta1}
+              </Button>
             </Link>
           </div>
-
-          <Link href={`/${locale}/kontak`}>
-            <Button
-              variant="outline"
-              className="border-gold-600/50 bg-transparent text-gold-500 hover:border-gold-500 hover:bg-gold-600/10 hover:text-gold-400"
-            >
-              {dict.hero.cta1}
-            </Button>
-          </Link>
-        </div>
-        {/* Mobile Menu Toggle */}
-        <label
-          htmlFor="mobile-menu-toggle"
-          className="lg:hidden relative z-50 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-navy-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gold-500 cursor-pointer"
-          aria-label="Toggle menu navigasi"
-        >
-          <Menu className="h-6 w-6 block peer-checked:hidden" aria-hidden="true" />
-          <X className="h-6 w-6 hidden peer-checked:block text-white" aria-hidden="true" />
-        </label>
-      </nav>
-    </header>
+          {/* Mobile Menu Toggle */}
+          <label
+            htmlFor="mobile-menu-toggle"
+            className="lg:hidden relative z-50 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-navy-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gold-500 cursor-pointer"
+            aria-label="Toggle menu navigasi"
+          >
+            <Menu
+              className="h-6 w-6 block peer-checked:hidden"
+              aria-hidden="true"
+            />
+            <X
+              className="h-6 w-6 hidden peer-checked:block text-white"
+              aria-hidden="true"
+            />
+          </label>
+        </nav>
+      </header>
 
       {/* Mobile Menu Overlay and Content */}
       <label
@@ -213,117 +221,145 @@ export function Navbar({ dict, locale }: { dict: Dictionary; locale: string }) {
           </label>
         </div>
 
-          <div className="flex flex-col px-6 py-6 overflow-y-auto">
-            <ul className="space-y-1">
-              {navItems.map((item) => {
-                const fullHref = `/${locale}${item.href === "/" ? "" : item.href}`;
-                const isActive =
-                  (item.href === "/" && pathname === `/${locale}`) ||
-                  (item.href !== "/" && pathname.startsWith(fullHref));
-                
-                if (item.href === "/layanan") {
-                  return (
-                    <li key={item.href} className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <Link
-                          href={fullHref}
-                          onClick={closeMenu}
-                          className={cn(
-                            "block rounded-md px-3 py-2 text-base font-medium transition-colors flex-grow",
-                            isActive
-                              ? "bg-navy-900 text-gold-500"
-                              : "text-gray-300 hover:bg-navy-800 hover:text-white"
-                          )}
-                        >
-                          {item.label}
-                        </Link>
-                        <button 
-                          onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                          className="p-2 text-gray-300 hover:text-gold-500 hover:bg-navy-800 rounded-md transition-colors"
-                          aria-label="Toggle menu layanan"
-                        >
-                          <ChevronDown className={cn("h-5 w-5 transition-transform duration-300", isMobileServicesOpen && "rotate-180")} />
-                        </button>
-                      </div>
-                      <div className={cn("overflow-hidden transition-all duration-300 ease-in-out", isMobileServicesOpen ? "max-h-[500px] opacity-100 mt-1" : "max-h-0 opacity-0")}>
-                        <ul className="pl-4 space-y-1 border-l border-navy-700 ml-3 py-1">
-                          {practiceAreas.map((area) => (
-                            <li key={area.id}>
-                              <Link
-                                href={`/${locale}/layanan/${area.slug}`}
-                                onClick={closeMenu}
-                                className={cn(
-                                  "block rounded-md px-3 py-2 text-sm font-medium transition-colors text-gray-400 hover:bg-navy-800 hover:text-white",
-                                  pathname === `/${locale}/layanan/${area.slug}` && "text-gold-400"
-                                )}
-                              >
-                                {dict.servicesPage.areas[area.id as keyof typeof dict.servicesPage.areas]?.title || area.title}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </li>
-                  );
-                }
+        <div className="flex flex-col px-6 py-6 overflow-y-auto">
+          <ul className="space-y-1">
+            {navItems.map((item) => {
+              const fullHref = `/${locale}${item.href === "/" ? "" : item.href}`;
+              const isActive =
+                (item.href === "/" && pathname === `/${locale}`) ||
+                (item.href !== "/" && pathname.startsWith(fullHref));
 
+              if (item.href === "/layanan") {
                 return (
-                  <li key={item.href}>
-                    <Link
-                      href={fullHref}
-                      onClick={closeMenu}
+                  <li key={item.href} className="space-y-1">
+                    <div className="flex items-center justify-between">
+                      <Link
+                        href={fullHref}
+                        onClick={closeMenu}
+                        className={cn(
+                          "block rounded-md px-3 py-2 text-base font-medium transition-colors flex-grow",
+                          isActive
+                            ? "bg-navy-900 text-gold-500"
+                            : "text-gray-300 hover:bg-navy-800 hover:text-white"
+                        )}
+                      >
+                        {item.label}
+                      </Link>
+                      <button
+                        onClick={() =>
+                          setIsMobileServicesOpen(!isMobileServicesOpen)
+                        }
+                        className="p-2 text-gray-300 hover:text-gold-500 hover:bg-navy-800 rounded-md transition-colors"
+                        aria-label="Toggle menu layanan"
+                      >
+                        <ChevronDown
+                          className={cn(
+                            "h-5 w-5 transition-transform duration-300",
+                            isMobileServicesOpen && "rotate-180"
+                          )}
+                        />
+                      </button>
+                    </div>
+                    <div
                       className={cn(
-                        "block rounded-md px-3 py-2 text-base font-medium transition-colors",
-                        isActive
-                          ? "bg-navy-900 text-gold-500"
-                          : "text-gray-300 hover:bg-navy-800 hover:text-white"
+                        "overflow-hidden transition-all duration-300 ease-in-out",
+                        isMobileServicesOpen
+                          ? "max-h-[500px] opacity-100 mt-1"
+                          : "max-h-0 opacity-0"
                       )}
                     >
-                      {item.label}
-                    </Link>
+                      <ul className="pl-4 space-y-1 border-l border-navy-700 ml-3 py-1">
+                        {practiceAreas.map((area) => (
+                          <li key={area.id}>
+                            <Link
+                              href={`/${locale}/layanan/${area.slug}`}
+                              onClick={closeMenu}
+                              className={cn(
+                                "block rounded-md px-3 py-2 text-sm font-medium transition-colors text-gray-400 hover:bg-navy-800 hover:text-white",
+                                pathname ===
+                                  `/${locale}/layanan/${area.slug}` &&
+                                  "text-gold-400"
+                              )}
+                            >
+                              {dict.servicesPage.areas[
+                                area.id as keyof typeof dict.servicesPage.areas
+                              ]?.title || area.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </li>
                 );
-              })}
-            </ul>
+              }
 
-            {/* Mobile Language Switcher */}
-            <div className="mt-4 flex items-center gap-4 px-3 py-2">
-              <span className="text-sm font-medium text-gray-400">Bahasa:</span>
-              <div className="flex items-center gap-3 text-sm font-medium">
-                <Link
-                  href={getLocalizedPath("id")}
-                  onClick={() => { setCookie("id"); closeMenu(); }}
-                  className={cn(
-                    "transition-colors hover:text-gold-400",
-                    locale === "id" ? "text-gold-500" : "text-gray-500"
-                  )}
-                >
-                  ID
-                </Link>
-                <span className="text-gray-600">|</span>
-                <Link
-                  href={getLocalizedPath("en")}
-                  onClick={() => { setCookie("en"); closeMenu(); }}
-                  className={cn(
-                    "transition-colors hover:text-gold-400",
-                    locale === "en" ? "text-gold-500" : "text-gray-500"
-                  )}
-                >
-                  EN
-                </Link>
-              </div>
-            </div>
+              return (
+                <li key={item.href}>
+                  <Link
+                    href={fullHref}
+                    onClick={closeMenu}
+                    className={cn(
+                      "block rounded-md px-3 py-2 text-base font-medium transition-colors",
+                      isActive
+                        ? "bg-navy-900 text-gold-500"
+                        : "text-gray-300 hover:bg-navy-800 hover:text-white"
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
 
-            {/* Mobile CTA */}
-            <div className="mt-6 border-t border-navy-700 pt-6">
-              <Link href={`/${locale}/kontak`} onClick={closeMenu} className="block">
-                <Button className="w-full bg-gold-600 text-navy-950 hover:bg-gold-500">
-                  {dict.hero.cta1}
-                </Button>
+          {/* Mobile Language Switcher */}
+          <div className="mt-4 flex items-center gap-4 px-3 py-2">
+            <span className="text-sm font-medium text-gray-400">Bahasa:</span>
+            <div className="flex items-center gap-3 text-sm font-medium">
+              <Link
+                href={getLocalizedPath("id")}
+                onClick={() => {
+                  setCookie("id");
+                  closeMenu();
+                }}
+                className={cn(
+                  "transition-colors hover:text-gold-400",
+                  locale === "id" ? "text-gold-500" : "text-gray-500"
+                )}
+              >
+                ID
+              </Link>
+              <span className="text-gray-600">|</span>
+              <Link
+                href={getLocalizedPath("en")}
+                onClick={() => {
+                  setCookie("en");
+                  closeMenu();
+                }}
+                className={cn(
+                  "transition-colors hover:text-gold-400",
+                  locale === "en" ? "text-gold-500" : "text-gray-500"
+                )}
+              >
+                EN
               </Link>
             </div>
           </div>
+
+          {/* Mobile CTA */}
+          <div className="mt-6 border-t border-navy-700 pt-6">
+            <Link
+              href={`/${locale}/kontak`}
+              onClick={closeMenu}
+              className="block"
+            >
+              <Button className="w-full bg-gold-600 text-navy-950 hover:bg-gold-500">
+                {dict.hero.cta1}
+              </Button>
+            </Link>
+          </div>
         </div>
-      </>
-    );
+      </div>
+    </>
+  );
 }

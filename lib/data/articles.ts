@@ -23,11 +23,13 @@ export const articles: ArticleDictionary = {
     {
       id: "1",
       slug: "panduan-hukum-regulasi-baru-bisnis",
-      title: "Panduan Hukum: Implikasi Regulasi Baru Terhadap Operasional Bisnis Anda",
+      title:
+        "Panduan Hukum: Implikasi Regulasi Baru Terhadap Operasional Bisnis Anda",
       category: "Hukum Bisnis",
       readTime: "5 Menit Baca",
       date: "12 Mei 2024",
-      excerpt: "Artikel ini membahas secara mendalam tentang implikasi dari perubahan undang-undang terbaru terhadap operasional bisnis Anda di Indonesia.",
+      excerpt:
+        "Artikel ini membahas secara mendalam tentang implikasi dari perubahan undang-undang terbaru terhadap operasional bisnis Anda di Indonesia.",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">Memahami Perubahan Regulasi Bisnis 2024</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">Pemerintah Republik Indonesia baru-baru ini mengesahkan serangkaian amandemen komprehensif terhadap undang-undang ketenagakerjaan dan kerangka perizinan berusaha. Reformasi struktural ini dirancang untuk menciptakan iklim investasi yang lebih kondusif, namun pada saat yang bersamaan, ia membawa implikasi langsung dan sangat signifikan terhadap cara perusahaan beroperasi secara harian. Sebagai pelaku bisnis di tingkat korporasi maupun multinasional, sangat penting untuk tidak sekadar mengetahui adanya perubahan ini, melainkan secara aktif mendekonstruksi dan mengintegrasikan aturan main baru tersebut ke dalam strategi perusahaan. Kegagalan dalam melakukan adaptasi ini tidak hanya berpotensi memicu sanksi administratif yang melumpuhkan, tetapi juga membuka celah lebar terhadap risiko litigasi yang berkepanjangan.</p>
@@ -48,16 +50,19 @@ export const articles: ArticleDictionary = {
       author: "Rizky Maulana Malik Ibrahim",
       authorRole: "Managing Partner",
       authorImage: "/images/team/Rizky Maulana Malik Ibrahim-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop",
+      imageUrl:
+        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop",
     },
     {
       id: "2",
       slug: "penyelesaian-sengketa-komersial-arbitrase",
-      title: "Mengapa Arbitrase Menjadi Pilihan Utama Penyelesaian Sengketa Komersial",
+      title:
+        "Mengapa Arbitrase Menjadi Pilihan Utama Penyelesaian Sengketa Komersial",
       category: "Sengketa",
       readTime: "7 Menit Baca",
       date: "28 April 2024",
-      excerpt: "Ketahui keuntungan eksklusif menyelesaikan sengketa bisnis melalui jalur arbitrase dibandingkan proses peradilan konvensional yang memakan waktu lama.",
+      excerpt:
+        "Ketahui keuntungan eksklusif menyelesaikan sengketa bisnis melalui jalur arbitrase dibandingkan proses peradilan konvensional yang memakan waktu lama.",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">Pergeseran Paradigma Menuju Arbitrase Komersial</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">Dalam arena bisnis modern yang bergerak dengan kecepatan eksponensial, sengketa komersial—baik yang timbul dari kompleksitas interpretasi kontrak, wanprestasi, maupun perselisihan antara pemegang saham—sering kali merupakan keniscayaan yang tidak dapat dihindari. Namun demikian, metode yang Anda pilih untuk menyelesaikan perselisihan tersebut akan sangat mendikte masa depan kelangsungan, reputasi, dan kesehatan finansial perusahaan Anda. Dewasa ini, arbitrase komersial telah mengukuhkan posisinya sebagai forum penyelesaian sengketa favorit dan pilihan utama bagi mayoritas korporasi multinasional, menggeser dominasi proses litigasi di pengadilan konvensional.</p>
@@ -75,16 +80,19 @@ export const articles: ArticleDictionary = {
       author: "Yalsa Safitri",
       authorRole: "Corporate Legal Specialist",
       authorImage: "/images/team/Yalsa Safitri-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2112&auto=format&fit=crop",
+      imageUrl:
+        "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2112&auto=format&fit=crop",
     },
     {
       id: "3",
       slug: "perlindungan-kekayaan-intelektual-startup",
-      title: "Pentingnya Pendaftaran Hak Kekayaan Intelektual Bagi Perusahaan Rintisan",
+      title:
+        "Pentingnya Pendaftaran Hak Kekayaan Intelektual Bagi Perusahaan Rintisan",
       category: "Kekayaan Intelektual",
       readTime: "4 Menit Baca",
       date: "15 April 2024",
-      excerpt: "Merek dagang, paten, dan hak cipta adalah urat nadi valuasi startup. Pelajari urgensi melindunginya sejak hari pertama Anda merintis bisnis.",
+      excerpt:
+        "Merek dagang, paten, dan hak cipta adalah urat nadi valuasi startup. Pelajari urgensi melindunginya sejak hari pertama Anda merintis bisnis.",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">Melindungi Aset Tak Berwujud yang Paling Berharga</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">Dalam ekosistem ekonomi digital yang sangat kompetitif saat ini, banyak <em>founder startup</em> dan pengusaha muda yang kerap kali terjebak dalam obsesi untuk terus melakukan iterasi pengembangan produk (product development) dan akselerasi akuisisi pelanggan. Di tengah euforia pertumbuhan tersebut, mereka seringkali mengesampingkan satu aspek yuridis yang sangat fundamental dan krusial: Perlindungan Hak Kekayaan Intelektual (HKI). Kesalahan fatal ini umumnya baru disadari secara menyakitkan ketika perusahaan mulai mendapatkan traksi pasar yang kuat, dan secara tiba-tiba muncul pihak kompetitor atau oknum tidak bertanggung jawab yang menggunakan nama <em>brand</em>, logo, atau mereplikasi teknologi yang serupa.</p>
@@ -101,16 +109,19 @@ export const articles: ArticleDictionary = {
       author: "Faturrohman Hakim",
       authorRole: "Senior Legal Advisor",
       authorImage: "/images/team/Faturrohman Hakim-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop",
+      imageUrl:
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop",
     },
     {
       id: "4",
       slug: "kepatuhan-hukum-dan-tata-kelola-perusahaan",
-      title: "Membangun Budaya Kepatuhan: Fondasi Tata Kelola Perusahaan yang Kuat",
+      title:
+        "Membangun Budaya Kepatuhan: Fondasi Tata Kelola Perusahaan yang Kuat",
       category: "Kepatuhan",
       readTime: "6 Menit Baca",
       date: "02 Mei 2024",
-      excerpt: "Kepatuhan hukum bukan sekadar daftar periksa, melainkan tulang punggung keberlanjutan dan kredibilitas perusahaan di mata publik dan regulator.",
+      excerpt:
+        "Kepatuhan hukum bukan sekadar daftar periksa, melainkan tulang punggung keberlanjutan dan kredibilitas perusahaan di mata publik dan regulator.",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">Menjadikan Kepatuhan Sebagai Budaya Korporasi</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">Di era bisnis modern yang ditandai dengan pengawasan ketat dari regulator dan tuntutan transparansi yang semakin tinggi dari para pemangku kepentingan, kepatuhan hukum (legal compliance) tidak lagi dapat diposisikan sekadar sebagai tugas administratif departemen legal. Kepatuhan harus ditransformasikan menjadi budaya organik yang mengalir dalam setiap nadi operasional perusahaan. Membangun struktur tata kelola perusahaan yang baik (Good Corporate Governance/GCG) membutuhkan komitmen menyeluruh dari jajaran eksekutif puncak hingga tingkat operasional di lapangan. Tanpa fondasi kepatuhan yang mengakar kuat, perusahaan tidak hanya rentan terhadap sanksi denda yang masif, tetapi juga berisiko kehilangan aset paling berharganya: reputasi.</p>
@@ -129,16 +140,19 @@ export const articles: ArticleDictionary = {
       author: "Rajni Kamila",
       authorRole: "Legal Research & Compliance Officer",
       authorImage: "/images/team/Rajni Kamila-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop",
+      imageUrl:
+        "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop",
     },
     {
       id: "5",
       slug: "strategi-litigasi-dan-manajemen-krisis",
-      title: "Strategi Litigasi dan Manajemen Krisis Saat Menghadapi Gugatan Hukum",
+      title:
+        "Strategi Litigasi dan Manajemen Krisis Saat Menghadapi Gugatan Hukum",
       category: "Sengketa",
       readTime: "8 Menit Baca",
       date: "20 Maret 2024",
-      excerpt: "Mengahadapi gugatan di pengadilan membutuhkan lebih dari sekadar pemahaman hukum; ia menuntut strategi taktis dan pengelolaan krisis yang terukur.",
+      excerpt:
+        "Mengahadapi gugatan di pengadilan membutuhkan lebih dari sekadar pemahaman hukum; ia menuntut strategi taktis dan pengelolaan krisis yang terukur.",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">Anatomi Sebuah Krisis Hukum Korporasi</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">Menerima surat panggilan dari pengadilan (relas) seringkali menjadi momen krusial yang dapat memicu kepanikan di tingkat manajerial. Gugatan perdata berskala besar atau investigasi pidana korporasi berpotensi menghentikan operasional bisnis, membekukan aset perusahaan, dan meruntuhkan kepercayaan publik dalam sekejap mata. Dalam menghadapi skenario mimpi buruk ini, reaksi pertama perusahaan akan sangat menentukan hasil akhir dari proses hukum tersebut. Litigasi bukanlah arena pertarungan emosional, melainkan permainan catur strategis yang menuntut kepala dingin, analisis presisi, dan taktik pertahanan yang berlapis.</p>
@@ -153,7 +167,8 @@ export const articles: ArticleDictionary = {
       author: "Dimas Damar Pangestu",
       authorRole: "Head of Litigation",
       authorImage: "/images/team/Dimas Damar Pangestu-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?q=80&w=2070&auto=format&fit=crop",
+      imageUrl:
+        "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?q=80&w=2070&auto=format&fit=crop",
     },
     {
       id: "6",
@@ -162,7 +177,8 @@ export const articles: ArticleDictionary = {
       category: "Hukum Tenaga Kerja",
       readTime: "5 Menit Baca",
       date: "10 Februari 2024",
-      excerpt: "Pelajari prosedur hukum yang tepat dalam melakukan rasionalisasi karyawan agar perusahaan terhindar dari sengketa hubungan industrial yang berlarut-larut.",
+      excerpt:
+        "Pelajari prosedur hukum yang tepat dalam melakukan rasionalisasi karyawan agar perusahaan terhindar dari sengketa hubungan industrial yang berlarut-larut.",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">Kompleksitas Regulasi Ketenagakerjaan Modern</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">Dinamika ekonomi global seringkali memaksa korporasi untuk mengambil keputusan bisnis yang berat, termasuk melakukan rasionalisasi atau efisiensi jumlah karyawan. Namun, di Indonesia, hukum ketenagakerjaan dirancang dengan sangat protektif terhadap hak-hak pekerja. Keputusan Pemutusan Hubungan Kerja (PHK) yang dilakukan secara gegabah, tanpa mengindahkan prosedur formal yang diwajibkan oleh undang-undang, hampir dapat dipastikan akan berujung pada sengketa di Pengadilan Hubungan Industrial (PHI). Sengketa semacam ini tidak hanya menguras energi dan finansial perusahaan untuk membayar kompensasi ganda, tetapi juga berpotensi menciptakan preseden buruk yang memicu keresahan massal di kalangan karyawan lainnya.</p>
@@ -177,7 +193,8 @@ export const articles: ArticleDictionary = {
       author: "Azhar",
       authorRole: "Associate Lawyer",
       authorImage: "/images/team/Azhar-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=2069&auto=format&fit=crop",
+      imageUrl:
+        "https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=2069&auto=format&fit=crop",
     },
     {
       id: "7",
@@ -186,7 +203,8 @@ export const articles: ArticleDictionary = {
       category: "Kontrak Hukum",
       readTime: "4 Menit Baca",
       date: "25 Januari 2024",
-      excerpt: "Sebuah kontrak bisnis adalah bom waktu jika tidak dirancang dengan teliti. Pelajari cara mengidentifikasi klausul yang mengancam aset korporasi Anda.",
+      excerpt:
+        "Sebuah kontrak bisnis adalah bom waktu jika tidak dirancang dengan teliti. Pelajari cara mengidentifikasi klausul yang mengancam aset korporasi Anda.",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">Kontrak Sebagai Instrumen Pertahanan Pertama</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">Dalam lalu lintas perdagangan komersial, sebuah Perjanjian atau Kontrak Bisnis bukanlah sekadar formalitas administratif yang menuntut tanda tangan; ia adalah fondasi arsitektur dari setiap transaksi, sekaligus instrumen pertahanan hukum pertama dan utama bagi perusahaan Anda. Banyak pemimpin bisnis yang terlalu bersemangat mengejar <em>deal</em> (kesepakatan) sehingga mereka hanya membaca bagian finansial dari draf kontrak yang disodorkan mitra, dan mengabaikan klausul-klausul lain yang terkesan standar (boilerplate clauses). Kelalaian ini adalah jebakan maut yang secara konstan memicu kerugian finansial bernilai miliaran rupiah saat terjadi sengketa bisnis (breach of contract) di kemudian hari.</p>
@@ -201,16 +219,19 @@ export const articles: ArticleDictionary = {
       author: "Nabil Faqih Zulfikar",
       authorRole: "Client Relations & Legal Administration",
       authorImage: "/images/team/Nabil Faqih Zulfikar-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1554774853-719586f82d77?q=80&w=2070&auto=format&fit=crop",
+      imageUrl:
+        "https://images.unsplash.com/photo-1554774853-719586f82d77?q=80&w=2070&auto=format&fit=crop",
     },
     {
       id: "8",
       slug: "kepatuhan-perlindungan-data-pribadi",
-      title: "Mempersiapkan Korporasi Menghadapi Rezim UU Pelindungan Data Pribadi (UU PDP)",
+      title:
+        "Mempersiapkan Korporasi Menghadapi Rezim UU Pelindungan Data Pribadi (UU PDP)",
       category: "Hukum Digital",
       readTime: "6 Menit Baca",
       date: "05 Januari 2024",
-      excerpt: "Undang-Undang Pelindungan Data Pribadi memberikan sanksi denda yang masif. Sudahkah sistem IT dan legal perusahaan Anda beradaptasi?",
+      excerpt:
+        "Undang-Undang Pelindungan Data Pribadi memberikan sanksi denda yang masif. Sudahkah sistem IT dan legal perusahaan Anda beradaptasi?",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">Menyongsong Era Baru Privasi Data di Indonesia</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">Pengesahan Undang-Undang Pelindungan Data Pribadi (UU PDP) menandai pergeseran monumental dalam lanskap regulasi ekonomi digital di Indonesia. Regulasi ini tidak hanya menyasar perusahaan raksasa teknologi, melainkan seluruh spektrum korporasi yang dalam operasionalnya mengumpulkan, memproses, dan menyimpan data pribadi konsumen atau karyawannya (termasuk bank, rumah sakit, hingga perusahaan <em>e-commerce</em>). Tenggat waktu masa transisi yang ditetapkan pemerintah kini semakin menyempit, dan perusahaan yang terbukti lalai atau gagal mengamankan data pribadi akan menghadapi ancaman sanksi denda administratif yang dapat mencapai miliaran rupiah, hingga tuntutan pidana yang menargetkan dewan direksi secara langsung.</p>
@@ -225,17 +246,19 @@ export const articles: ArticleDictionary = {
       author: "Zalfa Syifa Aghniya",
       authorRole: "Junior Legal Analyst",
       authorImage: "/images/team/Zalfa Syifa Aghniya-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop",
-
+      imageUrl:
+        "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop",
     },
     {
       id: "9",
       slug: "audit-hukum-akuisisi-perusahaan",
-      title: "Pentingnya Audit Hukum (Legal Due Diligence) Sebelum Akuisisi Perusahaan",
+      title:
+        "Pentingnya Audit Hukum (Legal Due Diligence) Sebelum Akuisisi Perusahaan",
       category: "Hukum Perusahaan",
       readTime: "7 Menit Baca",
       date: "02 Desember 2023",
-      excerpt: "Mengapa audit hukum secara menyeluruh adalah benteng perlindungan terbaik Anda saat merencanakan akuisisi atau merger.",
+      excerpt:
+        "Mengapa audit hukum secara menyeluruh adalah benteng perlindungan terbaik Anda saat merencanakan akuisisi atau merger.",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">Menghindari Jebakan dalam Transaksi Akuisisi</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">Ekspansi bisnis melalui skema merger dan akuisisi (M&A) merupakan strategi akselerasi yang sangat populer di kalangan korporasi modern. Janji akan sinergi operasional, dominasi pangsa pasar yang lebih luas, serta integrasi teknologi sering kali membutakan para pengambil keputusan dari risiko tersembunyi yang melekat pada entitas target. Tanpa pelaksanaan Audit Hukum atau <em>Legal Due Diligence</em> (LDD) yang komprehensif, sebuah akuisisi berpotensi besar berubah dari investasi yang menguntungkan menjadi pusaran liabilitas yang dapat menenggelamkan perusahaan induk.</p>
@@ -256,18 +279,21 @@ export const articles: ArticleDictionary = {
       author: "Rizky Maulana Malik Ibrahim",
       authorRole: "Managing Partner",
       authorImage: "/images/team/Rizky Maulana Malik Ibrahim-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop",
-    }
+      imageUrl:
+        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop",
+    },
   ],
   en: [
     {
       id: "1",
       slug: "panduan-hukum-regulasi-baru-bisnis",
-      title: "Legal Guide: Implications of New Regulations on Your Business Operations",
+      title:
+        "Legal Guide: Implications of New Regulations on Your Business Operations",
       category: "Business Law",
       readTime: "5 Min Read",
       date: "May 12, 2024",
-      excerpt: "This article discusses in-depth the implications of the latest legal amendments on how your company operates in Indonesia.",
+      excerpt:
+        "This article discusses in-depth the implications of the latest legal amendments on how your company operates in Indonesia.",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">Understanding 2024 Business Regulation Changes</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">The Government of the Republic of Indonesia recently enacted a series of comprehensive amendments to labor laws and the business licensing framework. These structural reforms are primarily designed to create a more conducive investment climate, but concurrently, they bring direct and highly significant implications to the daily operations of companies. As a business actor operating at the corporate or multinational level, it is paramount not merely to be aware of these changes, but to actively deconstruct and integrate these new regulations into the company's grand strategy. Failure to adapt not only carries the severe potential of crippling administrative sanctions but also opens a wide vulnerability to prolonged and damaging litigation risks.</p>
@@ -288,16 +314,19 @@ export const articles: ArticleDictionary = {
       author: "Rizky Maulana Malik Ibrahim",
       authorRole: "Managing Partner",
       authorImage: "/images/team/Rizky Maulana Malik Ibrahim-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop",
+      imageUrl:
+        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop",
     },
     {
       id: "2",
       slug: "penyelesaian-sengketa-komersial-arbitrase",
-      title: "Why Arbitration is the Top Choice for Commercial Dispute Resolution",
+      title:
+        "Why Arbitration is the Top Choice for Commercial Dispute Resolution",
       category: "Dispute",
       readTime: "7 Min Read",
       date: "April 28, 2024",
-      excerpt: "Discover the exclusive advantages of resolving business disputes through arbitration compared to time-consuming conventional court proceedings.",
+      excerpt:
+        "Discover the exclusive advantages of resolving business disputes through arbitration compared to time-consuming conventional court proceedings.",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">The Paradigm Shift Towards Commercial Arbitration</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">In the arena of modern business, which moves at an exponential velocity, commercial disputes—whether arising from the complexities of contractual interpretation, breaches of agreement, or intense conflicts among shareholders—are frequently an unavoidable certainty. However, the specific method you choose to resolve these conflicts will heavily dictate the future continuity, reputation, and financial health of your enterprise. Today, commercial arbitration has firmly solidified its position as the favored dispute resolution forum and the primary choice for the vast majority of multinational corporations, effectively displacing the dominance of conventional court litigation.</p>
@@ -315,16 +344,19 @@ export const articles: ArticleDictionary = {
       author: "Yalsa Safitri",
       authorRole: "Corporate Legal Specialist",
       authorImage: "/images/team/Yalsa Safitri-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2112&auto=format&fit=crop",
+      imageUrl:
+        "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2112&auto=format&fit=crop",
     },
     {
       id: "3",
       slug: "perlindungan-kekayaan-intelektual-startup",
-      title: "The Importance of Intellectual Property Registration for Startups",
+      title:
+        "The Importance of Intellectual Property Registration for Startups",
       category: "Intellectual Property",
       readTime: "4 Min Read",
       date: "April 15, 2024",
-      excerpt: "Trademarks, patents, and copyrights are the lifeblood of startup valuation. Learn the urgency of protecting them from day one of your business.",
+      excerpt:
+        "Trademarks, patents, and copyrights are the lifeblood of startup valuation. Learn the urgency of protecting them from day one of your business.",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">Protecting Your Most Valuable Intangible Assets</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">Within today's hyper-competitive digital economy ecosystem, many <em>startup founders</em> and young entrepreneurs frequently become ensnared in an obsession with continuous product development iteration and the rapid acceleration of customer acquisition. Amidst this euphoria of growth, they frequently sideline one juridical aspect that is absolutely fundamental and crucial: the Protection of Intellectual Property (IP) Rights. This fatal error is generally only painfully realized when the company begins to gain strong market traction, and suddenly, competitors or unscrupulous individuals emerge using similar brand names, logos, or replicating identical core technologies.</p>
@@ -341,16 +373,19 @@ export const articles: ArticleDictionary = {
       author: "Faturrohman Hakim",
       authorRole: "Senior Legal Advisor",
       authorImage: "/images/team/Faturrohman Hakim-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop",
+      imageUrl:
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop",
     },
     {
       id: "4",
       slug: "kepatuhan-hukum-dan-tata-kelola-perusahaan",
-      title: "Building a Culture of Compliance: The Foundation of Strong Corporate Governance",
+      title:
+        "Building a Culture of Compliance: The Foundation of Strong Corporate Governance",
       category: "Compliance",
       readTime: "6 Min Read",
       date: "May 02, 2024",
-      excerpt: "Legal compliance is not merely a checklist, but the backbone of a company's sustainability and credibility in the eyes of the public and regulators.",
+      excerpt:
+        "Legal compliance is not merely a checklist, but the backbone of a company's sustainability and credibility in the eyes of the public and regulators.",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">Making Compliance a Corporate Culture</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">In a modern business era marked by intense scrutiny from regulators and increasingly high demands for transparency from stakeholders, legal compliance can no longer be positioned merely as an administrative task of the legal department. Compliance must be transformed into an organic culture that flows through every vein of the company's operations. Establishing a robust structure of Good Corporate Governance (GCG) requires a comprehensive commitment from top executive ranks down to the operational levels in the field. Without a deeply rooted foundation of compliance, a company is not only vulnerable to massive financial penalties but also risks losing its most valuable asset: its reputation.</p>
@@ -369,16 +404,19 @@ export const articles: ArticleDictionary = {
       author: "Rajni Kamila",
       authorRole: "Legal Research & Compliance Officer",
       authorImage: "/images/team/Rajni Kamila-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop",
+      imageUrl:
+        "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop",
     },
     {
       id: "5",
       slug: "strategi-litigasi-dan-manajemen-krisis",
-      title: "Litigation Strategy and Crisis Management When Facing Legal Action",
+      title:
+        "Litigation Strategy and Crisis Management When Facing Legal Action",
       category: "Dispute",
       readTime: "8 Min Read",
       date: "March 20, 2024",
-      excerpt: "Facing a lawsuit in court requires more than just legal understanding; it demands tactical strategy and calculated crisis management.",
+      excerpt:
+        "Facing a lawsuit in court requires more than just legal understanding; it demands tactical strategy and calculated crisis management.",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">The Anatomy of a Corporate Legal Crisis</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">Receiving a summons from the court is frequently a crucial moment that can trigger panic at the managerial level. A large-scale civil lawsuit or corporate criminal investigation has the potential to halt business operations, freeze corporate assets, and obliterate public trust in the blink of an eye. In facing this nightmare scenario, the company's initial reaction will heavily dictate the final outcome of the legal process. Litigation is not an arena for emotional battles, but a strategic chess match that demands a cool head, precise analysis, and layered defensive tactics.</p>
@@ -393,7 +431,8 @@ export const articles: ArticleDictionary = {
       author: "Dimas Damar Pangestu",
       authorRole: "Head of Litigation",
       authorImage: "/images/team/Dimas Damar Pangestu-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?q=80&w=2070&auto=format&fit=crop",
+      imageUrl:
+        "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?q=80&w=2070&auto=format&fit=crop",
     },
     {
       id: "6",
@@ -402,7 +441,8 @@ export const articles: ArticleDictionary = {
       category: "Labor Law",
       readTime: "5 Min Read",
       date: "February 10, 2024",
-      excerpt: "Learn the correct legal procedures in executing employee rationalization to ensure the company avoids prolonged industrial relations disputes.",
+      excerpt:
+        "Learn the correct legal procedures in executing employee rationalization to ensure the company avoids prolonged industrial relations disputes.",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">The Complexity of Modern Labor Regulations</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">The dynamics of the global economy frequently force corporations to make difficult business decisions, including rationalizing or optimizing employee headcount. However, in Indonesia, labor law is designed to be highly protective of workers' rights. A decision to Terminate Employment (PHK) made recklessly, without adhering to the formal procedures mandated by law, is almost guaranteed to culminate in a dispute at the Industrial Relations Court (PHI). Such disputes not only drain the company's energy and finances in paying double compensation but also have the potential to create a terrible precedent that triggers mass unrest among other employees.</p>
@@ -417,7 +457,8 @@ export const articles: ArticleDictionary = {
       author: "Azhar",
       authorRole: "Associate Lawyer",
       authorImage: "/images/team/Azhar-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=2069&auto=format&fit=crop",
+      imageUrl:
+        "https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=2069&auto=format&fit=crop",
     },
     {
       id: "7",
@@ -426,7 +467,8 @@ export const articles: ArticleDictionary = {
       category: "Contract Law",
       readTime: "4 Min Read",
       date: "January 25, 2024",
-      excerpt: "A business contract is a ticking time bomb if not drafted meticulously. Learn how to identify clauses that threaten your corporate assets.",
+      excerpt:
+        "A business contract is a ticking time bomb if not drafted meticulously. Learn how to identify clauses that threaten your corporate assets.",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">The Contract as the First Line of Defense</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">In the traffic of commercial trade, a Business Agreement or Contract is not merely an administrative formality requiring a signature; it is the architectural foundation of every transaction, and simultaneously the first and primary instrument of legal defense for your company. Many business leaders are too eager to close a <em>deal</em> that they only read the financial sections of the draft contract presented by their partners, entirely ignoring other clauses that seem standard (boilerplate clauses). This negligence is a death trap that constantly triggers financial losses worth billions of rupiah when a breach of contract dispute arises in the future.</p>
@@ -441,16 +483,19 @@ export const articles: ArticleDictionary = {
       author: "Nabil Faqih Zulfikar",
       authorRole: "Client Relations & Legal Administration",
       authorImage: "/images/team/Nabil Faqih Zulfikar-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1554774853-719586f82d77?q=80&w=2070&auto=format&fit=crop",
+      imageUrl:
+        "https://images.unsplash.com/photo-1554774853-719586f82d77?q=80&w=2070&auto=format&fit=crop",
     },
     {
       id: "8",
       slug: "kepatuhan-perlindungan-data-pribadi",
-      title: "Preparing Corporations for the Personal Data Protection Law (PDP Law) Regime",
+      title:
+        "Preparing Corporations for the Personal Data Protection Law (PDP Law) Regime",
       category: "Digital Law",
       readTime: "6 Min Read",
       date: "January 05, 2024",
-      excerpt: "The Personal Data Protection Law imposes massive financial penalties. Have your company's IT and legal systems fully adapted?",
+      excerpt:
+        "The Personal Data Protection Law imposes massive financial penalties. Have your company's IT and legal systems fully adapted?",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">Welcoming a New Era of Data Privacy in Indonesia</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">The enactment of the Personal Data Protection Law (PDP Law) marks a monumental shift in the regulatory landscape of Indonesia's digital economy. This regulation does not merely target giant technology companies, but the entire spectrum of corporations that collect, process, and store the personal data of consumers or employees in their operations (including banks, hospitals, and <em>e-commerce</em> platforms). The transition period deadline set by the government is rapidly narrowing, and companies proven negligent or failing to secure personal data will face the threat of administrative fines that can reach billions of rupiah, extending to criminal charges directly targeting the board of directors.</p>
@@ -465,17 +510,19 @@ export const articles: ArticleDictionary = {
       author: "Zalfa Syifa Aghniya",
       authorRole: "Junior Legal Analyst",
       authorImage: "/images/team/Zalfa Syifa Aghniya-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop",
-
+      imageUrl:
+        "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop",
     },
     {
       id: "9",
       slug: "audit-hukum-akuisisi-perusahaan",
-      title: "The Importance of Legal Due Diligence Prior to Corporate Acquisitions",
+      title:
+        "The Importance of Legal Due Diligence Prior to Corporate Acquisitions",
       category: "Corporate Law",
       readTime: "7 Min Read",
       date: "December 02, 2023",
-      excerpt: "Why comprehensive legal auditing is your best line of defense when planning a merger or acquisition.",
+      excerpt:
+        "Why comprehensive legal auditing is your best line of defense when planning a merger or acquisition.",
       content: `
         <h2 class="text-2xl font-bold text-navy-950 mb-6 font-heading mt-8">Avoiding Traps in Acquisition Transactions</h2>
         <p class="text-gray-600 mb-6 leading-relaxed text-justify indent-8">Business expansion through mergers and acquisitions (M&A) is a highly popular acceleration strategy among modern corporations. The promise of operational synergy, broader market share dominance, and technological integration often blinds decision-makers to the hidden risks inherent in the target entity. Without the execution of a comprehensive Legal Due Diligence (LDD), an acquisition carries a massive potential of transforming from a profitable investment into a vortex of liabilities that can sink the parent company.</p>
@@ -496,16 +543,20 @@ export const articles: ArticleDictionary = {
       author: "Rizky Maulana Malik Ibrahim",
       authorRole: "Managing Partner",
       authorImage: "/images/team/Rizky Maulana Malik Ibrahim-v4.png",
-      imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop",
-    }
-  ]
+      imageUrl:
+        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop",
+    },
+  ],
 };
 
-export function getArticles(locale: string = 'id'): Article[] {
+export function getArticles(locale: string = "id"): Article[] {
   return articles[locale as keyof ArticleDictionary] || articles.id;
 }
 
-export function getArticleBySlug(slug: string, locale: string = 'id'): Article | undefined {
+export function getArticleBySlug(
+  slug: string,
+  locale: string = "id"
+): Article | undefined {
   const localizedArticles = getArticles(locale);
-  return localizedArticles.find(article => article.slug === slug);
+  return localizedArticles.find((article) => article.slug === slug);
 }

@@ -1,10 +1,10 @@
-import { Hero } from "@/components/sections/hero";
-import { Statistics } from "@/components/sections/statistics";
-import { PracticeAreas } from "@/components/sections/practice-areas";
-import { WhyChooseUs } from "@/components/sections/why-choose-us";
-import { TeamPreview } from "@/components/sections/team-preview";
-import { Testimonials } from "@/components/sections/testimonials";
-import { CTA } from "@/components/sections/cta";
+import { Hero } from "@/components/sections";
+import { Statistics } from "@/components/sections";
+import { PracticeAreas } from "@/components/sections";
+import { WhyChooseUs } from "@/components/sections";
+import { TeamPreview } from "@/components/sections";
+import { Testimonials } from "@/components/sections";
+import { CTA } from "@/components/sections";
 import { getDictionary } from "@/lib/dictionary";
 import type { Locale } from "@/lib/i18n";
 

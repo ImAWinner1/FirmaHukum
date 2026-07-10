@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { siteConfig } from "@/lib/data/site-config";
+import { siteConfig } from "@/constants/site";
 import { getAllPracticeAreaSlugs } from "@/lib/data/practice-areas";
 
 export default function sitemap(): MetadataRoute.Sitemap {

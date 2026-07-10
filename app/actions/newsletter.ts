@@ -11,7 +11,7 @@ const newsletterSchema = z.object({
 async function verifyEmailDomain(email: string): Promise<boolean> {
   const domain = email.split("@")[1];
   if (!domain) return false;
-  
+
   try {
     const mxRecords = await dns.promises.resolveMx(domain);
     return mxRecords && mxRecords.length > 0;
@@ -20,19 +20,22 @@ async function verifyEmailDomain(email: string): Promise<boolean> {
   }
 }
 
-export async function subscribeNewsletter(formData: FormData | { email: string }) {
+export async function subscribeNewsletter(
+  formData: FormData | { email: string }
+) {
   try {
-    const rawEmail = formData instanceof FormData ? formData.get("email") : formData.email;
-    
+    const rawEmail =
+      formData instanceof FormData ? formData.get("email") : formData.email;
+
     // 1. Validate the incoming data
     const validatedData = newsletterSchema.parse({ email: rawEmail });
-    
+
     // 2. Verify email domain (MX Record Check)
     const isDomainValid = await verifyEmailDomain(validatedData.email);
     if (!isDomainValid) {
       return {
         success: false,
-        message: "Alamat email tidak valid atau domain tidak terdaftar."
+        message: "Alamat email tidak valid atau domain tidak terdaftar.",
       };
     }
 
@@ -42,9 +45,10 @@ export async function subscribeNewsletter(formData: FormData | { email: string }
 
     if (!emailUser || !emailPass) {
       console.error("Missing EMAIL_USER or EMAIL_PASS environment variables.");
-      return { 
-        success: false, 
-        message: "Server configuration error. Please contact the administrator." 
+      return {
+        success: false,
+        message:
+          "Server configuration error. Please contact the administrator.",
       };
     }
 
@@ -98,12 +102,15 @@ export async function subscribeNewsletter(formData: FormData | { email: string }
 
     await Promise.all([
       transporter.sendMail(mailOptionsAdmin),
-      transporter.sendMail(mailOptionsSubscriber)
+      transporter.sendMail(mailOptionsSubscriber),
     ]);
 
     return { success: true };
   } catch (error) {
     console.error("Error subscribing to newsletter:", error);
-    return { success: false, message: "Format email tidak valid atau terjadi kesalahan server." };
+    return {
+      success: false,
+      message: "Format email tidak valid atau terjadi kesalahan server.",
+    };
   }
 }

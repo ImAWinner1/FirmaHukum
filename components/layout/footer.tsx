@@ -11,10 +11,10 @@ import {
   ArrowRight,
   Loader2,
 } from "lucide-react";
-import { Linkedin, Instagram, Facebook, Twitter } from "@/components/shared/social-icons";
+import { Linkedin, Instagram, Facebook, Twitter } from "@/components/shared";
 import { cn } from "@/lib/utils";
-import { siteConfig } from "@/lib/data/site-config";
-import { Container } from "@/components/shared/container";
+import { siteConfig } from "@/constants/site";
+import { Container } from "@/components/shared";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import type { Dictionary } from "@/dictionaries/id";
@@ -44,11 +44,20 @@ export function Footer({ dict, locale }: { dict: Dictionary; locale: string }) {
   ];
 
   const footerServiceLinks = [
-    { label: dict.practiceAreas.corporate.title, href: "/layanan/hukum-korporasi" },
+    {
+      label: dict.practiceAreas.corporate.title,
+      href: "/layanan/hukum-korporasi",
+    },
     { label: dict.practiceAreas.civil.title, href: "/layanan/hukum-perdata" },
     { label: dict.practiceAreas.criminal.title, href: "/layanan/hukum-pidana" },
-    { label: dict.practiceAreas.employment.title, href: "/layanan/hukum-ketenagakerjaan" },
-    { label: dict.practiceAreas.property.title, href: "/layanan/hukum-properti" },
+    {
+      label: dict.practiceAreas.employment.title,
+      href: "/layanan/hukum-ketenagakerjaan",
+    },
+    {
+      label: dict.practiceAreas.property.title,
+      href: "/layanan/hukum-properti",
+    },
   ];
 
   async function handleNewsletterSubmit(e: React.FormEvent) {
@@ -65,12 +74,15 @@ export function Footer({ dict, locale }: { dict: Dictionary; locale: string }) {
     if (result.success) {
       setSubscribed(true);
       setEmail("");
-      
+
       setTimeout(() => {
         setSubscribed(false);
       }, 3000);
     } else {
-      setError(result.message || (locale === "en" ? "Failed to subscribe" : "Gagal berlangganan"));
+      setError(
+        result.message ||
+          (locale === "en" ? "Failed to subscribe" : "Gagal berlangganan")
+      );
     }
   }
 
@@ -82,7 +94,7 @@ export function Footer({ dict, locale }: { dict: Dictionary; locale: string }) {
             <Link
               href={`/${locale}`}
               className="mb-4 inline-flex items-center gap-2 transition-opacity hover:opacity-80"
-              aria-label={`${siteConfig.name} — Beranda`}
+              aria-label={`${siteConfig.name} - Beranda`}
             >
               <Scale className="h-6 w-6 text-gold-500" />
               <span className="font-heading text-lg font-bold text-white">
@@ -154,9 +166,7 @@ export function Footer({ dict, locale }: { dict: Dictionary; locale: string }) {
             <ul className="space-y-3">
               <li className="flex gap-3 text-sm">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-600" />
-                <span className="text-gray-400">
-                  {dict.contact.address}
-                </span>
+                <span className="text-gray-400">{dict.contact.address}</span>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Phone className="h-4 w-4 shrink-0 text-gold-600" />
@@ -190,21 +200,26 @@ export function Footer({ dict, locale }: { dict: Dictionary; locale: string }) {
               Newsletter
             </h3>
             <p className="mb-4 text-sm text-gray-400">
-              {locale === "en" ? "Get the latest legal insights directly to your inbox." : "Dapatkan informasi hukum terbaru langsung ke email Anda."}
+              {locale === "en"
+                ? "Get the latest legal insights directly to your inbox."
+                : "Dapatkan informasi hukum terbaru langsung ke email Anda."}
             </p>
             {subscribed ? (
               <p className="text-sm font-medium text-gold-500">
-                {locale === "en" ? "Thank you for subscribing!" : "Terima kasih telah berlangganan!"}
+                {locale === "en"
+                  ? "Thank you for subscribing!"
+                  : "Terima kasih telah berlangganan!"}
               </p>
             ) : (
               <div className="flex flex-col gap-2">
-                <form
-                  onSubmit={handleNewsletterSubmit}
-                  className="flex gap-2"
-                >
+                <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
                   <Input
                     type="email"
-                    placeholder={locale === "en" ? "Your email address" : "Alamat email Anda"}
+                    placeholder={
+                      locale === "en"
+                        ? "Your email address"
+                        : "Alamat email Anda"
+                    }
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -223,9 +238,7 @@ export function Footer({ dict, locale }: { dict: Dictionary; locale: string }) {
                     )}
                   </Button>
                 </form>
-                {error && (
-                  <p className="text-xs text-red-400">{error}</p>
-                )}
+                {error && <p className="text-xs text-red-400">{error}</p>}
               </div>
             )}
           </div>

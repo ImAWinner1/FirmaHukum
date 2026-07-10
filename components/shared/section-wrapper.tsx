@@ -16,8 +16,8 @@ const backgroundStyles: Record<SectionBackground, string> = {
 };
 
 /**
- * Consistent section wrapper with vertical padding and background variants.
- * Ensures uniform spacing rhythm across all page sections.
+ * Komponen pembungkus (wrapper) bagian halaman dengan variasi latar belakang dan padding vertikal yang konsisten.
+ * Memastikan ritme jarak (spacing rhythm) yang seragam di seluruh tata letak situs.
  */
 export function SectionWrapper({
   children,

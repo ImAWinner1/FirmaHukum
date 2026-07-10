@@ -2,17 +2,23 @@
 
 import { useMemo } from "react";
 import * as LucideIcons from "lucide-react";
-import { Container } from "@/components/shared/container";
-import { SectionWrapper } from "@/components/shared/section-wrapper";
-import { AnimatedElement } from "@/components/shared/animated-element";
+import { Container } from "@/components/shared";
+import { SectionWrapper } from "@/components/shared";
+import { AnimatedElement } from "@/components/shared";
 import { statistics } from "@/lib/data/statistics";
 import type { Dictionary } from "@/dictionaries/id";
 
 /**
- * Statistics bar displaying key firm metrics.
- * Uses a white background with a subtle border, overlapping the hero visually.
+ * Batang statistik yang menampilkan metrik pencapaian utama (key metrics) firma.
+ * Menggunakan latar belakang putih dengan batas tepi (border) tipis, menumpuk secara visual di atas Hero.
  */
-export function Statistics({ dict, locale }: { dict: Dictionary; locale: string }) {
+export function Statistics({
+  dict,
+  locale,
+}: {
+  dict: Dictionary;
+  locale: string;
+}) {
   // Memoize icon mapping to avoid repeated lookups
   const iconMap = useMemo(() => {
     const map: Record<string, React.ElementType> = {};
@@ -26,13 +32,18 @@ export function Statistics({ dict, locale }: { dict: Dictionary; locale: string 
 
   const getStatLabel = (statLabel: string) => {
     switch (statLabel) {
-      case "Tahun Pengalaman": return dict.statistics.yearsOfExperience;
-      case "Klien Terlayani": return dict.statistics.clientsServed;
-      case "Tingkat Keberhasilan": return dict.statistics.successRate;
-      case "Klien Korporasi": return dict.statistics.corporateClients;
-      default: return statLabel;
+      case "Tahun Pengalaman":
+        return dict.statistics.yearsOfExperience;
+      case "Klien Terlayani":
+        return dict.statistics.clientsServed;
+      case "Tingkat Keberhasilan":
+        return dict.statistics.successRate;
+      case "Klien Korporasi":
+        return dict.statistics.corporateClients;
+      default:
+        return statLabel;
     }
-  }
+  };
 
   return (
     <SectionWrapper

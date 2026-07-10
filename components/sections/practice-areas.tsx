@@ -4,10 +4,10 @@ import { useMemo } from "react";
 import Link from "next/link";
 import * as LucideIcons from "lucide-react";
 import { ArrowRight } from "lucide-react";
-import { Container } from "@/components/shared/container";
-import { SectionWrapper } from "@/components/shared/section-wrapper";
-import { SectionHeading } from "@/components/shared/section-heading";
-import { AnimatedElement } from "@/components/shared/animated-element";
+import { Container } from "@/components/shared";
+import { SectionWrapper } from "@/components/shared";
+import { SectionHeading } from "@/components/shared";
+import { AnimatedElement } from "@/components/shared";
 import { practiceAreas } from "@/lib/data/practice-areas";
 import {
   Card,
@@ -18,7 +18,13 @@ import {
 } from "@/components/ui/card";
 import type { Dictionary } from "@/dictionaries/id";
 
-export function PracticeAreas({ dict, locale }: { dict: Dictionary; locale: string }) {
+export function PracticeAreas({
+  dict,
+  locale,
+}: {
+  dict: Dictionary;
+  locale: string;
+}) {
   const iconMap = useMemo(() => {
     const map: Record<string, React.ElementType> = {};
     practiceAreas.forEach((area) => {
@@ -30,16 +36,23 @@ export function PracticeAreas({ dict, locale }: { dict: Dictionary; locale: stri
   }, []);
 
   const getAreaDict = (id: string) => {
-    switch(id) {
-      case "hukum-korporasi": return dict.practiceAreas.corporate;
-      case "hukum-perdata": return dict.practiceAreas.civil;
-      case "hukum-pidana": return dict.practiceAreas.criminal;
-      case "hukum-ketenagakerjaan": return dict.practiceAreas.employment;
-      case "hukum-properti": return dict.practiceAreas.property;
-      case "hukum-keluarga": return dict.practiceAreas.family;
-      default: return null;
+    switch (id) {
+      case "hukum-korporasi":
+        return dict.practiceAreas.corporate;
+      case "hukum-perdata":
+        return dict.practiceAreas.civil;
+      case "hukum-pidana":
+        return dict.practiceAreas.criminal;
+      case "hukum-ketenagakerjaan":
+        return dict.practiceAreas.employment;
+      case "hukum-properti":
+        return dict.practiceAreas.property;
+      case "hukum-keluarga":
+        return dict.practiceAreas.family;
+      default:
+        return null;
     }
-  }
+  };
 
   return (
     <SectionWrapper background="cream" id="layanan">
@@ -65,7 +78,10 @@ export function PracticeAreas({ dict, locale }: { dict: Dictionary; locale: stri
                 delay={index * 0.1}
                 className="h-full"
               >
-                <Link href={`/${locale}/layanan/${area.slug}`} className="block h-full">
+                <Link
+                  href={`/${locale}/layanan/${area.slug}`}
+                  className="block h-full"
+                >
                   <Card className="group h-full flex flex-col border-gray-200 bg-white transition-all duration-300 hover:border-gold-300 hover:shadow-xl hover:shadow-gold-900/5">
                     <CardHeader>
                       <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-50 text-navy-700 transition-colors group-hover:bg-gold-50 group-hover:text-gold-600">

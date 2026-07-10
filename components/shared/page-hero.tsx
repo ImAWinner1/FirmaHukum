@@ -1,22 +1,22 @@
 "use client";
 
-import { Container } from "@/components/shared/container";
-import { AnimatedElement } from "@/components/shared/animated-element";
+import { Container } from "@/components/shared";
+import { AnimatedElement } from "@/components/shared";
 import { cn } from "@/lib/utils";
 
 interface PageHeroProps {
   title: string;
   description: string;
   eyebrow?: string;
-  /** Optional background image path */
+  /** Direktori (path) opsional untuk me-render gambar latar belakang. */
   backgroundImage?: string;
-  /** Add extra padding at the bottom if needed */
+  /** Tambahkan padding ekstra pada ruang bawah (bottom space) jika diperlukan tata letak. */
   className?: string;
 }
 
 /**
- * Reusable hero section for interior pages.
- * Features a dark navy gradient background and optional background image.
+ * Komponen Header (Hero) yang dapat digunakan ulang untuk halaman-halaman sub-navigasi (Tentang Kami, Layanan, Kontak, dll).
+ * Menampilkan latar belakang gradasi biru dongker (navy) dan opsi untuk menambahkan gambar latar belakang.
  */
 export function PageHero({
   title,
@@ -67,7 +67,7 @@ export function PageHero({
           </p>
         </AnimatedElement>
       </Container>
-      
+
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-600/30 to-transparent" />
     </section>

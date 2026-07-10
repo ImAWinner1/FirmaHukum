@@ -1,10 +1,7 @@
 import type { SiteConfig, NavItem } from "@/types";
 
 /**
- * Core site configuration — single source of truth for firm identity.
- *
- * NOTE: All contact details, names, and addresses are PLACEHOLDERS.
- * Replace with actual firm data before production deployment.
+ * Konfigurasi utama situs. Berfungsi sebagai sumber kebenaran tunggal (single source of truth) untuk identitas, kontak, dan tautan sosial media perusahaan.
  */
 export const siteConfig: SiteConfig = {
   name: "Firma Hukum",
@@ -43,7 +40,7 @@ export const siteConfig: SiteConfig = {
   ],
 };
 
-/** Primary navigation items */
+/** Daftar tautan utama untuk navigasi atas (Navbar). */
 export const navItems: NavItem[] = [
   { label: "Beranda", href: "/" },
   { label: "Tentang Kami", href: "/tentang-kami" },
@@ -53,7 +50,7 @@ export const navItems: NavItem[] = [
   { label: "Kontak", href: "/kontak" },
 ];
 
-/** Footer service links (subset of practice areas) */
+/** Tautan layanan pilihan untuk ditampilkan pada bagian catatan kaki (Footer). */
 export const footerServiceLinks: NavItem[] = [
   { label: "Hukum Korporasi", href: "/layanan/hukum-korporasi" },
   { label: "Hukum Perdata", href: "/layanan/hukum-perdata" },

@@ -5,15 +5,15 @@ interface SectionHeadingProps {
   title: string;
   description?: string;
   align?: "left" | "center";
-  /** Use light text colors (for dark backgrounds) */
+  /** Menggunakan warna teks terang (cocok disematkan di atas latar belakang gelap). */
   dark?: boolean;
   className?: string;
 }
 
 /**
- * Reusable section heading with optional eyebrow text, serif title,
- * and supporting description. Supports left and center alignment,
- * and dark/light color modes.
+ * Header terstandarisasi yang dapat digunakan ulang (reusable) untuk berbagai bagian (section) situs.
+ * Mendukung fitur sub-judul opsional (eyebrow), judul utama dengan serif, serta teks deskripsi pendukung.
+ * Mendukung perataan (alignment) kiri dan tengah, serta mode warna gelap/terang.
  */
 export function SectionHeading({
   eyebrow,

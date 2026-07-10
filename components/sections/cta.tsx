@@ -2,18 +2,25 @@
 
 import Link from "next/link";
 import { ArrowRight, PhoneCall } from "lucide-react";
-import { Container } from "@/components/shared/container";
-import { SectionWrapper } from "@/components/shared/section-wrapper";
-import { AnimatedElement } from "@/components/shared/animated-element";
+import { Container } from "@/components/shared";
+import { SectionWrapper } from "@/components/shared";
+import { AnimatedElement } from "@/components/shared";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/data/site-config";
+import { siteConfig } from "@/constants/site";
 import type { Dictionary } from "@/dictionaries/id";
 
 export function CTA({ dict, locale }: { dict: Dictionary; locale: string }) {
   return (
     <SectionWrapper background="navy" className="relative overflow-hidden">
       {/* Decorative background elements */}
-      <div className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.2) 1px, transparent 0)', backgroundSize: '32px 32px' }} />
+      <div
+        className="absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 2px 2px, rgba(255,255,255,0.2) 1px, transparent 0)",
+          backgroundSize: "32px 32px",
+        }}
+      />
       <div className="absolute top-0 right-0 h-[500px] w-[500px] -translate-y-1/2 translate-x-1/3 rounded-full bg-gold-600/10 blur-[100px]" />
       <div className="absolute bottom-0 left-0 h-[500px] w-[500px] translate-y-1/2 -translate-x-1/3 rounded-full bg-gold-600/10 blur-[100px]" />
 
@@ -36,7 +43,7 @@ export function CTA({ dict, locale }: { dict: Dictionary; locale: string }) {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            
+
             <a href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}>
               <Button
                 size="lg"

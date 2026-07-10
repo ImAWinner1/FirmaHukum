@@ -1,10 +1,7 @@
 import type { StatItem } from "@/types";
 
 /**
- * Statistics data for the homepage statistics bar.
- *
- * NOTE: All numbers are PLACEHOLDERS for development purposes.
- * Replace with actual firm data before production deployment.
+ * Data statistik untuk komponen batang statistik (statistics bar) pada beranda.
  */
 export const statistics: StatItem[] = [
   {

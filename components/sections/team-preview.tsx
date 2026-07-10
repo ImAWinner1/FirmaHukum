@@ -3,27 +3,34 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { Linkedin } from "@/components/shared/social-icons";
-import { Container } from "@/components/shared/container";
-import { SectionWrapper } from "@/components/shared/section-wrapper";
-import { SectionHeading } from "@/components/shared/section-heading";
-import { AnimatedElement } from "@/components/shared/animated-element";
+import { Linkedin } from "@/components/shared";
+import { Container } from "@/components/shared";
+import { SectionWrapper } from "@/components/shared";
+import { SectionHeading } from "@/components/shared";
+import { AnimatedElement } from "@/components/shared";
 import { Button } from "@/components/ui/button";
 import { teamMembers } from "@/lib/data/team-members";
 import type { Dictionary } from "@/dictionaries/id";
 
-export function TeamPreview({ dict, locale }: { dict: Dictionary; locale: string }) {
+export function TeamPreview({
+  dict,
+  locale,
+}: {
+  dict: Dictionary;
+  locale: string;
+}) {
   // Use all teamMembers for the marquee slider
 
   return (
     <SectionWrapper background="navy" className="relative overflow-hidden">
       {/* Decorative background grid */}
-      <div 
-        className="absolute inset-0 opacity-[0.02]" 
-        style={{ 
-          backgroundImage: "linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)",
-          backgroundSize: "40px 40px"
-        }} 
+      <div
+        className="absolute inset-0 opacity-[0.02]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
+        }}
       />
 
       <Container className="relative z-10">
@@ -40,7 +47,10 @@ export function TeamPreview({ dict, locale }: { dict: Dictionary; locale: string
           {/* First Marquee Set */}
           <div className="flex shrink-0 animate-marquee gap-6 group-hover:[animation-play-state:paused]">
             {teamMembers.map((member) => (
-              <div key={`set1-${member.id}`} className="w-[280px] md:w-[300px] shrink-0 h-full">
+              <div
+                key={`set1-${member.id}`}
+                className="w-[280px] md:w-[300px] shrink-0 h-full"
+              >
                 <div className="group/card relative overflow-hidden rounded-xl bg-navy-900 border border-navy-700/50 transition-all duration-300 hover:border-gold-600/50 hover:shadow-2xl hover:shadow-gold-600/10">
                   {/* Image Container */}
                   <div className="aspect-[3/4] w-full overflow-hidden bg-navy-950 relative">
@@ -62,12 +72,20 @@ export function TeamPreview({ dict, locale }: { dict: Dictionary; locale: string
                     </div>
                     <div className="h-[1.5rem] flex items-center">
                       <p className="text-sm font-medium text-gold-600 line-clamp-1">
-                        {dict.teamPage.members[member.id as keyof typeof dict.teamPage.members]?.title}
+                        {
+                          dict.teamPage.members[
+                            member.id as keyof typeof dict.teamPage.members
+                          ]?.title
+                        }
                       </p>
                     </div>
                     <div className="h-[1.5rem] mt-1 flex items-center">
                       <p className="text-xs text-gray-400 line-clamp-1">
-                        {dict.teamPage.members[member.id as keyof typeof dict.teamPage.members]?.spec}
+                        {
+                          dict.teamPage.members[
+                            member.id as keyof typeof dict.teamPage.members
+                          ]?.spec
+                        }
                       </p>
                     </div>
 
@@ -92,9 +110,15 @@ export function TeamPreview({ dict, locale }: { dict: Dictionary; locale: string
           </div>
 
           {/* Second Marquee Set */}
-          <div className="flex shrink-0 animate-marquee gap-6 group-hover:[animation-play-state:paused]" aria-hidden="true">
+          <div
+            className="flex shrink-0 animate-marquee gap-6 group-hover:[animation-play-state:paused]"
+            aria-hidden="true"
+          >
             {teamMembers.map((member) => (
-              <div key={`set2-${member.id}`} className="w-[280px] md:w-[300px] shrink-0 h-full">
+              <div
+                key={`set2-${member.id}`}
+                className="w-[280px] md:w-[300px] shrink-0 h-full"
+              >
                 <div className="group/card relative overflow-hidden rounded-xl bg-navy-900 border border-navy-700/50 transition-all duration-300 hover:border-gold-600/50 hover:shadow-2xl hover:shadow-gold-600/10">
                   {/* Image Container */}
                   <div className="aspect-[3/4] w-full overflow-hidden bg-navy-950 relative">
@@ -116,12 +140,20 @@ export function TeamPreview({ dict, locale }: { dict: Dictionary; locale: string
                     </div>
                     <div className="h-[1.5rem] flex items-center">
                       <p className="text-sm font-medium text-gold-600 line-clamp-1">
-                        {dict.teamPage.members[member.id as keyof typeof dict.teamPage.members]?.title}
+                        {
+                          dict.teamPage.members[
+                            member.id as keyof typeof dict.teamPage.members
+                          ]?.title
+                        }
                       </p>
                     </div>
                     <div className="h-[1.5rem] mt-1 flex items-center">
                       <p className="text-xs text-gray-400 line-clamp-1">
-                        {dict.teamPage.members[member.id as keyof typeof dict.teamPage.members]?.spec}
+                        {
+                          dict.teamPage.members[
+                            member.id as keyof typeof dict.teamPage.members
+                          ]?.spec
+                        }
                       </p>
                     </div>
 
@@ -148,7 +180,11 @@ export function TeamPreview({ dict, locale }: { dict: Dictionary; locale: string
 
         <AnimatedElement variant="fadeUp" className="mt-12 text-center">
           <Link href={`/${locale}/tim`}>
-            <Button size="lg" variant="outline" className="border-gray-600 bg-transparent px-8 py-6 text-base font-semibold text-white hover:border-gold-500 hover:bg-gold-600/10 hover:text-gold-400">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-gray-600 bg-transparent px-8 py-6 text-base font-semibold text-white hover:border-gold-500 hover:bg-gold-600/10 hover:text-gold-400"
+            >
               {dict.team.seeAll}
             </Button>
           </Link>

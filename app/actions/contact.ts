@@ -9,13 +9,13 @@ const contactFormSchema = z.object({
   email: z.string().email(),
   phone: z.string().min(9),
   service: z.string().min(1),
-  message: z.string().min(10)
+  message: z.string().min(10),
 });
 
 async function verifyEmailDomain(email: string): Promise<boolean> {
   const domain = email.split("@")[1];
   if (!domain) return false;
-  
+
   try {
     const mxRecords = await dns.promises.resolveMx(domain);
     return mxRecords && mxRecords.length > 0;
@@ -24,9 +24,11 @@ async function verifyEmailDomain(email: string): Promise<boolean> {
   }
 }
 
-async function verifyEmailAbstract(email: string): Promise<{ valid: boolean; reason?: string }> {
+async function verifyEmailAbstract(
+  email: string
+): Promise<{ valid: boolean; reason?: string }> {
   const apiKey = process.env.ABSTRACT_EMAIL_API_KEY;
-  
+
   // Stronger Fallback: DNS MX Record check
   const fallbackRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   let isRegexValid = fallbackRegex.test(email);
@@ -35,78 +37,116 @@ async function verifyEmailAbstract(email: string): Promise<{ valid: boolean; rea
   }
 
   if (!apiKey) {
-    return isRegexValid ? { valid: true } : { valid: false, reason: "Alamat email tidak valid atau domain tidak terdaftar." };
+    return isRegexValid
+      ? { valid: true }
+      : {
+          valid: false,
+          reason: "Alamat email tidak valid atau domain tidak terdaftar.",
+        };
   }
 
   try {
-    const res = await fetch(`https://emailvalidation.abstractapi.com/v1/?api_key=${apiKey}&email=${email}`);
+    const res = await fetch(
+      `https://emailvalidation.abstractapi.com/v1/?api_key=${apiKey}&email=${email}`
+    );
     const data = await res.json();
-    
+
     if (data.error) {
       console.error("Abstract Email API Error:", data.error.message);
       // Smart Fallback if API Key is invalid or rate limited
-      return isRegexValid ? { valid: true } : { valid: false, reason: "Alamat email tidak valid atau domain tidak terdaftar." }; 
+      return isRegexValid
+        ? { valid: true }
+        : {
+            valid: false,
+            reason: "Alamat email tidak valid atau domain tidak terdaftar.",
+          };
     }
 
     // Deliverability can be DELIVERABLE, UNDELIVERABLE, RISKY, UNKNOWN
     if (data.deliverability === "UNDELIVERABLE") {
-      return { valid: false, reason: "Alamat email tidak dapat menerima pesan. Mohon pastikan email aktif." };
+      return {
+        valid: false,
+        reason:
+          "Alamat email tidak dapat menerima pesan. Mohon pastikan email aktif.",
+      };
     }
-    
+
     if (data.is_disposable_email?.value) {
-      return { valid: false, reason: "Mohon gunakan email profesional atau personal yang asli, bukan email sementara." };
+      return {
+        valid: false,
+        reason:
+          "Mohon gunakan email profesional atau personal yang asli, bukan email sementara.",
+      };
     }
 
     return { valid: true };
   } catch (error) {
     console.error("Failed to call Abstract Email API", error);
-    return isRegexValid ? { valid: true } : { valid: false, reason: "Format alamat email tidak valid." };
+    return isRegexValid
+      ? { valid: true }
+      : { valid: false, reason: "Format alamat email tidak valid." };
   }
 }
 
-async function verifyPhoneAbstract(phone: string): Promise<{ valid: boolean; reason?: string }> {
+async function verifyPhoneAbstract(
+  phone: string
+): Promise<{ valid: boolean; reason?: string }> {
   const apiKey = process.env.ABSTRACT_PHONE_API_KEY;
-  
+
   // Regex Fallback for Phone (at least 8 digits, optional +, spaces, dashes)
   const fallbackRegex = /^\+?[0-9\s\-\(\)]{8,20}$/;
   const isRegexValid = fallbackRegex.test(phone);
 
   if (!apiKey) {
-    return isRegexValid ? { valid: true } : { valid: false, reason: "Format nomor telepon tidak valid." };
+    return isRegexValid
+      ? { valid: true }
+      : { valid: false, reason: "Format nomor telepon tidak valid." };
   }
 
   try {
-    const res = await fetch(`https://phonevalidation.abstractapi.com/v1/?api_key=${apiKey}&phone=${phone}`);
+    const res = await fetch(
+      `https://phonevalidation.abstractapi.com/v1/?api_key=${apiKey}&phone=${phone}`
+    );
     const data = await res.json();
-    
+
     if (data.error) {
       console.error("Abstract Phone API Error:", data.error.message);
       // Smart Fallback if API Key is invalid
-      return isRegexValid ? { valid: true } : { valid: false, reason: "Format nomor telepon tidak valid." };
+      return isRegexValid
+        ? { valid: true }
+        : { valid: false, reason: "Format nomor telepon tidak valid." };
     }
 
     if (!data.valid) {
-      return { valid: false, reason: "Nomor telepon yang Anda masukkan tidak terdaftar atau tidak valid." };
+      return {
+        valid: false,
+        reason:
+          "Nomor telepon yang Anda masukkan tidak terdaftar atau tidak valid.",
+      };
     }
 
     return { valid: true };
   } catch (error) {
     console.error("Failed to call Abstract Phone API", error);
-    return isRegexValid ? { valid: true } : { valid: false, reason: "Format nomor telepon tidak valid." };
+    return isRegexValid
+      ? { valid: true }
+      : { valid: false, reason: "Format nomor telepon tidak valid." };
   }
 }
 
-export async function sendContactEmail(formData: z.infer<typeof contactFormSchema>) {
+export async function sendContactEmail(
+  formData: z.infer<typeof contactFormSchema>
+) {
   try {
     // 1. Validate the incoming data
     const validatedData = contactFormSchema.parse(formData);
-    
+
     // 1.5 Verify email via Abstract API
     const emailCheck = await verifyEmailAbstract(validatedData.email);
     if (!emailCheck.valid) {
       return {
         success: false,
-        message: emailCheck.reason || "Alamat email tidak valid."
+        message: emailCheck.reason || "Alamat email tidak valid.",
       };
     }
 
@@ -115,19 +155,20 @@ export async function sendContactEmail(formData: z.infer<typeof contactFormSchem
     if (!phoneCheck.valid) {
       return {
         success: false,
-        message: phoneCheck.reason || "Nomor telepon tidak valid."
+        message: phoneCheck.reason || "Nomor telepon tidak valid.",
       };
     }
-    
+
     // 2. Extract credentials from environment variables
     const emailUser = process.env.EMAIL_USER;
     const emailPass = process.env.EMAIL_PASS;
 
     if (!emailUser || !emailPass) {
       console.error("Missing EMAIL_USER or EMAIL_PASS environment variables.");
-      return { 
-        success: false, 
-        message: "Server configuration error. Please contact the administrator." 
+      return {
+        success: false,
+        message:
+          "Server configuration error. Please contact the administrator.",
       };
     }
 
@@ -179,6 +220,9 @@ ${validatedData.message}
     return { success: true };
   } catch (error) {
     console.error("Error sending email:", error);
-    return { success: false, message: "Gagal mengirim pesan. Silakan coba lagi nanti." };
+    return {
+      success: false,
+      message: "Gagal mengirim pesan. Silakan coba lagi nanti.",
+    };
   }
 }

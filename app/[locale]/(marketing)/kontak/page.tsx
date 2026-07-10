@@ -1,16 +1,17 @@
-import { getDictionary } from '@/lib/dictionary';
+import { getDictionary } from "@/lib/dictionary";
 import { Metadata } from "next";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { Container } from "@/components/shared/container";
-import { SectionWrapper } from "@/components/shared/section-wrapper";
-import { PageHero } from "@/components/shared/page-hero";
-import { AnimatedElement } from "@/components/shared/animated-element";
+import { Container } from "@/components/shared";
+import { SectionWrapper } from "@/components/shared";
+import { PageHero } from "@/components/shared";
+import { AnimatedElement } from "@/components/shared";
 import { ContactForm } from "@/components/forms/contact-form";
-import { siteConfig } from "@/lib/data/site-config";
+import { siteConfig } from "@/constants/site";
 
 export const metadata: Metadata = {
   title: "Kontak Kami",
-  description: "Hubungi kami untuk mendapatkan konsultasi awal terkait kebutuhan hukum bisnis atau personal Anda.",
+  description:
+    "Hubungi kami untuk mendapatkan konsultasi awal terkait kebutuhan hukum bisnis atau personal Anda.",
 };
 
 type Props = {
@@ -19,7 +20,7 @@ type Props = {
 
 export default async function ContactPage({ params }: Props) {
   const { locale } = await params;
-  const dict = await getDictionary(locale as 'id' | 'en');
+  const dict = await getDictionary(locale as "id" | "en");
 
   return (
     <>
@@ -41,7 +42,7 @@ export default async function ContactPage({ params }: Props) {
                   <p className="text-gray-600 mb-8">
                     {dict.kontakPage.formDesc}
                   </p>
-                  
+
                   <ContactForm dict={dict} />
                 </div>
               </AnimatedElement>
@@ -53,39 +54,51 @@ export default async function ContactPage({ params }: Props) {
                 <h2 className="font-heading text-2xl font-bold text-navy-950 mb-6">
                   {dict.kontakPage.contactInfo}
                 </h2>
-                
+
                 <div className="space-y-6">
                   <div className="flex gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-navy-50 text-gold-600">
                       <MapPin className="h-6 w-6" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-navy-900 mb-1">{dict.kontakPage.hq}</h3>
+                      <h3 className="font-bold text-navy-900 mb-1">
+                        {dict.kontakPage.hq}
+                      </h3>
                       <p className="text-gray-600 leading-relaxed">
                         {siteConfig.contact.address}
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-navy-50 text-gold-600">
                       <Phone className="h-6 w-6" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-navy-900 mb-1">{dict.kontakPage.phone}</h3>
+                      <h3 className="font-bold text-navy-900 mb-1">
+                        {dict.kontakPage.phone}
+                      </h3>
                       <p className="text-gray-600 mb-1">
-                        <a href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`} className="hover:text-gold-600 transition-colors">
+                        <a
+                          href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
+                          className="hover:text-gold-600 transition-colors"
+                        >
                           {siteConfig.contact.phone}
                         </a>
                       </p>
                       <p className="text-gray-600">
-                        <a href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/\+/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-gold-600 transition-colors">
+                        <a
+                          href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/\+/g, "")}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-gold-600 transition-colors"
+                        >
                           {siteConfig.contact.whatsapp} (WhatsApp Only)
                         </a>
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-navy-50 text-gold-600">
                       <Mail className="h-6 w-6" />
@@ -93,19 +106,24 @@ export default async function ContactPage({ params }: Props) {
                     <div>
                       <h3 className="font-bold text-navy-900 mb-1">Email</h3>
                       <p className="text-gray-600">
-                        <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-gold-600 transition-colors">
+                        <a
+                          href={`mailto:${siteConfig.contact.email}`}
+                          className="hover:text-gold-600 transition-colors"
+                        >
                           {siteConfig.contact.email}
                         </a>
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-navy-50 text-gold-600">
                       <Clock className="h-6 w-6" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-navy-900 mb-1">{dict.kontakPage.hours}</h3>
+                      <h3 className="font-bold text-navy-900 mb-1">
+                        {dict.kontakPage.hours}
+                      </h3>
                       <p className="text-gray-600">
                         {siteConfig.contact.businessHours}
                       </p>
@@ -114,15 +132,19 @@ export default async function ContactPage({ params }: Props) {
                 </div>
               </AnimatedElement>
 
-              <AnimatedElement variant="fadeLeft" delay={0.2} className="h-64 w-full overflow-hidden rounded-2xl bg-gray-200 border border-gray-200">
+              <AnimatedElement
+                variant="fadeLeft"
+                delay={0.2}
+                className="h-64 w-full overflow-hidden rounded-2xl bg-gray-200 border border-gray-200"
+              >
                 {/* Embedded Map Placeholder */}
-                <iframe 
-                  src="https://maps.google.com/maps?q=Jl.+AH.+Nasution+No.105,+Cipadung+Wetan,+Kec.+Cibiru,+Kota+Bandung,+Jawa+Barat+40614&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  allowFullScreen 
-                  loading="lazy" 
+                <iframe
+                  src="https://maps.google.com/maps?q=Jl.+AH.+Nasution+No.105,+Cipadung+Wetan,+Kec.+Cibiru,+Kota+Bandung,+Jawa+Barat+40614&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Peta Lokasi Kantor Firma Hukum"
                 />

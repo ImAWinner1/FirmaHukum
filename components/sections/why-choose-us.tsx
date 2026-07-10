@@ -2,13 +2,19 @@
 
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
-import { Container } from "@/components/shared/container";
-import { SectionWrapper } from "@/components/shared/section-wrapper";
-import { SectionHeading } from "@/components/shared/section-heading";
-import { AnimatedElement } from "@/components/shared/animated-element";
+import { Container } from "@/components/shared";
+import { SectionWrapper } from "@/components/shared";
+import { SectionHeading } from "@/components/shared";
+import { AnimatedElement } from "@/components/shared";
 import type { Dictionary } from "@/dictionaries/id";
 
-export function WhyChooseUs({ dict, locale }: { dict: Dictionary; locale: string }) {
+export function WhyChooseUs({
+  dict,
+  locale,
+}: {
+  dict: Dictionary;
+  locale: string;
+}) {
   const reasons = dict.whyChooseUs.features;
 
   return (
@@ -16,7 +22,10 @@ export function WhyChooseUs({ dict, locale }: { dict: Dictionary; locale: string
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-24 items-center">
           {/* Left Column - Image */}
-          <AnimatedElement variant="fadeRight" className="relative w-full aspect-[3/4] md:aspect-[4/5] lg:aspect-auto lg:h-full lg:min-h-[600px] overflow-hidden rounded-2xl bg-navy-900">
+          <AnimatedElement
+            variant="fadeRight"
+            className="relative w-full aspect-[3/4] md:aspect-[4/5] lg:aspect-auto lg:h-full lg:min-h-[600px] overflow-hidden rounded-2xl bg-navy-900"
+          >
             {/* Portrait of Rizky Maulana Malik Ibrahim */}
             <Image
               src="/images/team/Rizky Maulana Malik Ibrahim-v4.png"
@@ -26,7 +35,7 @@ export function WhyChooseUs({ dict, locale }: { dict: Dictionary; locale: string
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent" />
-            
+
             <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8 rounded-xl border border-white/10 bg-white/10 p-4 sm:p-6 backdrop-blur-md">
               <p className="font-heading text-lg sm:text-xl font-medium italic text-white">
                 {dict.whyChooseUs.quote}
@@ -42,8 +51,12 @@ export function WhyChooseUs({ dict, locale }: { dict: Dictionary; locale: string
                   />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-white">{dict.whyChooseUs.quoteAuthor}</p>
-                  <p className="text-xs text-gold-500 line-clamp-1">{dict.whyChooseUs.quoteRole}</p>
+                  <p className="text-sm font-semibold text-white">
+                    {dict.whyChooseUs.quoteAuthor}
+                  </p>
+                  <p className="text-xs text-gold-500 line-clamp-1">
+                    {dict.whyChooseUs.quoteRole}
+                  </p>
                 </div>
               </div>
             </div>

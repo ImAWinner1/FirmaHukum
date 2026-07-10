@@ -5,9 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ==========================================================================
-   DESIGN TOKENS — Firma Hukum
-   Source of truth: DESIGN.md
-   Palette: Dark Navy & Warm Gold — Luxury Legal Corporate
+   DESIGN TOKENS - Firma Hukum
+   Palette: Dark Navy & Warm Gold - Luxury Legal Corporate
    ========================================================================== */
 
 @theme inline {
@@ -38,21 +37,21 @@
   --color-ring: var(--ring);
 
   /* — Custom project colors — */
-  --color-navy-950: #0A0F1C;
-  --color-navy-900: #0E1629;
-  --color-navy-800: #141D33;
-  --color-navy-700: #1C2844;
+  --color-navy-950: #0a0f1c;
+  --color-navy-900: #0e1629;
+  --color-navy-800: #141d33;
+  --color-navy-700: #1c2844;
   --color-navy-600: #243356;
 
-  --color-gold-700: #B08D3A;
-  --color-gold-600: #C9A24A;
-  --color-gold-500: #D4AF6A;
-  --color-gold-400: #E0C083;
-  --color-gold-300: #EBCF9C;
+  --color-gold-700: #b08d3a;
+  --color-gold-600: #c9a24a;
+  --color-gold-500: #d4af6a;
+  --color-gold-400: #e0c083;
+  --color-gold-300: #ebcf9c;
 
-  --color-cream-50: #FAF7F0;
-  --color-cream-100: #F5F1E8;
-  --color-cream-200: #EDE7D9;
+  --color-cream-50: #faf7f0;
+  --color-cream-100: #f5f1e8;
+  --color-cream-200: #ede7d9;
 
   /* — Radius scale — */
   --radius-sm: 4px;
@@ -81,7 +80,7 @@
 
   /* — Custom Animations — */
   --animate-marquee: marquee 40s linear infinite;
-  
+
   @keyframes marquee {
     from {
       transform: translateX(0);
@@ -98,104 +97,104 @@
    ========================================================================== */
 :root {
   /* Core */
-  --background: #FFFFFF;
+  --background: #ffffff;
   --foreground: #111319;
 
   /* Cards */
-  --card: #FFFFFF;
+  --card: #ffffff;
   --card-foreground: #111319;
 
   /* Popover */
-  --popover: #FFFFFF;
+  --popover: #ffffff;
   --popover-foreground: #111319;
 
   /* Primary = Gold accent */
-  --primary: #C9A24A;
-  --primary-foreground: #0A0F1C;
+  --primary: #c9a24a;
+  --primary-foreground: #0a0f1c;
 
   /* Secondary = Navy */
-  --secondary: #0E1629;
-  --secondary-foreground: #F9FAFB;
+  --secondary: #0e1629;
+  --secondary-foreground: #f9fafb;
 
   /* Muted */
-  --muted: #F3F4F6;
-  --muted-foreground: #6B7280;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
 
   /* Accent */
-  --accent: #F5F1E8;
+  --accent: #f5f1e8;
   --accent-foreground: #111319;
 
   /* Destructive */
-  --destructive: #DC2626;
+  --destructive: #dc2626;
 
   /* Borders / Input / Ring */
-  --border: #E5E7EB;
-  --input: #E5E7EB;
-  --ring: #C9A24A;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #c9a24a;
 
   /* Charts */
-  --chart-1: #C9A24A;
-  --chart-2: #0E1629;
-  --chart-3: #6B7280;
+  --chart-1: #c9a24a;
+  --chart-2: #0e1629;
+  --chart-3: #6b7280;
   --chart-4: #374151;
-  --chart-5: #D4AF6A;
+  --chart-5: #d4af6a;
 
   /* Sidebar */
-  --sidebar: #FFFFFF;
+  --sidebar: #ffffff;
   --sidebar-foreground: #111319;
-  --sidebar-primary: #C9A24A;
-  --sidebar-primary-foreground: #0A0F1C;
-  --sidebar-accent: #F5F1E8;
+  --sidebar-primary: #c9a24a;
+  --sidebar-primary-foreground: #0a0f1c;
+  --sidebar-accent: #f5f1e8;
   --sidebar-accent-foreground: #111319;
-  --sidebar-border: #E5E7EB;
-  --sidebar-ring: #C9A24A;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #c9a24a;
 }
 
 /* ==========================================================================
    DARK MODE — Used for navy sections (hero, footer, team, navbar)
    ========================================================================== */
 .dark {
-  --background: #0A0F1C;
-  --foreground: #F9FAFB;
+  --background: #0a0f1c;
+  --foreground: #f9fafb;
 
-  --card: #141D33;
-  --card-foreground: #F9FAFB;
+  --card: #141d33;
+  --card-foreground: #f9fafb;
 
-  --popover: #141D33;
-  --popover-foreground: #F9FAFB;
+  --popover: #141d33;
+  --popover-foreground: #f9fafb;
 
-  --primary: #D4AF6A;
-  --primary-foreground: #0A0F1C;
+  --primary: #d4af6a;
+  --primary-foreground: #0a0f1c;
 
-  --secondary: #1C2844;
-  --secondary-foreground: #F9FAFB;
+  --secondary: #1c2844;
+  --secondary-foreground: #f9fafb;
 
-  --muted: #1C2844;
-  --muted-foreground: #9CA3AF;
+  --muted: #1c2844;
+  --muted-foreground: #9ca3af;
 
-  --accent: #1C2844;
-  --accent-foreground: #F9FAFB;
+  --accent: #1c2844;
+  --accent-foreground: #f9fafb;
 
-  --destructive: #EF4444;
+  --destructive: #ef4444;
 
   --border: rgba(255, 255, 255, 0.1);
   --input: rgba(255, 255, 255, 0.15);
-  --ring: #D4AF6A;
+  --ring: #d4af6a;
 
-  --chart-1: #D4AF6A;
-  --chart-2: #9CA3AF;
-  --chart-3: #6B7280;
+  --chart-1: #d4af6a;
+  --chart-2: #9ca3af;
+  --chart-3: #6b7280;
   --chart-4: #374151;
-  --chart-5: #E0C083;
+  --chart-5: #e0c083;
 
-  --sidebar: #0E1629;
-  --sidebar-foreground: #F9FAFB;
-  --sidebar-primary: #D4AF6A;
-  --sidebar-primary-foreground: #0A0F1C;
-  --sidebar-accent: #1C2844;
-  --sidebar-accent-foreground: #F9FAFB;
+  --sidebar: #0e1629;
+  --sidebar-foreground: #f9fafb;
+  --sidebar-primary: #d4af6a;
+  --sidebar-primary-foreground: #0a0f1c;
+  --sidebar-accent: #1c2844;
+  --sidebar-accent-foreground: #f9fafb;
   --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: #D4AF6A;
+  --sidebar-ring: #d4af6a;
 }
 
 /* ==========================================================================
@@ -235,8 +234,8 @@
 
   /* Selection */
   ::selection {
-    background-color: #C9A24A;
-    color: #0A0F1C;
+    background-color: #c9a24a;
+    color: #0a0f1c;
   }
 }
 
@@ -294,7 +293,7 @@
 
   /* Gold text gradient */
   .text-gradient-gold {
-    background: linear-gradient(135deg, #D4AF6A 0%, #C9A24A 50%, #E0C083 100%);
+    background: linear-gradient(135deg, #d4af6a 0%, #c9a24a 50%, #e0c083 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
