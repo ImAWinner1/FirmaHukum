@@ -426,7 +426,7 @@ Untuk pertanyaan teknis atau kolaborasi terkait proyek ini:
 ---
 
 <p align="center">
-  <img src="app/icon.svg" width="28" alt="Firma Hukum" />
+  <img src="app/icon.svg" width="64" alt="Firma Hukum" />
 </p>
 
 <p align="center">
