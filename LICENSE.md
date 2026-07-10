@@ -1,13 +1,13 @@
-# PERJANJIAN LISENSI PERANGKAT LUNAK PROPRIETARY / PROPRIETARY SOFTWARE LICENSE AGREEMENT
-
 *For the English version, please scroll down below the Indonesian text.*
 *Untuk versi Bahasa Inggris, silakan gulir ke bawah setelah teks Bahasa Indonesia.*
 
 ---
 
-# VERSI BAHASA INDONESIA
+# BAHASA INDONESIA
 
-**PLATFORM SITUS WEB FIRMA HUKUM — KODE SUMBER, ASET DESAIN, DAN MEDIA**
+**PERJANJIAN LISENSI PERANGKAT LUNAK BERPEMILIK**
+
+**PLATFORM SITUS WEB FIRMA HUKUM**
 
 **Hak Cipta © 2026 Firma Hukum. Hak Cipta Dilindungi Undang-Undang.**
 
@@ -241,11 +241,11 @@ Seluruh pemberitahuan, permohonan Persetujuan Tertulis, atau komunikasi lain yan
 ---
 ---
 
-# ENGLISH VERSION
+# ENGLISH
 
 **PROPRIETARY SOFTWARE LICENSE AGREEMENT**
 
-**FIRMA HUKUM WEBSITE PLATFORM — SOURCE CODE, DESIGN ASSETS, AND MEDIA**
+**FIRMA HUKUM WEBSITE PLATFORM**
 
 **Copyright © 2026 Firma Hukum. All Rights Reserved.**
 
