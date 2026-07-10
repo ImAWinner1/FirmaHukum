@@ -13,7 +13,7 @@ export function CTA({ dict, locale }: { dict: Dictionary; locale: string }) {
   return (
     <SectionWrapper background="navy" className="relative overflow-hidden">
       {/* Decorative background elements */}
-      <div className="absolute inset-0 bg-[url('/images/placeholder/pattern.png')] bg-cover bg-center opacity-[0.03]" />
+      <div className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.2) 1px, transparent 0)', backgroundSize: '32px 32px' }} />
       <div className="absolute top-0 right-0 h-[500px] w-[500px] -translate-y-1/2 translate-x-1/3 rounded-full bg-gold-600/10 blur-[100px]" />
       <div className="absolute bottom-0 left-0 h-[500px] w-[500px] translate-y-1/2 -translate-x-1/3 rounded-full bg-gold-600/10 blur-[100px]" />
 
