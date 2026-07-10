@@ -436,3 +436,7 @@ Untuk pertanyaan teknis atau kolaborasi terkait proyek ini:
 <p align="center">
   <sub>Hak Cipta &copy; 2026 Firma Hukum. Seluruh hak dilindungi undang-undang.</sub>
 </p>
+
+<p align="center">
+  <img src="public/images/readme-title.svg" width="150" alt="Firma Hukum" />
+</p>
