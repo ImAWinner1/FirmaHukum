@@ -426,7 +426,9 @@ Untuk pertanyaan teknis atau kolaborasi terkait proyek ini:
 ---
 
 <p align="center">
-  <img src="app/icon.svg" width="28" alt="Firma Hukum" />
+  <img src="app/icon.svg" width="28" alt="Logo Firma Hukum" style="vertical-align: middle;" />
+  &nbsp;&nbsp;
+  <img src="public/images/readme-title.svg" width="120" alt="Firma Hukum" style="vertical-align: middle;" />
 </p>
 
 <p align="center">
@@ -435,8 +437,4 @@ Untuk pertanyaan teknis atau kolaborasi terkait proyek ini:
 
 <p align="center">
   <sub>Hak Cipta &copy; 2026 Firma Hukum. Seluruh hak dilindungi undang-undang.</sub>
-</p>
-
-<p align="center">
-  <img src="public/images/readme-title.svg" width="150" alt="Firma Hukum" />
 </p>
