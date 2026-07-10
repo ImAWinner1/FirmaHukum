@@ -6,7 +6,7 @@
 
 ---
 
-**NOTICE: THIS IS A PROPRIETARY AND CONFIDENTIAL LICENSE AGREEMENT. THIS IS NOT AN OPEN-SOURCE LICENSE. NO RIGHTS ARE GRANTED TO ANY PERSON OR ENTITY EXCEPT AS EXPRESSLY STATED HEREIN.**
+**NOTICE: THIS IS A STRICTLY PROPRIETARY AND CONFIDENTIAL LICENSE AGREEMENT. THIS IS NOT AN OPEN-SOURCE LICENSE. NO RIGHTS ARE GRANTED TO ANY PERSON OR ENTITY EXCEPT AS EXPRESSLY STATED HEREIN.**
 
 This Proprietary Software License Agreement (hereinafter referred to as the "**Agreement**") constitutes a legally binding instrument governing the use, access, and handling of the proprietary software, source code, design assets, component architecture, and media assets (collectively, the "**Licensed Materials**") comprising the corporate profile website of Firma Hukum. By accessing, cloning, downloading, viewing, compiling, executing, or otherwise interacting with the Licensed Materials in any manner whatsoever, any natural person or legal entity (the "**Recipient**") acknowledges that they have read, understood, and agree to be irrevocably bound by the terms and conditions set forth in this Agreement. If the Recipient does not agree to these terms in their entirety, the Recipient is strictly prohibited from accessing, retaining, or making any use of the Licensed Materials, and must immediately and permanently destroy any copy thereof in its possession or control.
 
@@ -37,17 +37,17 @@ This Proprietary Software License Agreement (hereinafter referred to as the "**A
 
 For the purposes of this Agreement, the following terms shall have the meanings ascribed to them below:
 
-**1.1 "Licensed Materials"** means, collectively and without limitation: (a) all source code, object code, executable files, scripts, and compiled binaries; (b) all component architecture, folder structures, configuration files, build pipelines, and deployment scripts; (c) all design assets, including but not limited to user interface designs, wireframes, mockups, style guides, typography specifications, and color systems; (d) all media assets, including but not limited to photographs, illustrations, iconography, video content, and audio content; (e) all documentation, technical specifications, and internal notes; and (f) any derivative works, modifications, adaptations, updates, or improvements thereof, whether created by the Owner or any third party.
+**1.1 "Licensed Materials"** means, collectively and without limitation: (a) all source code (including but not limited to Next.js, React, TypeScript, and Tailwind CSS implementation), object code, executable files, scripts, and compiled binaries; (b) all component architecture, folder structures, configuration files, build pipelines, and deployment scripts; (c) all design assets, including but not limited to user interface designs, wireframes, mockups, style guides, typography specifications, and color systems; (d) all media assets, including but not limited to photographs, illustrations, iconography, video content, and audio content; (e) all documentation, technical specifications, and internal notes; and (f) any derivative works, modifications, adaptations, updates, or improvements thereof, whether created by the Owner or any third party.
 
 **1.2 "Owner"** means Firma Hukum, together with its successors, assigns, affiliates, and any duly authorized legal representatives thereof, being the sole and exclusive holder of all right, title, and interest in and to the Licensed Materials.
 
 **1.3 "Recipient"** means any natural person, corporation, partnership, limited liability entity, government body, or other organization that obtains access to, possession of, or exposure to any part of the Licensed Materials, whether through authorized or unauthorized means.
 
-**1.4 "Intellectual Property Rights"** means any and all rights existing under copyright law, trade secret law, trademark law, patent law, unfair competition law, and any other proprietary or intellectual property rights recognized under the laws of the Republic of Indonesia and under applicable international treaties and conventions, including moral rights, wherever such rights may exist and however denominated.
+**1.4 "Intellectual Property Rights"** means any and all rights existing under copyright law, trade secret law, trademark law, patent law, unfair competition law, and any other proprietary or intellectual property rights recognized under the laws of the Republic of Indonesia—expressly including but not limited to **Law No. 28 of 2014 concerning Copyright (Undang-Undang Hak Cipta)** and **Law No. 30 of 2000 concerning Trade Secrets (Undang-Undang Rahasia Dagang)**—and under applicable international treaties and conventions, including moral rights, wherever such rights may exist and however denominated.
 
 **1.5 "Written Consent"** means an express, unambiguous authorization executed in physical or verified electronic form, signed or otherwise formally approved by a duly authorized representative of the Owner, expressly referencing this Agreement and the specific act being authorized. Implied consent, tacit approval, silence, or inaction on the part of the Owner shall under no circumstances be construed as Written Consent.
 
-**1.6 "Confidential Information"** means all non-public information relating to the Licensed Materials, including without limitation source code logic, architectural design patterns, business logic, client data structures, and any other information not generally known or readily ascertainable by proper means by persons outside the Owner's organization.
+**1.6 "Confidential Information"** means all non-public information relating to the Licensed Materials, including without limitation source code logic, architectural design patterns, business logic, client data structures, proprietary legal content frameworks, and any other information not generally known or readily ascertainable by proper means by persons outside the Owner's organization.
 
 **1.7 "Derivative Work"** means any work that is based upon, incorporates, is adapted from, or is substantially similar to the Licensed Materials, in whole or in part, regardless of the medium or form of expression.
 
@@ -59,7 +59,7 @@ For the purposes of this Agreement, the following terms shall have the meanings 
 
 **2.2 No Transfer of Ownership.** Nothing contained in this Agreement, nor any act performed by the Owner in connection with the disclosure, hosting, transmission, or display of the Licensed Materials, shall be construed as an assignment, transfer, conveyance, or relinquishment of any ownership interest, in whole or in part, to any Recipient or third party.
 
-**2.3 Work Made for Hire; Assignment.** To the extent any portion of the Licensed Materials is or may be deemed to have been created by any contractor, employee, freelancer, or third-party developer engaged by or on behalf of the Owner, such portion is conclusively deemed a work made for hire in favor of the Owner, or, to the extent it may not be so deemed under applicable law, is hereby irrevocably assigned to the Owner in its entirety, together with all Intellectual Property Rights therein, without further consideration.
+**2.3 Work Made for Hire; Assignment.** To the extent any portion of the Licensed Materials is or may be deemed to have been created by any contractor, developer (including Project TEFA WebWeavers), employee, freelancer, or third-party engaged by or on behalf of the Owner, such portion is conclusively deemed a work made for hire in favor of the Owner, or, to the extent it may not be so deemed under applicable law, is hereby irrevocably assigned to the Owner in its entirety, together with all Intellectual Property Rights therein, without further consideration.
 
 **2.4 Reservation of Rights.** All rights not expressly and unambiguously granted to the Recipient under this Agreement are expressly reserved by the Owner. No rights are granted by implication, estoppel, course of dealing, or otherwise.
 
@@ -107,7 +107,7 @@ For the purposes of this Agreement, the following terms shall have the meanings 
 
 ## Section 5. Confidentiality Obligations
 
-**5.1 Duty of Confidentiality.** The Recipient shall hold all Confidential Information in strict confidence, using at minimum the same degree of care that the Recipient uses to protect its own confidential information of similar importance, and in no event less than a reasonable degree of care.
+**5.1 Duty of Confidentiality.** The Recipient shall hold all Confidential Information in strict confidence, using at minimum the same degree of care that the Recipient uses to protect its own confidential information of similar importance, and in no event less than a reasonable degree of care. This includes strict adherence to the principles of confidentiality expected within the legal profession.
 
 **5.2 Permitted Disclosure.** The Recipient may disclose Confidential Information only to those of its personnel who have a strict need to know such information for the limited purpose authorized under Section 3.2, and who are bound by confidentiality obligations at least as protective as those set forth herein.
 
@@ -149,7 +149,7 @@ For the purposes of this Agreement, the following terms shall have the meanings 
 
 ## Section 9. Indemnification
 
-**9.1 Indemnity by Recipient.** The Recipient shall defend, indemnify, and hold harmless the Owner and its directors, partners, officers, employees, and agents from and against any and all claims, demands, actions, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of or in connection with: (a) any breach of this Agreement by the Recipient; (b) any unauthorized use, reproduction, or distribution of the Licensed Materials by the Recipient; or (c) any claim brought by a third party arising from the Recipient's use of, or access to, the Licensed Materials in violation of this Agreement.
+**9.1 Indemnity by Recipient.** The Recipient shall defend, indemnify, and hold harmless the Owner and its directors, partners, officers, employees, and agents from and against any and all claims, demands, actions, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of or in connection with: (a) any breach of this Agreement by the Recipient; (b) any unauthorized use, reproduction, or distribution of the Licensed Materials by the Recipient; or (c) any claim brought by a third party arising from the Recipient's use of, or access to, the Licensed Materials in violation of this Agreement, including but not limited to violations of the Indonesian Electronic Information and Transactions Law (UU ITE).
 
 ---
 
@@ -179,7 +179,7 @@ For the purposes of this Agreement, the following terms shall have the meanings 
 
 ## Section 12. Governing Law and Dispute Resolution
 
-**12.1 Governing Law.** This Agreement, and any dispute, controversy, or claim arising out of or relating to this Agreement, including its existence, validity, interpretation, performance, breach, or termination, shall be governed by and construed in accordance with the laws of the Republic of Indonesia (**Negara Kesatuan Republik Indonesia**), without regard to its conflict-of-laws principles.
+**12.1 Governing Law.** This Agreement, and any dispute, controversy, or claim arising out of or relating to this Agreement, including its existence, validity, interpretation, performance, breach, or termination, shall be governed by and construed in accordance with the laws of the Republic of Indonesia (**Negara Kesatuan Republik Indonesia**), without regard to its conflict-of-laws principles. This includes, without limitation, the strict enforcement of **Law No. 28 of 2014 concerning Copyright** and **Law No. 11 of 2008 concerning Electronic Information and Transactions (as amended by Law No. 19 of 2016 and Law No. 1 of 2024)**.
 
 **12.2 Jurisdiction.** The parties irrevocably agree that any dispute arising out of or in connection with this Agreement that cannot be resolved amicably shall be submitted to, and finally settled by, the competent District Court (**Pengadilan Negeri**) having jurisdiction over the domicile of the Owner, and each party irrevocably waives any objection to venue or jurisdiction on grounds of inconvenient forum.
 
@@ -223,7 +223,7 @@ All notices, requests for Written Consent, or other communications required or p
 
 ---
 
-**ALL RIGHTS RESERVED. UNAUTHORIZED REPRODUCTION, DISTRIBUTION, OR USE OF THE LICENSED MATERIALS, IN WHOLE OR IN PART, IS STRICTLY PROHIBITED AND MAY RESULT IN CIVIL AND/OR CRIMINAL LIABILITY UNDER THE APPLICABLE LAWS OF THE REPUBLIC OF INDONESIA AND APPLICABLE INTERNATIONAL COPYRIGHT TREATIES.**
+**ALL RIGHTS RESERVED. UNAUTHORIZED REPRODUCTION, DISTRIBUTION, OR USE OF THE LICENSED MATERIALS, IN WHOLE OR IN PART, IS STRICTLY PROHIBITED AND MAY RESULT IN CIVIL AND/OR CRIMINAL LIABILITY UNDER THE APPLICABLE LAWS OF THE REPUBLIC OF INDONESIA (INCLUDING UU HAK CIPTA AND UU ITE) AND APPLICABLE INTERNATIONAL COPYRIGHT TREATIES.**
 
 **Copyright © 2026 Firma Hukum. All Rights Reserved.**
 
