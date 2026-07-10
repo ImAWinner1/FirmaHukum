@@ -49,12 +49,21 @@ export const metadata: Metadata = {
     title: "Firma Hukum | Solusi Hukum Terpercaya",
     description:
       "Firma hukum profesional yang menyediakan layanan konsultasi dan pendampingan hukum terpercaya untuk individu dan korporasi di Indonesia.",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Firma Hukum",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Firma Hukum | Solusi Hukum Terpercaya",
     description:
       "Firma hukum profesional yang menyediakan layanan konsultasi dan pendampingan hukum terpercaya untuk individu dan korporasi di Indonesia.",
+    images: ["/opengraph-image.jpg"],
   },
   robots: {
     index: true,
