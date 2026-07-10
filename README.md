@@ -171,7 +171,7 @@ Pastikan perangkat berikut telah terinstal sebelum memulai proses instalasi:
 1. **Clone Repository**
 
     ```bash
-    git clone https://github.com/sosusesa-bri/FirmaHukum.git
+    git clone https://github.com/ImAWinner1/FirmaHukum.git
     cd FirmaHukum
     ```
 
