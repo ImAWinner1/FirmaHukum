@@ -401,7 +401,7 @@ Pastikan langkah berikut telah dilakukan sebelum mengajukan Pull Request:
 
 ## <img src="https://img.shields.io/badge/08-D4AF6A?style=flat-square" alt="" /> Lisensi
 
-Proyek ini bersifat **proprietary** dan tidak dilisensikan untuk penggunaan publik.
+Proyek ini bersifat **proprietary** dan tidak dilisensikan untuk penggunaan publik. Silakan merujuk pada file [LICENSE](LICENSE) untuk melihat keseluruhan **Perjanjian Lisensi Perangkat Lunak Berpemilik (Proprietary Software License Agreement)**.
 
 Hak Cipta &copy; 2026 Firma Hukum. Seluruh hak dilindungi undang-undang.
 
