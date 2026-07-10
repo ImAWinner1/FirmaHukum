@@ -51,6 +51,7 @@ Firma Hukum adalah situs web profil perusahaan yang dibangun untuk menyajikan id
 
 ---
 
+<a name="fitur-utama"></a>
 ## <img src="https://img.shields.io/badge/01-D4AF6A?style=flat-square" alt="" /> Fitur Utama
 
 ### Internasionalisasi (i18n) Berbasis Kamus Statis
@@ -83,6 +84,7 @@ Setiap route menghasilkan metadata dinamis (title, description, Open Graph, Twit
 
 ---
 
+<a name="teknologi-dan-arsitektur"></a>
 ## <img src="https://img.shields.io/badge/02-D4AF6A?style=flat-square" alt="" /> Teknologi dan Arsitektur
 
 ### Tech Stack
@@ -146,6 +148,7 @@ Proyek ini menggunakan pola **Feature-Based Organization** yang dikombinasikan d
 
 ---
 
+<a name="prasyarat-sistem"></a>
 ## <img src="https://img.shields.io/badge/03-D4AF6A?style=flat-square" alt="" /> Prasyarat Sistem
 
 Pastikan perangkat berikut telah terinstal sebelum memulai proses instalasi:
@@ -162,6 +165,7 @@ Pastikan perangkat berikut telah terinstal sebelum memulai proses instalasi:
 
 ---
 
+<a name="instalasi-dan-pengembangan-lokal"></a>
 ## <img src="https://img.shields.io/badge/04-D4AF6A?style=flat-square" alt="" /> Instalasi dan Pengembangan Lokal
 
 1. **Clone Repository**
@@ -209,6 +213,7 @@ Pastikan perangkat berikut telah terinstal sebelum memulai proses instalasi:
 
 ---
 
+<a name="struktur-direktori"></a>
 ## <img src="https://img.shields.io/badge/05-D4AF6A?style=flat-square" alt="" /> Struktur Direktori
 
 ```
@@ -321,6 +326,7 @@ import { Hero, Statistics, CTA } from "@/components/sections";
 
 ---
 
+<a name="skrip-tersedia"></a>
 ## <img src="https://img.shields.io/badge/06-D4AF6A?style=flat-square" alt="" /> Skrip Tersedia
 
 | Perintah | Deskripsi | Environment |
@@ -332,6 +338,7 @@ import { Hero, Statistics, CTA } from "@/components/sections";
 
 ---
 
+<a name="panduan-kontribusi"></a>
 ## <img src="https://img.shields.io/badge/07-D4AF6A?style=flat-square" alt="" /> Panduan Kontribusi
 
 ### Alur Branching
@@ -399,6 +406,7 @@ Pastikan langkah berikut telah dilakukan sebelum mengajukan Pull Request:
 
 ---
 
+<a name="lisensi"></a>
 ## <img src="https://img.shields.io/badge/08-D4AF6A?style=flat-square" alt="" /> Lisensi
 
 Proyek ini bersifat **proprietary** dan tidak dilisensikan untuk penggunaan publik. Silakan merujuk pada file [LICENSE](LICENSE) untuk melihat keseluruhan **Perjanjian Lisensi Perangkat Lunak Berpemilik (Proprietary Software License Agreement)**.
@@ -407,6 +415,7 @@ Hak Cipta &copy; 2026 Firma Hukum. Seluruh hak dilindungi undang-undang.
 
 ---
 
+<a name="kontak"></a>
 ## <img src="https://img.shields.io/badge/09-D4AF6A?style=flat-square" alt="" /> Kontak
 
 Untuk pertanyaan teknis atau kolaborasi terkait proyek ini:
