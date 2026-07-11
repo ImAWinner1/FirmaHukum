@@ -654,7 +654,7 @@ The ultimate goal of all our legal interventions in this field is to guarantee t
       contact: {
         title: "11. Data Protection Officer Contact",
         content: [
-          "If you wish to exercise your data subject rights, or if you have comprehensive questions regarding this policy, please contact our Data Protection Officer in writing via email at: privacy@thelawticsa-firmahukum.vercel.app."
+          "If you wish to exercise your data subject rights, or if you have comprehensive questions regarding this policy, please contact our Data Protection Officer in writing via email at: thelawticsa@gmail.com."
         ]
       },
       changes: {
@@ -739,7 +739,7 @@ The ultimate goal of all our legal interventions in this field is to guarantee t
       contact: {
         title: "11. Official Contact",
         content: [
-          "For the delivery of legal notices, technical inquiries related to Website use, or written permission requests for the use of intellectual property rights, please direct your official correspondence to: privacy@thelawticsa-firmahukum.vercel.app."
+          "For the delivery of legal notices, technical inquiries related to Website use, or written permission requests for the use of intellectual property rights, please direct your official correspondence to: thelawticsa@gmail.com."
         ]
       }
     }

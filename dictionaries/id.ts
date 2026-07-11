@@ -654,7 +654,7 @@ Tujuan pamungkas dari seluruh intervensi hukum kami di bidang ini adalah untuk m
       contact: {
         title: "11. Kontak Petugas Pelindungan Data",
         content: [
-          "Apabila Anda ingin melaksanakan hak-hak subjek data Anda, atau jika Anda memiliki pertanyaan komprehensif mengenai kebijakan ini, silakan hubungi Petugas Pelindungan Data (Data Protection Officer) kami secara tertulis melalui email ke: privacy@thelawticsa-firmahukum.vercel.app."
+          "Apabila Anda ingin melaksanakan hak-hak subjek data Anda, atau jika Anda memiliki pertanyaan komprehensif mengenai kebijakan ini, silakan hubungi Petugas Pelindungan Data (Data Protection Officer) kami secara tertulis melalui email ke: thelawticsa@gmail.com."
         ]
       },
       changes: {
@@ -739,7 +739,7 @@ Tujuan pamungkas dari seluruh intervensi hukum kami di bidang ini adalah untuk m
       contact: {
         title: "11. Kontak Resmi",
         content: [
-          "Untuk pengiriman pemberitahuan hukum (legal notices), pertanyaan teknis terkait penggunaan Website, atau permintaan izin tertulis penggunaan hak kekayaan intelektual, mohon arahkan korespondensi resmi Anda ke: privacy@thelawticsa-firmahukum.vercel.app."
+          "Untuk pengiriman pemberitahuan hukum (legal notices), pertanyaan teknis terkait penggunaan Website, atau permintaan izin tertulis penggunaan hak kekayaan intelektual, mohon arahkan korespondensi resmi Anda ke: thelawticsa@gmail.com."
         ]
       }
     }
