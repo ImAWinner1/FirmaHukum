@@ -40,6 +40,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Documentation artifacts
-AGENTS.md
-DESIGN.md
+
