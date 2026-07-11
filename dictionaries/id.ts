@@ -234,7 +234,7 @@ export const id = {
     officeBadge: "Kantor Kami",
     officeTitle: "Pusat Operasional",
     officeDesc:
-      "Berlokasi strategis di pusat distrik bisnis Jakarta, kantor kami dirancang untuk memfasilitasi kerja kolaboratif dan menjaga kerahasiaan tingkat tinggi bagi setiap klien.",
+      "Berlokasi strategis di kawasan Cibiru, Kota Bandung, kantor kami dirancang untuk memfasilitasi kerja kolaboratif dan menjaga kerahasiaan tingkat tinggi bagi setiap klien.",
     officeFeatures: [
       {
         title: "Fasilitas Modern",

@@ -236,7 +236,7 @@ export const en: Dictionary = {
     officeBadge: "Our Office",
     officeTitle: "Operational Center",
     officeDesc:
-      "Strategically located in Jakartas central business district, our office is designed to facilitate collaborative work and maintain top-tier confidentiality for every client.",
+      "Strategically located in the Cibiru area of Bandung City, our office is designed to facilitate collaborative work and maintain top-tier confidentiality for every client.",
     officeFeatures: [
       {
         title: "Modern Facilities",

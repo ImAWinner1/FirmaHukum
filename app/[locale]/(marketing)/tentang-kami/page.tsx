@@ -280,6 +280,7 @@ export default async function AboutPage({ params }: Props) {
                 description={dict.aboutPage.officeDesc}
                 align="left"
                 dark
+                descClassName="text-justify"
               />
 
               <ul className="mt-8 space-y-6">

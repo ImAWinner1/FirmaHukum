@@ -8,6 +8,7 @@ interface SectionHeadingProps {
   /** Menggunakan warna teks terang (cocok disematkan di atas latar belakang gelap). */
   dark?: boolean;
   className?: string;
+  descClassName?: string;
 }
 
 /**
@@ -22,6 +23,7 @@ export function SectionHeading({
   align = "center",
   dark = false,
   className,
+  descClassName,
 }: SectionHeadingProps) {
   return (
     <div
@@ -54,7 +56,8 @@ export function SectionHeading({
           className={cn(
             "mt-4 max-w-2xl text-base leading-relaxed md:text-lg",
             align === "center" && "mx-auto",
-            dark ? "text-gray-400" : "text-gray-500"
+            dark ? "text-gray-400" : "text-gray-500",
+            descClassName
           )}
         >
           {description}
