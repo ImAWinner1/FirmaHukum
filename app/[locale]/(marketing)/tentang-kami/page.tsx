@@ -199,15 +199,15 @@ export default async function AboutPage({ params }: Props) {
                   key={value.title}
                   variant="fadeUp"
                   delay={index * 0.1}
-                  className="rounded-xl bg-white p-8 shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-gold-300"
+                  className="rounded-xl bg-white p-8 shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-gold-300 h-full flex flex-col"
                 >
-                  <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-50 text-navy-950">
+                  <div className="mb-6 shrink-0 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-50 text-navy-950">
                     <Icon className="h-6 w-6" />
                   </div>
                   <h3 className="mb-3 font-heading text-xl font-bold text-navy-950">
                     {value.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed text-sm">
+                  <p className="text-gray-600 leading-relaxed text-sm text-justify flex-grow">
                     {value.desc}
                   </p>
                 </AnimatedElement>
