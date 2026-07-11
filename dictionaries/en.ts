@@ -564,7 +564,7 @@ The ultimate goal of all our legal interventions in this field is to guarantee t
   },
   privacyPolicy: {
     title: "Privacy Policy",
-    lastUpdated: "Last updated: August 15, 2026",
+    lastUpdated: "Last updated: July 10, 2026",
     sections: {
       introduction: {
         title: "1. Introduction & Data Controller Identity",
@@ -667,7 +667,7 @@ The ultimate goal of all our legal interventions in this field is to guarantee t
   },
   termsConditions: {
     title: "Terms & Conditions of Use",
-    lastUpdated: "Last updated: August 15, 2026",
+    lastUpdated: "Last updated: July 10, 2026",
     sections: {
       acceptance: {
         title: "1. Acceptance of Terms",

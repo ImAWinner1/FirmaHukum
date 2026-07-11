@@ -564,7 +564,7 @@ Tujuan pamungkas dari seluruh intervensi hukum kami di bidang ini adalah untuk m
   },
   privacyPolicy: {
     title: "Kebijakan Privasi",
-    lastUpdated: "Terakhir diperbarui: 15 Agustus 2026",
+    lastUpdated: "Terakhir diperbarui: 10 Juli 2026",
     sections: {
       introduction: {
         title: "1. Pendahuluan & Identitas Pengendali Data Pribadi",
@@ -667,7 +667,7 @@ Tujuan pamungkas dari seluruh intervensi hukum kami di bidang ini adalah untuk m
   },
   termsConditions: {
     title: "Syarat & Ketentuan Penggunaan",
-    lastUpdated: "Terakhir diperbarui: 15 Agustus 2026",
+    lastUpdated: "Terakhir diperbarui: 10 Juli 2026",
     sections: {
       acceptance: {
         title: "1. Penerimaan Ketentuan",
