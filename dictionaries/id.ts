@@ -208,27 +208,27 @@ export const id = {
       },
     ],
     timelineBadge: "Perjalanan Kami",
-    timelineTitle: "Tonggak Sejarah Firma",
+    timelineTitle: "Tonggak Sejarah Firma Hukum",
     timeline: [
       {
         year: "2023",
-        title: "Pendirian Firma",
+        title: "Pendirian Firma Hukum",
         desc: "Didirikan oleh Rizky Maulana Malik Ibrahim dengan visi membangun firma hukum litigasi yang tangguh. Fokus awal meliputi litigasi perdata dan pidana komersial dengan standar keunggulan profesional tingkat tinggi di Jakarta.",
       },
       {
         year: "2024",
         title: "Ekspansi Layanan Korporasi & Kepatuhan",
-        desc: "Bergabungnya Yalsa Safitri dan Rajni Kamila membawa keahlian baru di bidang Hukum Perusahaan dan Kepatuhan. Firma ini secara resmi memperluas praktiknya ke arah penasihat hukum korporasi dan restrukturisasi bisnis.",
+        desc: "Bergabungnya Yalsa Safitri dan Rajni Kamila membawa keahlian baru di bidang Hukum Perusahaan dan Kepatuhan. Firma Hukum ini secara resmi memperluas praktiknya ke arah penasihat hukum korporasi dan restrukturisasi bisnis.",
       },
       {
         year: "2025",
         title: "Penguatan Divisi Litigasi & Konsultasi Senior",
-        desc: "Dengan hadirnya Dimas Damar Pangestu sebagai Kepala Divisi Litigasi dan Faturrohman Hakim sebagai Penasihat Hukum Senior, firma berhasil menangani berbagai sengketa komersial berskala nasional dan arbitrase bergengsi.",
+        desc: "Dengan hadirnya Dimas Damar Pangestu sebagai Kepala Divisi Litigasi dan Faturrohman Hakim sebagai Penasihat Hukum Senior, Firma Hukum ini berhasil menangani berbagai sengketa komersial berskala nasional dan arbitrase bergengsi.",
       },
       {
         year: "2026",
         title: "Formasi Tim Modern & Layanan Terintegrasi",
-        desc: "Diperkuat oleh jajaran profesional seperti Azhar, Nabil Faqih Zulfikar, dan Zalfa Syifa Aghniya, firma mengadopsi pendekatan layanan hukum terintegrasi untuk memenuhi dinamika klien bisnis modern.",
+        desc: "Diperkuat oleh jajaran profesional seperti Azhar, Nabil Faqih Zulfikar, dan Zalfa Syifa Aghniya, Firma Hukum ini mengadopsi pendekatan layanan hukum terintegrasi untuk memenuhi dinamika klien bisnis modern.",
       },
     ],
     officeBadge: "Kantor Kami",
