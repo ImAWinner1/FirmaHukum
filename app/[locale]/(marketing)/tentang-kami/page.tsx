@@ -312,9 +312,19 @@ export default async function AboutPage({ params }: Props) {
               </ul>
             </AnimatedElement>
 
-            <AnimatedElement variant="fadeLeft" className="relative">
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-navy-900 border border-navy-700/50">
-                <div className="absolute inset-0 bg-[url('/images/placeholder/building.jpg')] bg-cover bg-center opacity-50 mix-blend-luminosity" />
+            <AnimatedElement variant="fadeLeft" className="relative h-full">
+              <div className="aspect-[4/3] w-full lg:h-full overflow-hidden rounded-2xl bg-gray-200 border border-navy-700/50">
+                <iframe
+                  src="https://maps.google.com/maps?q=Jl.+AH.+Nasution+No.105,+Cipadung+Wetan,+Kec.+Cibiru,+Kota+Bandung,+Jawa+Barat+40614&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Peta Lokasi Kantor Firma Hukum"
+                  className="absolute inset-0 w-full h-full lg:static lg:min-h-[400px]"
+                />
               </div>
             </AnimatedElement>
           </div>
