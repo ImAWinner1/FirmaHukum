@@ -118,6 +118,7 @@ export default async function AboutPage({ params }: Props) {
                   src="/images/tentang-kami.png"
                   alt="Sejarah WebWeavers"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-right opacity-80"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent" />
