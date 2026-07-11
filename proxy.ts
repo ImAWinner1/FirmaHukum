@@ -16,7 +16,7 @@ export function middleware(request: NextRequest) {
 
   /** Periksa apakah pathname belum memiliki segmen locale yang didukung */
   const pathnameIsMissingLocale = i18n.locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+    (locale: string) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
 
   /** Redirect ke locale yang sesuai jika belum ada di pathname */
