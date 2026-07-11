@@ -11,7 +11,7 @@ import { i18n } from "@/lib/i18n";
  * 3. Jika cookie tidak tersedia atau nilainya tidak valid, gunakan locale default (`id`).
  * 4. Redirect pengguna ke URL yang sama dengan tambahan prefix locale di awal path.
  */
-export function proxy(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
   /** Periksa apakah pathname belum memiliki segmen locale yang didukung */
