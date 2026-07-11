@@ -241,17 +241,17 @@ export function Footer({ dict, locale }: { dict: Dictionary; locale: string }) {
             </p>
             <div className="flex items-center gap-4 text-xs text-gray-500">
               <Link
-                href={`/${locale}/kebijakan-privasi`}
+                href={`/${locale}/privacy`}
                 className="transition-colors hover:text-gold-500"
               >
-                {locale === "en" ? "Privacy Policy" : "Kebijakan Privasi"}
+                {dict.privacyPolicy.title}
               </Link>
               <span className="text-gray-700">|</span>
               <Link
-                href={`/${locale}/syarat-ketentuan`}
+                href={`/${locale}/terms`}
                 className="transition-colors hover:text-gold-500"
               >
-                {locale === "en" ? "Terms & Conditions" : "Syarat & Ketentuan"}
+                {dict.termsConditions.title}
               </Link>
             </div>
           </div>

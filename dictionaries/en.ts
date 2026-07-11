@@ -562,4 +562,186 @@ The ultimate goal of all our legal interventions in this field is to guarantee t
       "Jl. AH. Nasution No.105, Cipadung Wetan, Cibiru District, Bandung City, West Java 40614",
     businessHours: "Monday – Friday: 08:00 AM – 05:00 PM (WIB)",
   },
+  privacyPolicy: {
+    title: "Privacy Policy",
+    lastUpdated: "Last updated: August 15, 2026",
+    sections: {
+      introduction: {
+        title: "1. Introduction & Data Controller Identity",
+        content: [
+          "Law Firm (hereinafter referred to as the \"Law Firm\", \"We\", or \"Our\") is absolutely committed to protecting the confidentiality and security of your personal data. We understand that as a corporate and litigation law firm, the information you entrust to us carries an extremely high level of sensitivity.",
+          "This Privacy Policy is drafted in strict compliance with the Republic of Indonesia Law No. 27 of 2022 concerning Personal Data Protection (UU PDP).",
+          "In the context of this website's operation, Law Firm acts legally as the Data Controller. We determine the purposes and means of processing your personal data independently."
+        ]
+      },
+      dataCollected: {
+        title: "2. Types of Personal Data Collected",
+        content: [
+          "We only collect personal data that is proportionate and relevant to the processing purposes. The categories of data we may collect when you interact with our website include:",
+          "General Personal Data: Includes full name, corporate/personal email address, phone/WhatsApp number, job title, company name, as well as standard interaction data (IP address, browser type, access time).",
+          "Specific Personal Data: In the context of general use of this website, we do not intentionally collect specific personal data (such as biometric data, sexual orientation, or criminal records). However, if you voluntarily submit a case description through the contact form that contains specific personal data relevant to your legal matter, we will process it with the highest standard of confidentiality as mandated by the UU PDP and the Advocate Code of Ethics."
+        ]
+      },
+      lawfulBasis: {
+        title: "3. Lawful Basis for Processing",
+        content: [
+          "Pursuant to Article 20 of the UU PDP, we process your personal data based on at least one of the following legal bases:",
+          "Explicit Consent: When you voluntarily fill out and submit a contact form or subscribe to a newsletter.",
+          "Performance of a Contract: If the data is necessary as a preliminary step prior to entering into a legal representation (Retainer Agreement).",
+          "Legitimate Interest: To optimize website security, prevent fraud, and comply with legal reporting obligations applicable to the advocate profession."
+        ]
+      },
+      purpose: {
+        title: "4. Purposes of Data Processing",
+        content: [
+          "The collected data will be processed exclusively for the following purposes:",
+          "Facilitating initial communication and responding promptly to your legal or commercial inquiries.",
+          "Conducting internal conflict of interest checks before we can accept your appointment as a client.",
+          "Delivering updates regarding jurisprudence, regulatory changes, or legal newsletters (only if you have consented to receive marketing materials).",
+          "Analyzing the technical performance of the website to improve user experience (UX) and our cyber infrastructure security."
+        ]
+      },
+      dataRights: {
+        title: "5. Rights of the Personal Data Subject",
+        content: [
+          "Referring to the UU PDP, as a personal data subject, you have the following absolute rights that we will facilitate without undue delay:"
+        ],
+        items: [
+          "Right to Information: To obtain clarity regarding the identity, basis, purpose, and retention of your data processing.",
+          "Right of Access: To obtain access to and a copy of your personal data held by us.",
+          "Right to Rectification: To complete, update, or correct errors/inaccuracies in your personal data.",
+          "Right to Erasure: To request the termination of processing, deletion, or destruction of your personal data, unless we are required by law to retain it.",
+          "Right to Withdraw Consent: To withdraw your consent to data processing that you have previously given at any time.",
+          "Right to Object to Automated Decision-Making: To object to decision-making actions based solely on automated processing, including profiling.",
+          "Right to Restriction: To delay or restrict the processing of personal data proportionally.",
+          "Right to Data Portability: To obtain and reuse your personal data from us in a structured format.",
+          "Right to Sue & Compensation: To sue and receive compensation for violations of your personal data protection in accordance with statutory regulations."
+        ]
+      },
+      retention: {
+        title: "6. Data Retention Period",
+        content: [
+          "Your personal data will be stored in our infrastructure systems only for the period reasonably necessary to achieve its processing purposes, or as required by taxation and legal archiving laws in Indonesia (typically a minimum of 5 to 10 years). Once the retention period expires, your data will be permanently destroyed or anonymized."
+        ]
+      },
+      thirdParty: {
+        title: "7. Disclosure to Third Parties & Data Transfer",
+        content: [
+          "We uphold the principle of confidentiality. Your data will never be sold or rented. We may only disclose your personal data to:",
+          "IT Infrastructure Partners (Cloud Hosting, email services), who are bound by strict non-disclosure agreements (NDAs) and maintain equivalent or higher security standards.",
+          "Law Enforcement Authorities or Courts of the Republic of Indonesia, only when expressly required by a court order or statutory provisions.",
+          "Cross-Border Transfer: If, for technical reasons, our vendor's servers are located overseas, we ensure that the receiving country has an adequate or higher level of data protection than Indonesia's UU PDP, or we will ensure the presence of Standard Contractual Clauses."
+        ]
+      },
+      security: {
+        title: "8. Personal Data Security",
+        content: [
+          "The Law Firm implements state-of-the-art technical and organizational measures to protect your data against unauthorized access, disclosure, alteration, or destruction. This includes the use of SSL/TLS encryption certificates on website communications, multi-factor authentication systems for our staff, and strict data access restrictions based on the \"need-to-know\" principle."
+        ]
+      },
+      children: {
+        title: "9. Data of Minors",
+        content: [
+          "Our legal services and website are exclusively intended for corporate entities and adult individuals. We do not knowingly process the personal data of minors (as defined by the UU PDP) without explicit verification of consent from a parent or legal guardian."
+        ]
+      },
+      cookies: {
+        title: "10. Cookies & Tracking Technologies",
+        content: [
+          "Our website uses essential cookies to ensure basic website functions operate, as well as analytical cookies (anonymous in nature) to help us understand how visitors navigate the site. You have full control to manage cookie preferences through your browser settings."
+        ]
+      },
+      contact: {
+        title: "11. Data Protection Officer Contact",
+        content: [
+          "If you wish to exercise your data subject rights, or if you have comprehensive questions regarding this policy, please contact our Data Protection Officer in writing via email at: privacy@thelawticsa-firmahukum.vercel.app."
+        ]
+      },
+      changes: {
+        title: "12. Policy Changes",
+        content: [
+          "We reserve the right to update this Privacy Policy periodically to reflect changes in regulatory or operational dynamics. Material changes will be notified by updating the \"Effective Date\" on this page."
+        ]
+      }
+    }
+  },
+  termsConditions: {
+    title: "Terms & Conditions of Use",
+    lastUpdated: "Last updated: August 15, 2026",
+    sections: {
+      acceptance: {
+        title: "1. Acceptance of Terms",
+        content: [
+          "By accessing, browsing, or using the Law Firm website (hereinafter referred to as the \"Website\"), you consciously and voluntarily agree to be bound by all of these Terms & Conditions of Use without exception. If you do not agree to part or all of these terms, you are required to immediately cease using this Website."
+        ]
+      },
+      definitions: {
+        title: "2. Definitions of Terms",
+        content: [
+          "Law Firm / We refers to Law Firm, a law firm legally domiciled in the Republic of Indonesia.",
+          "User / You refers to any individual, corporate entity, or third party accessing this Website."
+        ]
+      },
+      intellectualProperty: {
+        title: "3. Intellectual Property Rights",
+        content: [
+          "All digital assets contained in this Website, including but not limited to architectural design, user interface, typography, logos, source code, database structures, as well as all articles, legal insights, and textual publications, are the absolute intellectual property of the Law Firm or its legitimate licensors.",
+          "You are strictly prohibited from copying, redistributing, reproducing, publishing, or commercially exploiting any part of this Website without obtaining prior written consent from the Law Firm."
+        ]
+      },
+      noAttorneyClient: {
+        title: "4. NO ATTORNEY-CLIENT RELATIONSHIP",
+        content: [
+          "THIS CLAUSE IS ABSOLUTE AND NON-NEGOTIABLE. Your use of this Website, or your act of sending emails, messages, documents, or any information through the contact forms available on this Website, DOES NOT in itself create, give rise to, or be interpreted as the formation of an attorney-client relationship between you and Law Firm or any advocate affiliated with us.",
+          "An attorney-client relationship will only be legally created when there is a Retainer Agreement or a Special Power of Attorney that has been formally negotiated, approved, and signed by a legitimate representative of the Law Firm and you.",
+          "As long as such formal attorney-client relationship has not been established, there is no attorney-client privilege/confidentiality arising over any information you submit to us through this Website."
+        ]
+      },
+      noLegalAdvice: {
+        title: "5. No Legal Advice Disclaimer",
+        content: [
+          "All content, articles, reviews, publications, and written or visual materials presented on this Website are strictly for general information purposes only. The material DOES NOT constitute legal advice, a binding legal opinion, or strategic guidance specifically tailored to resolve the legal dispute or transaction you are currently facing.",
+          "Laws and regulations in the Republic of Indonesia are highly dynamic. Therefore, the Law Firm makes no warranties that the information on this Website is always up-to-date, universally accurate, or relevant to the latest jurisprudential developments. You are strictly prohibited from taking (or refraining from) any legal or business action based solely on the information contained on this Website without directly consulting a professionally licensed legal counsel."
+        ]
+      },
+      limitationLiability: {
+        title: "6. Limitation of Liability",
+        content: [
+          "To the fullest extent permitted by applicable law, the Law Firm, including all its partners, affiliated advocates (associates), staff, and technical vendors, expressly disclaims all forms of legal liability for any damages whatsoever, whether material or immaterial, direct or indirect, incidental, or consequential damages (including loss of profits or data), arising from:",
+          "Your reliance on the information or opinions presented on this Website.",
+          "Server disruptions, technical failures, cyberattacks, or virus/malware transmission while you access our Website."
+        ]
+      },
+      prohibitedConduct: {
+        title: "7. Prohibited User Conduct",
+        content: [
+          "In accessing the Website, you agree not to: use the Website for illegal or unlawful purposes, engage in hacking, system penetration, or distribute malicious code (malware); conduct data scraping/crawling of Website content without permission, or flood our servers with unreasonable traffic (DDoS)."
+        ]
+      },
+      thirdPartyLinks: {
+        title: "8. Links to Third-Party Sites",
+        content: [
+          "This Website may contain links directing to third-party sites or platforms (e.g., social media, news portals, or government regulatory sites). These links are provided purely as a reference facility and do not constitute an endorsement by the Law Firm. We have no control over and are not responsible for the substance, security, or privacy policies of those third-party sites."
+        ]
+      },
+      governingLaw: {
+        title: "9. Governing Law & Jurisdiction",
+        content: [
+          "These Terms & Conditions of Use are interpreted, governed, and subject exclusively to the legal jurisdiction of the Unitary State of the Republic of Indonesia. Any form of dispute, controversy, or claim arising in connection with the use of this Website shall be resolved exclusively and finally through the jurisdiction of the Central Jakarta District Court, without prejudice to the Law Firm's right to seek injunctive relief in any court of competent jurisdiction to protect its intellectual property rights."
+        ]
+      },
+      modifications: {
+        title: "10. Modification of Terms",
+        content: [
+          "The Law Firm retains sole discretion to revise, modify, or revoke any clause within these Terms & Conditions at any time without the necessity of providing prior notice. Your continued use of the Website following the publication of an update will be deemed as absolute acknowledgment and consent to the newly applicable terms."
+        ]
+      },
+      contact: {
+        title: "11. Official Contact",
+        content: [
+          "For the delivery of legal notices, technical inquiries related to Website use, or written permission requests for the use of intellectual property rights, please direct your official correspondence to: privacy@thelawticsa-firmahukum.vercel.app."
+        ]
+      }
+    }
+  }
 };

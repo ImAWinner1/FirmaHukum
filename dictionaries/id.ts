@@ -562,6 +562,188 @@ Tujuan pamungkas dari seluruh intervensi hukum kami di bidang ini adalah untuk m
       "Jl. AH. Nasution No.105, Cipadung Wetan, Kec. Cibiru, Kota Bandung, Jawa Barat 40614",
     businessHours: "Senin – Jumat: 08.00 – 17.00 WIB",
   },
+  privacyPolicy: {
+    title: "Kebijakan Privasi",
+    lastUpdated: "Terakhir diperbarui: 15 Agustus 2026",
+    sections: {
+      introduction: {
+        title: "1. Pendahuluan & Identitas Pengendali Data Pribadi",
+        content: [
+          "Firma Hukum (selanjutnya disebut \"Firma Hukum\", \"Kami\", atau \"Milik Kami\") berkomitmen secara absolut untuk melindungi kerahasiaan dan keamanan data pribadi Anda. Kami memahami bahwa sebagai firma hukum korporasi dan litigasi, informasi yang Anda percayakan kepada kami memiliki tingkat sensitivitas yang sangat tinggi.",
+          "Kebijakan Privasi ini disusun berdasarkan kepatuhan mutlak terhadap Undang-Undang No. 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP) Republik Indonesia.",
+          "Dalam konteks operasional website ini, Firma Hukum bertindak secara hukum sebagai Pengendali Data Pribadi (Data Controller). Kami menentukan tujuan dan cara pemrosesan data pribadi Anda secara mandiri."
+        ]
+      },
+      dataCollected: {
+        title: "2. Jenis Data Pribadi yang Dikumpulkan",
+        content: [
+          "Kami hanya mengumpulkan data pribadi yang proporsional dan relevan dengan tujuan pemrosesan. Kategorisasi data yang mungkin kami kumpulkan saat Anda berinteraksi dengan website kami meliputi:",
+          "Data Pribadi Umum: Meliputi nama lengkap, alamat email korporat/pribadi, nomor telepon/WhatsApp, jabatan, nama perusahaan, serta data interaksi standar (alamat IP, jenis peramban, waktu akses).",
+          "Data Pribadi Spesifik: Dalam konteks penggunaan umum website ini, kami tidak dengan sengaja mengumpulkan data pribadi yang bersifat spesifik (seperti data biometrik, orientasi seksual, atau catatan kejahatan). Namun, jika Anda secara sukarela mengirimkan deskripsi kasus melalui formulir kontak yang mengandung data pribadi spesifik yang relevan dengan perkara hukum Anda, kami akan memprosesnya dengan standar kerahasiaan tertinggi sebagaimana diatur oleh UU PDP dan Kode Etik Advokat."
+        ]
+      },
+      lawfulBasis: {
+        title: "3. Dasar Pemrosesan yang Sah (Lawful Basis)",
+        content: [
+          "Berdasarkan Pasal 20 UU PDP, kami memproses data pribadi Anda berdasarkan setidaknya satu dari dasar hukum berikut:",
+          "Persetujuan Eksplisit (Explicit Consent): Saat Anda secara sukarela mengisi dan mengirimkan formulir kontak atau berlangganan buletin (newsletter).",
+          "Pelaksanaan Kontrak (Performance of a Contract): Jika data diperlukan sebagai langkah awal sebelum meresmikan hubungan kuasa hukum (Retainer Agreement).",
+          "Kepentingan Hukum Lain (Legitimate Interest): Untuk mengoptimalkan keamanan website, mencegah penipuan, serta mematuhi kewajiban pelaporan hukum yang berlaku bagi profesi advokat."
+        ]
+      },
+      purpose: {
+        title: "4. Tujuan Pemrosesan Data",
+        content: [
+          "Data yang terkumpul akan diproses secara eksklusif untuk tujuan-tujuan berikut:",
+          "Memfasilitasi komunikasi awal dan merespons pertanyaan (inquiries) hukum atau komersial Anda secara tepat.",
+          "Melakukan pemeriksaan konflik kepentingan (conflict of interest check) internal sebelum kami dapat menerima penunjukan Anda sebagai klien.",
+          "Menyampaikan informasi terkini terkait yurisprudensi, perubahan regulasi, atau buletin hukum (hanya jika Anda telah menyetujui penerimaan materi pemasaran).",
+          "Menganalisis kinerja teknis website guna meningkatkan pengalaman pengguna (UX) dan keamanan infrastruktur siber kami."
+        ]
+      },
+      dataRights: {
+        title: "5. Hak-Hak Subjek Data Pribadi",
+        content: [
+          "Merujuk pada UU PDP, sebagai subjek data pribadi, Anda memiliki hak-hak mutlak berikut yang akan kami fasilitasi tanpa hambatan yang tidak wajar:"
+        ],
+        items: [
+          "Hak atas Informasi: Memperoleh kejelasan identitas, dasar, tujuan, dan retensi pemrosesan data Anda.",
+          "Hak Akses: Memperoleh akses dan salinan atas data pribadi Anda yang ada pada kami.",
+          "Hak Pembaruan & Koreksi: Melengkapi, memperbarui, atau memperbaiki kesalahan/ketidakakuratan pada data pribadi Anda.",
+          "Hak Penghapusan (Right to Erasure): Meminta pengakhiran pemrosesan, penghapusan, atau pemusnahan data pribadi Anda, kecuali kami diwajibkan oleh undang-undang untuk menyimpannya.",
+          "Hak Penarikan Persetujuan: Menarik kembali persetujuan pemrosesan data yang telah Anda berikan kapan saja.",
+          "Hak Keberatan atas Keputusan Otomatis: Mengajukan keberatan atas tindakan pengambilan keputusan yang hanya didasarkan pada pemrosesan otomatis, termasuk pemrofilan (profiling).",
+          "Hak Penundaan/Pembatasan: Menunda atau membatasi pemrosesan data pribadi secara proporsional.",
+          "Hak Portabilitas Data: Memperoleh dan menggunakan kembali data pribadi Anda dari kami dalam format yang terstruktur.",
+          "Hak Gugatan & Ganti Rugi: Menggugat dan menerima ganti rugi atas pelanggaran pelindungan data pribadi Anda sesuai perundang-undangan."
+        ]
+      },
+      retention: {
+        title: "6. Jangka Waktu Penyimpanan Data (Retention Period)",
+        content: [
+          "Data pribadi Anda akan disimpan dalam sistem infrastruktur kami hanya selama periode yang secara wajar diperlukan untuk mencapai tujuan pemrosesannya, atau selama diwajibkan oleh ketentuan perundang-undangan perpajakan dan pengarsipan hukum di Indonesia (biasanya minimum 5 hingga 10 tahun). Setelah masa retensi habis, data Anda akan dimusnahkan secara permanen atau dianonimkan (anonymization)."
+        ]
+      },
+      thirdParty: {
+        title: "7. Pengungkapan kepada Pihak Ketiga & Transfer Data",
+        content: [
+          "Kami menjunjung tinggi asas kerahasiaan. Data Anda tidak akan pernah dijual atau disewakan. Kami hanya dapat mengungkap data pribadi Anda kepada:",
+          "Mitra Infrastruktur IT (Cloud Hosting, layanan email), yang terikat oleh perjanjian kerahasiaan (NDA) yang ketat dan memiliki standar keamanan setara atau lebih tinggi.",
+          "Otoritas Penegak Hukum atau Pengadilan Republik Indonesia, hanya apabila diwajibkan secara tegas oleh perintah pengadilan atau ketentuan undang-undang.",
+          "Transfer Lintas Batas (Cross-Border Transfer): Jika karena alasan teknis server vendor kami berada di luar negeri, kami memastikan bahwa negara penerima memiliki tingkat pelindungan data yang setara atau lebih tinggi dari UU PDP Indonesia, atau kami akan memastikan adanya kontrak perlindungan klausul standar (Standard Contractual Clauses)."
+        ]
+      },
+      security: {
+        title: "8. Keamanan Data Pribadi",
+        content: [
+          "Firma Hukum mengimplementasikan langkah-langkah teknis dan organisasional termutakhir untuk melindungi data Anda dari akses, pengungkapan, alterasi, atau perusakan yang tidak sah. Ini meliputi penggunaan sertifikat enkripsi SSL/TLS pada komunikasi website, sistem otentikasi multi-faktor bagi staf kami, serta pembatasan akses data secara ketat berdasarkan prinsip \"need-to-know\"."
+        ]
+      },
+      children: {
+        title: "9. Data Anak di Bawah Umur",
+        content: [
+          "Layanan hukum dan website kami secara eksklusif ditujukan untuk entitas korporat dan individu dewasa. Kami tidak secara sadar memproses data pribadi anak di bawah umur (sebagaimana didefinisikan oleh UU PDP) tanpa verifikasi persetujuan eksplisit dari orang tua atau wali sah."
+        ]
+      },
+      cookies: {
+        title: "10. Cookies & Teknologi Pelacakan",
+        content: [
+          "Website kami menggunakan cookies esensial untuk memastikan fungsi dasar website beroperasi, serta cookies analitik (bersifat anonim) untuk membantu kami memahami bagaimana pengunjung menavigasi situs. Anda memiliki kendali penuh untuk mengelola preferensi cookies melalui setelan peramban (browser) Anda."
+        ]
+      },
+      contact: {
+        title: "11. Kontak Petugas Pelindungan Data",
+        content: [
+          "Apabila Anda ingin melaksanakan hak-hak subjek data Anda, atau jika Anda memiliki pertanyaan komprehensif mengenai kebijakan ini, silakan hubungi Petugas Pelindungan Data (Data Protection Officer) kami secara tertulis melalui email ke: privacy@thelawticsa-firmahukum.vercel.app."
+        ]
+      },
+      changes: {
+        title: "12. Perubahan Kebijakan",
+        content: [
+          "Kami berhak memperbarui Kebijakan Privasi ini secara berkala untuk merefleksikan perubahan dinamika regulasi maupun operasional. Perubahan material akan dinotifikasikan melalui pembaruan \"Tanggal Efektif\" pada halaman ini."
+        ]
+      }
+    }
+  },
+  termsConditions: {
+    title: "Syarat & Ketentuan Penggunaan",
+    lastUpdated: "Terakhir diperbarui: 15 Agustus 2026",
+    sections: {
+      acceptance: {
+        title: "1. Penerimaan Ketentuan",
+        content: [
+          "Dengan mengakses, menelusuri, atau menggunakan website Firma Hukum (selanjutnya disebut \"Website\"), Anda secara sadar dan sukarela menyetujui untuk tunduk pada seluruh Syarat & Ketentuan Penggunaan ini tanpa pengecualian. Jika Anda tidak menyetujui sebagian atau seluruh ketentuan ini, Anda diwajibkan untuk segera menghentikan penggunaan Website ini."
+        ]
+      },
+      definitions: {
+        title: "2. Definisi Istilah",
+        content: [
+          "Firma Hukum / Kami merujuk pada Firma Hukum, sebuah firma hukum yang berkedudukan hukum di Republik Indonesia.",
+          "Pengguna / Anda merujuk pada setiap individu, entitas korporasi, atau pihak ketiga yang mengakses Website ini."
+        ]
+      },
+      intellectualProperty: {
+        title: "3. Hak Kekayaan Intelektual",
+        content: [
+          "Seluruh aset digital yang terdapat dalam Website ini, termasuk namun tidak terbatas pada desain arsitektur, antarmuka pengguna, tipografi, logo, kode sumber, struktur basis data, serta seluruh artikel, wawasan hukum, dan publikasi tekstual, adalah hak kekayaan intelektual mutlak milik Firma Hukum atau pemegang lisensi sahnya.",
+          "Anda dilarang keras untuk menyalin, mendistribusikan ulang, mereproduksi, menerbitkan, atau melakukan eksploitasi komersial atas bagian mana pun dari Website ini tanpa memperoleh persetujuan tertulis sebelumnya dari Firma Hukum."
+        ]
+      },
+      noAttorneyClient: {
+        title: "4. BUKAN HUBUNGAN KUASA HUKUM (NO ATTORNEY-CLIENT RELATIONSHIP)",
+        content: [
+          "KLAUSUL INI BERSIFAT ABSOLUT DAN TIDAK DAPAT DINEGOSIASIKAN. Penggunaan Anda atas Website ini, maupun tindakan Anda mengirimkan email, pesan, dokumen, atau informasi apa pun melalui formulir kontak yang tersedia di Website ini, TIDAK dengan sendirinya menciptakan, memunculkan, atau diinterpretasikan sebagai terbentuknya hubungan kuasa hukum (attorney-client relationship) antara Anda dengan Firma Hukum atau advokat mana pun yang berafiliasi dengan kami.",
+          "Hubungan kuasa hukum hanya akan tercipta secara sah apabila telah terdapat Perjanjian Jasa Hukum (Retainer Agreement) atau Surat Kuasa Khusus yang telah dinegosiasikan, disetujui, dan ditandatangani secara formal oleh perwakilan sah Firma Hukum dan Anda.",
+          "Selama belum terbentuknya hubungan kuasa hukum formal tersebut, tidak ada hak imunitas atau kewajiban kerahasiaan advokat-klien (attorney-client privilege/confidentiality) yang timbul atas segala informasi yang Anda kirimkan kepada kami melalui Website ini."
+        ]
+      },
+      noLegalAdvice: {
+        title: "5. Bukan Nasihat Hukum (No Legal Advice Disclaimer)",
+        content: [
+          "Seluruh konten, artikel, ulasan, publikasi, dan materi tertulis maupun visual yang disajikan di Website ini semata-mata bersifat informasi umum (general information purposes only). Materi tersebut BUKAN merupakan nasihat hukum (legal advice), opini hukum mengikat (legal opinion), atau panduan strategis yang secara spesifik dirancang untuk menyelesaikan sengketa hukum atau transaksi yang sedang Anda hadapi.",
+          "Hukum dan regulasi di Republik Indonesia sangat dinamis. Oleh karena itu, Firma Hukum tidak memberikan jaminan bahwa informasi pada Website ini selalu mutakhir, akurat secara universal, atau relevan dengan situasi yurisprudensi terbaru. Anda sangat dilarang untuk mengambil (atau menunda) suatu tindakan hukum atau bisnis hanya dengan bersandar pada informasi yang ada di Website ini tanpa berkonsultasi secara langsung dengan penasihat hukum profesional yang memegang lisensi aktif."
+        ]
+      },
+      limitationLiability: {
+        title: "6. Batasan Tanggung Jawab (Limitation of Liability)",
+        content: [
+          "Sejauh yang diizinkan oleh hukum yang berlaku, Firma Hukum, termasuk seluruh mitra (partners), advokat afiliasi (associates), staf, dan vendor teknis kami, secara tegas membebaskan diri dari segala bentuk pertanggungjawaban hukum atas kerugian apa pun, baik materiil maupun imateriil, langsung maupun tidak langsung, insidental, atau kerugian konsekuensial (termasuk hilangnya profit atau data), yang timbul akibat:",
+          "Ketergantungan Anda terhadap informasi atau opini yang disajikan di Website ini.",
+          "Gangguan server, kegagalan teknis, serangan siber (cyberattacks), atau transmisi virus/malware saat Anda mengakses Website kami."
+        ]
+      },
+      prohibitedConduct: {
+        title: "7. Perilaku Pengguna yang Dilarang",
+        content: [
+          "Dalam mengakses Website, Anda setuju untuk tidak: menggunakan Website untuk tujuan ilegal atau melanggar hukum, melakukan peretasan (hacking), penetrasi sistem, atau mendistribusikan kode berbahaya (malware); melakukan penyikatan data (data scraping/crawling) terhadap konten Website tanpa izin, atau membanjiri server kami dengan lalu lintas secara tidak wajar (DDoS)."
+        ]
+      },
+      thirdPartyLinks: {
+        title: "8. Tautan ke Situs Pihak Ketiga",
+        content: [
+          "Website ini mungkin memuat tautan yang mengarah pada situs atau platform pihak ketiga (contoh: media sosial, portal berita, atau situs regulasi pemerintah). Tautan tersebut disediakan murni sebagai fasilitas rujukan dan bukan merupakan bentuk pengesahan (endorsement) dari Firma Hukum. Kami tidak memegang kendali dan tidak bertanggung jawab atas substansi, keamanan, maupun kebijakan privasi dari situs pihak ketiga tersebut."
+        ]
+      },
+      governingLaw: {
+        title: "9. Hukum yang Berlaku & Yurisdiksi",
+        content: [
+          "Syarat & Ketentuan Penggunaan ini ditafsirkan, diatur, dan tunduk secara eksklusif pada yurisdiksi hukum Negara Kesatuan Republik Indonesia. Segala bentuk sengketa, perselisihan, atau klaim yang timbul sehubungan dengan penggunaan Website ini akan diselesaikan secara eksklusif dan final melalui yurisdiksi Pengadilan Negeri Jakarta Pusat, dengan tidak mengurangi hak Firma Hukum untuk mengajukan gugatan keleluasaan di pengadilan yurisdiksi lain yang relevan guna melindungi hak kekayaan intelektualnya."
+        ]
+      },
+      modifications: {
+        title: "10. Perubahan Ketentuan",
+        content: [
+          "Firma Hukum memegang diskresi penuh (sole discretion) untuk merevisi, memodifikasi, atau mencabut klausul mana pun di dalam Syarat & Ketentuan ini kapan saja tanpa keharusan memberikan pemberitahuan sebelumnya. Penggunaan berkelanjutan Anda atas Website setelah pembaruan diterbitkan akan dianggap sebagai pengakuan dan persetujuan mutlak terhadap ketentuan baru yang berlaku."
+        ]
+      },
+      contact: {
+        title: "11. Kontak Resmi",
+        content: [
+          "Untuk pengiriman pemberitahuan hukum (legal notices), pertanyaan teknis terkait penggunaan Website, atau permintaan izin tertulis penggunaan hak kekayaan intelektual, mohon arahkan korespondensi resmi Anda ke: privacy@thelawticsa-firmahukum.vercel.app."
+        ]
+      }
+    }
+  }
 };
 
 export type Dictionary = typeof id;
