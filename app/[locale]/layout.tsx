@@ -121,6 +121,7 @@ export default async function RootLayout({
     <html
       lang={locale}
       className={`${inter.variable} ${playfair.variable} h-full`}
+      data-scroll-behavior="smooth"
     >
       <body className="min-h-full flex flex-col">
         <script
