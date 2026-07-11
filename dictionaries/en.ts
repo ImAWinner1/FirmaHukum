@@ -213,22 +213,22 @@ export const en: Dictionary = {
     timelineTitle: "Firm Milestones",
     timeline: [
       {
-        year: "2004",
+        year: "2023",
         title: "Firm Establishment",
         desc: "Founded by Rizky Maulana Malik Ibrahim with a vision to build a formidable litigation law firm. The initial focus encompassed civil and commercial criminal litigation with a high standard of professional excellence in Jakarta.",
       },
       {
-        year: "2010",
+        year: "2024",
         title: "Corporate Services & Compliance Expansion",
         desc: "The joining of Yalsa Safitri and Rajni Kamila brought new expertise in Corporate Law and Compliance. The firm officially expanded its practice towards corporate legal advisory and business restructuring.",
       },
       {
-        year: "2016",
+        year: "2025",
         title: "Strengthening Litigation & Senior Advisory Divisions",
         desc: "With the arrival of Dimas Damar Pangestu as Head of Litigation and Faturrohman Hakim as Senior Legal Advisor, the firm successfully handled various national-scale commercial disputes and won prestigious arbitration cases.",
       },
       {
-        year: "2021",
+        year: "2026",
         title: "Modern Team Formation & Integrated Services",
         desc: "Strengthened by a lineup of professionals such as Azhar, Nabil Faqih Zulfikar, and Zalfa Syifa Aghniya, the firm adopted an integrated legal service approach to meet modern business client dynamics.",
       },
