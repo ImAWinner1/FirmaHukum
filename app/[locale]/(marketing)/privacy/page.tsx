@@ -41,7 +41,17 @@ export default async function PrivacyPolicyPage({ params }: Props) {
                 <div className="space-y-4 text-gray-300 text-justify">
                   {section.content.map((paragraph, index) => (
                     <p key={index} className="leading-relaxed">
-                      {paragraph}
+                      {paragraph.includes("thelawticsa@gmail.com") ? (
+                        <>
+                          {paragraph.split("thelawticsa@gmail.com")[0]}
+                          <a href="mailto:thelawticsa@gmail.com" className="text-gold-500 hover:text-gold-400 hover:underline transition-colors">
+                            thelawticsa@gmail.com
+                          </a>
+                          {paragraph.split("thelawticsa@gmail.com")[1]}
+                        </>
+                      ) : (
+                        paragraph
+                      )}
                     </p>
                   ))}
                   {/* @ts-ignore - Some sections have items, some don't */}

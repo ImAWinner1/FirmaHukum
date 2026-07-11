@@ -54,7 +54,17 @@ export default async function TermsConditionsPage({ params }: Props) {
                             : ""
                         }`}
                       >
-                        {paragraph}
+                        {paragraph.includes("thelawticsa@gmail.com") ? (
+                          <>
+                            {paragraph.split("thelawticsa@gmail.com")[0]}
+                            <a href="mailto:thelawticsa@gmail.com" className="text-gold-500 hover:text-gold-400 hover:underline transition-colors">
+                              thelawticsa@gmail.com
+                            </a>
+                            {paragraph.split("thelawticsa@gmail.com")[1]}
+                          </>
+                        ) : (
+                          paragraph
+                        )}
                       </p>
                     );
                   })}
