@@ -43,22 +43,12 @@ export function Footer({ dict, locale }: { dict: Dictionary; locale: string }) {
     { label: dict.nav.contact, href: "/kontak" },
   ];
 
-  const footerServiceLinks = [
-    {
-      label: dict.practiceAreas.corporate.title,
-      href: "/layanan/hukum-korporasi",
-    },
-    { label: dict.practiceAreas.civil.title, href: "/layanan/hukum-perdata" },
-    { label: dict.practiceAreas.criminal.title, href: "/layanan/hukum-pidana" },
-    {
-      label: dict.practiceAreas.employment.title,
-      href: "/layanan/hukum-ketenagakerjaan",
-    },
-    {
-      label: dict.practiceAreas.property.title,
-      href: "/layanan/hukum-properti",
-    },
-  ];
+  const footerServiceLinks = Object.entries(dict.servicesPage.areas).map(
+    ([slug, area]) => ({
+      label: area.title,
+      href: `/layanan/${slug}`,
+    })
+  );
 
   async function handleNewsletterSubmit(e: React.FormEvent) {
     e.preventDefault();
