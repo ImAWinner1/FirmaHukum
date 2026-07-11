@@ -569,9 +569,9 @@ The ultimate goal of all our legal interventions in this field is to guarantee t
       introduction: {
         title: "1. Introduction & Data Controller Identity",
         content: [
-          "Law Firm (hereinafter referred to as the \"Law Firm\", \"We\", or \"Our\") is absolutely committed to protecting the confidentiality and security of your personal data. We understand that as a corporate and litigation law firm, the information you entrust to us carries an extremely high level of sensitivity.",
+          "Firma Hukum (hereinafter referred to as the \"Firma Hukum\", \"We\", or \"Our\") is absolutely committed to protecting the confidentiality and security of your personal data. We understand that as a corporate and litigation law firm, the information you entrust to us carries an extremely high level of sensitivity.",
           "This Privacy Policy is drafted in strict compliance with the Republic of Indonesia Law No. 27 of 2022 concerning Personal Data Protection (UU PDP).",
-          "In the context of this website's operation, Law Firm acts legally as the Data Controller. We determine the purposes and means of processing your personal data independently."
+          "In the context of this website's operation, Firma Hukum acts legally as the Data Controller. We determine the purposes and means of processing your personal data independently."
         ]
       },
       dataCollected: {
@@ -636,7 +636,7 @@ The ultimate goal of all our legal interventions in this field is to guarantee t
       security: {
         title: "8. Personal Data Security",
         content: [
-          "The Law Firm implements state-of-the-art technical and organizational measures to protect your data against unauthorized access, disclosure, alteration, or destruction. This includes the use of SSL/TLS encryption certificates on website communications, multi-factor authentication systems for our staff, and strict data access restrictions based on the \"need-to-know\" principle."
+          "The Firma Hukum implements state-of-the-art technical and organizational measures to protect your data against unauthorized access, disclosure, alteration, or destruction. This includes the use of SSL/TLS encryption certificates on website communications, multi-factor authentication systems for our staff, and strict data access restrictions based on the \"need-to-know\" principle."
         ]
       },
       children: {
@@ -672,28 +672,28 @@ The ultimate goal of all our legal interventions in this field is to guarantee t
       acceptance: {
         title: "1. Acceptance of Terms",
         content: [
-          "By accessing, browsing, or using the Law Firm website (hereinafter referred to as the \"Website\"), you consciously and voluntarily agree to be bound by all of these Terms & Conditions of Use without exception. If you do not agree to part or all of these terms, you are required to immediately cease using this Website."
+          "By accessing, browsing, or using the Firma Hukum website (hereinafter referred to as the \"Website\"), you consciously and voluntarily agree to be bound by all of these Terms & Conditions of Use without exception. If you do not agree to part or all of these terms, you are required to immediately cease using this Website."
         ]
       },
       definitions: {
         title: "2. Definitions of Terms",
         content: [
-          "Law Firm / We refers to Law Firm, a law firm legally domiciled in the Republic of Indonesia.",
+          "Firma Hukum / We refers to Firma Hukum, a law firm legally domiciled in the Republic of Indonesia.",
           "User / You refers to any individual, corporate entity, or third party accessing this Website."
         ]
       },
       intellectualProperty: {
         title: "3. Intellectual Property Rights",
         content: [
-          "All digital assets contained in this Website, including but not limited to architectural design, user interface, typography, logos, source code, database structures, as well as all articles, legal insights, and textual publications, are the absolute intellectual property of the Law Firm or its legitimate licensors.",
-          "You are strictly prohibited from copying, redistributing, reproducing, publishing, or commercially exploiting any part of this Website without obtaining prior written consent from the Law Firm."
+          "All digital assets contained in this Website, including but not limited to architectural design, user interface, typography, logos, source code, database structures, as well as all articles, legal insights, and textual publications, are the absolute intellectual property of the Firma Hukum or its legitimate licensors.",
+          "You are strictly prohibited from copying, redistributing, reproducing, publishing, or commercially exploiting any part of this Website without obtaining prior written consent from the Firma Hukum."
         ]
       },
       noAttorneyClient: {
         title: "4. NO ATTORNEY-CLIENT RELATIONSHIP",
         content: [
-          "THIS CLAUSE IS ABSOLUTE AND NON-NEGOTIABLE. Your use of this Website, or your act of sending emails, messages, documents, or any information through the contact forms available on this Website, DOES NOT in itself create, give rise to, or be interpreted as the formation of an attorney-client relationship between you and Law Firm or any advocate affiliated with us.",
-          "An attorney-client relationship will only be legally created when there is a Retainer Agreement or a Special Power of Attorney that has been formally negotiated, approved, and signed by a legitimate representative of the Law Firm and you.",
+          "THIS CLAUSE IS ABSOLUTE AND NON-NEGOTIABLE. Your use of this Website, or your act of sending emails, messages, documents, or any information through the contact forms available on this Website, DOES NOT in itself create, give rise to, or be interpreted as the formation of an attorney-client relationship between you and Firma Hukum or any advocate affiliated with us.",
+          "An attorney-client relationship will only be legally created when there is a Retainer Agreement or a Special Power of Attorney that has been formally negotiated, approved, and signed by a legitimate representative of the Firma Hukum and you.",
           "As long as such formal attorney-client relationship has not been established, there is no attorney-client privilege/confidentiality arising over any information you submit to us through this Website."
         ]
       },
@@ -701,13 +701,13 @@ The ultimate goal of all our legal interventions in this field is to guarantee t
         title: "5. No Legal Advice Disclaimer",
         content: [
           "All content, articles, reviews, publications, and written or visual materials presented on this Website are strictly for general information purposes only. The material DOES NOT constitute legal advice, a binding legal opinion, or strategic guidance specifically tailored to resolve the legal dispute or transaction you are currently facing.",
-          "Laws and regulations in the Republic of Indonesia are highly dynamic. Therefore, the Law Firm makes no warranties that the information on this Website is always up-to-date, universally accurate, or relevant to the latest jurisprudential developments. You are strictly prohibited from taking (or refraining from) any legal or business action based solely on the information contained on this Website without directly consulting a professionally licensed legal counsel."
+          "Laws and regulations in the Republic of Indonesia are highly dynamic. Therefore, the Firma Hukum makes no warranties that the information on this Website is always up-to-date, universally accurate, or relevant to the latest jurisprudential developments. You are strictly prohibited from taking (or refraining from) any legal or business action based solely on the information contained on this Website without directly consulting a professionally licensed legal counsel."
         ]
       },
       limitationLiability: {
         title: "6. Limitation of Liability",
         content: [
-          "To the fullest extent permitted by applicable law, the Law Firm, including all its partners, affiliated advocates (associates), staff, and technical vendors, expressly disclaims all forms of legal liability for any damages whatsoever, whether material or immaterial, direct or indirect, incidental, or consequential damages (including loss of profits or data), arising from:",
+          "To the fullest extent permitted by applicable law, the Firma Hukum, including all its partners, affiliated advocates (associates), staff, and technical vendors, expressly disclaims all forms of legal liability for any damages whatsoever, whether material or immaterial, direct or indirect, incidental, or consequential damages (including loss of profits or data), arising from:",
           "Your reliance on the information or opinions presented on this Website.",
           "Server disruptions, technical failures, cyberattacks, or virus/malware transmission while you access our Website."
         ]
@@ -721,19 +721,19 @@ The ultimate goal of all our legal interventions in this field is to guarantee t
       thirdPartyLinks: {
         title: "8. Links to Third-Party Sites",
         content: [
-          "This Website may contain links directing to third-party sites or platforms (e.g., social media, news portals, or government regulatory sites). These links are provided purely as a reference facility and do not constitute an endorsement by the Law Firm. We have no control over and are not responsible for the substance, security, or privacy policies of those third-party sites."
+          "This Website may contain links directing to third-party sites or platforms (e.g., social media, news portals, or government regulatory sites). These links are provided purely as a reference facility and do not constitute an endorsement by the Firma Hukum. We have no control over and are not responsible for the substance, security, or privacy policies of those third-party sites."
         ]
       },
       governingLaw: {
         title: "9. Governing Law & Jurisdiction",
         content: [
-          "These Terms & Conditions of Use are interpreted, governed, and subject exclusively to the legal jurisdiction of the Unitary State of the Republic of Indonesia. Any form of dispute, controversy, or claim arising in connection with the use of this Website shall be resolved exclusively and finally through the jurisdiction of the Central Jakarta District Court, without prejudice to the Law Firm's right to seek injunctive relief in any court of competent jurisdiction to protect its intellectual property rights."
+          "These Terms & Conditions of Use are interpreted, governed, and subject exclusively to the legal jurisdiction of the Unitary State of the Republic of Indonesia. Any form of dispute, controversy, or claim arising in connection with the use of this Website shall be resolved exclusively and finally through the jurisdiction of the Central Jakarta District Court, without prejudice to the Firma Hukum's right to seek injunctive relief in any court of competent jurisdiction to protect its intellectual property rights."
         ]
       },
       modifications: {
         title: "10. Modification of Terms",
         content: [
-          "The Law Firm retains sole discretion to revise, modify, or revoke any clause within these Terms & Conditions at any time without the necessity of providing prior notice. Your continued use of the Website following the publication of an update will be deemed as absolute acknowledgment and consent to the newly applicable terms."
+          "The Firma Hukum retains sole discretion to revise, modify, or revoke any clause within these Terms & Conditions at any time without the necessity of providing prior notice. Your continued use of the Website following the publication of an update will be deemed as absolute acknowledgment and consent to the newly applicable terms."
         ]
       },
       contact: {
