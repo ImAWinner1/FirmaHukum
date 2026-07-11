@@ -204,7 +204,7 @@ export default async function AboutPage({ params }: Props) {
                   <div className="mb-6 shrink-0 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-50 text-navy-950">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <h3 className="mb-3 font-heading text-xl font-bold text-navy-950">
+                  <h3 className="mb-3 font-heading text-xl font-bold text-navy-950 min-h-14">
                     {value.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed text-sm text-justify flex-grow">
