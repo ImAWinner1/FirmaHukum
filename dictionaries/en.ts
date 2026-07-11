@@ -167,13 +167,13 @@ export const en: Dictionary = {
   aboutPage: {
     heroTitle: "About Our Firm",
     heroDesc:
-      "Our dedication to justice, integrity, and professional excellence has made us a trusted legal partner for over a decade.",
+      "Our dedication to justice, integrity, and professional excellence has made us a trusted legal partner for our clients.",
     historyBadge: "A History of Dedication and",
     historyHighlight: "Professional Excellence",
     historyP1:
-      "Founded in 2009, WebWeavers was born from a simple vision: to provide high-quality legal services that are accessible, transparent, and truly oriented toward the clients interests.",
+      "Founded in 2023, This Law Firm was born from a simple vision: to provide high-quality legal services that are accessible, transparent, and truly oriented toward the clients interests.",
     historyP2:
-      "Over more than a decade, we have grown from a small litigation practice (boutique firm) into a full-service Firma Hukum trusted by various multinational companies, SOEs, and prominent individuals.",
+      "Since our establishment, we have grown rapidly from a small litigation practice (boutique firm) into a full-service Firma Hukum trusted by various multinational companies, SOEs, and prominent individuals.",
     historyP3:
       "Our philosophy has never changed: every legal problem has a solution. Our job is to find it through a combination of deep legal knowledge, innovative strategies, and a thorough understanding of our clients business context.",
     quote: "Fiat Justitia Ruat Caelum",

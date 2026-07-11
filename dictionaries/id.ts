@@ -165,13 +165,13 @@ export const id = {
   aboutPage: {
     heroTitle: "Tentang Firma Kami",
     heroDesc:
-      "Dedikasi kami pada keadilan, integritas, dan keunggulan profesional telah menjadikan kami mitra hukum terpercaya selama lebih dari satu dekade.",
+      "Dedikasi kami pada keadilan, integritas, dan keunggulan profesional telah menjadikan kami mitra hukum terpercaya bagi klien-klien kami.",
     historyBadge: "Sejarah Dedikasi dan",
     historyHighlight: "Keunggulan Profesional",
     historyP1:
-      "Didirikan pada tahun 2009, WebWeavers lahir dari visi sederhana: menyediakan layanan hukum berkualitas tinggi yang dapat diakses, transparan, dan benar-benar berorientasi pada kepentingan klien.",
+      "Didirikan pada tahun 2023, Firma Hukum ini lahir dari visi sederhana: menyediakan layanan hukum berkualitas tinggi yang dapat diakses, transparan, dan benar-benar berorientasi pada kepentingan klien.",
     historyP2:
-      "Selama lebih dari satu dekade, kami telah berkembang dari sebuah praktik litigasi kecil (boutique firm) menjadi firma hukum layanan penuh yang dipercaya oleh berbagai perusahaan multinasional, BUMN, dan individu terkemuka.",
+      "Sejak awal berdiri, kami telah berkembang pesat menjadi firma hukum layanan penuh yang dipercaya oleh berbagai perusahaan multinasional, BUMN, dan individu terkemuka.",
     historyP3:
       "Filosofi kami tidak pernah berubah: setiap masalah hukum memiliki solusi. Tugas kami adalah menemukannya melalui perpaduan antara pengetahuan hukum mendalam, strategi yang inovatif, dan pemahaman menyeluruh terhadap konteks bisnis klien kami.",
     quote: "Fiat Justitia Ruat Caelum",

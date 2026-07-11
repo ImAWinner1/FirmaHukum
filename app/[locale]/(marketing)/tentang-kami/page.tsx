@@ -116,7 +116,7 @@ export default async function AboutPage({ params }: Props) {
               <div className="aspect-square overflow-hidden rounded-2xl bg-navy-900 relative">
                 <Image
                   src="/images/tentang-kami.png"
-                  alt="Sejarah WebWeavers"
+                  alt="Sejarah Firma Hukum"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-right opacity-80"
